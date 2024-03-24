@@ -7,13 +7,13 @@ const hero = () => {
   return (
     <section className="hero px-[20px]" id="hero">
       <div className="grid gap-4 lg:grid-cols-4 mb-10 md:mb-20">
-        <div className="w-full col-span-3 text-left">
-          <h1 className="text-left text-[20vw] lg:text-[200px] leading-none">
+        <div className="w-full col-span-3 text-left mb-3">
+          <h1 className="text-left text-[19vw] lg:text-[200px] leading-none">
             Web <span className="block leading-none">Developer</span>
           </h1>
         </div>
 
-        <div className="w-full flex items-end">
+        <div className="w-full col-span-3 md:col-span-1 flex items-end">
           <p className="text-left text-gray-500 pb-[30px]">
             specialized in Web Design, UX / UI, Webflow, and Front End
             Development.
@@ -53,7 +53,7 @@ const hero = () => {
         </div>
       </div>
       <div className="mb-10">
-      <button className="relative flex items-center py-3 px-4 font-bold">
+      <button className="relative flex items-center py-3 px-4 font-bold before:absolute before:-z-50 before:bg-gray-200 before:w-14 before:h-14 before:left-0 before:rounded-[50%]">
           Drop me a line{" "}
           <span className="ml-3">
             <MdCallMade />

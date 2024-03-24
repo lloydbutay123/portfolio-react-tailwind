@@ -27,7 +27,7 @@ const contact = () => {
       );
   };
   return (
-    <section className="contact px-[20px] py-[20px]" id="contact">
+    <section className="contact px-[20px] py-[20px] mt-20" id="contact">
       <form
         className="w-full min-h-[100vh] flex items-center flex-col justify-center"
         ref={form}
@@ -58,7 +58,7 @@ const contact = () => {
             </div>
             <div className="w-full md:w-1/2 px-3">
               <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 leading-tight focus:outline-none focus:bg-gray-200 focus:border-gray-500"
+                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
                 id="lName"
                 name="lName"
                 type="text"
@@ -70,7 +70,7 @@ const contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200 focus:border-gray-500"
+                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
                 id="email"
                 name="email"
                 type="email"
@@ -78,7 +78,7 @@ const contact = () => {
                 required
               />
               <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200 focus:border-gray-500"
+                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
                 id="phone"
                 name="phone"
                 type="text"
@@ -86,7 +86,7 @@ const contact = () => {
                 required
               />
               <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200 focus:border-gray-500"
+                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
                 id="subject"
                 name="subject"
                 type="text"
@@ -94,7 +94,7 @@ const contact = () => {
                 required
               />
               <textarea
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200 focus:border-gray-500"
+                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
                 id="message"
                 name="message"
                 type="text"
