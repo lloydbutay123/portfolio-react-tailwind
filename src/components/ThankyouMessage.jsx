@@ -6,7 +6,7 @@ function ThankyouMessage() {
   return (
     
     <section
-      className="thankyouMessage flex w-full min-h-[100vh] items-center justify-center"
+      className="thankyouMessage flex w-full min-h-[100vh] px-[20px] items-center justify-center"
       id="thankyouMessage"
     >
       <div className="text-center">
