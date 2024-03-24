@@ -6,7 +6,6 @@ function App() {
   return (
     <>
         <Routes>
-          <Route index element={<Main />} />
           <Route exact path="/" element={<Main />} />
           <Route exact path="/success" element={<ThankyouMessage />} />
         </Routes>
