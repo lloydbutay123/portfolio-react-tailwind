@@ -13,18 +13,18 @@ const nav = () => {
 
   const content = (
     <>
-      <div className="md:hidden -z-50 block absolute top-16 w-full left-0 right-0 bg-white">
+      <div className="md:hidden -z-50 block absolute top-16 w-full min-h-[100vh] left-0 right-0 bg-white">
         <ul className="text-center text-xl p-20">
           <Link spy={true} smooth={true} to="hero">
             <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded" onClick={handleClick}>
               Home
             </li>
           </Link>
-          {/* <Link spy={true} smooth={true} to="about">
+          <Link spy={true} smooth={true} to="about">
             <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded" onClick={handleClick}>
               About
             </li>
-          </Link> */}
+          </Link>
           <Link spy={true} smooth={true} to="services">
             <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded" onClick={handleClick}>
               Services
@@ -59,9 +59,9 @@ const nav = () => {
               <Link spy={true} smooth={true} to="hero">
                 <li className="cursor-pointer">Home</li>
               </Link>
-              {/* <Link spy={true} smooth={true} to="bbout">
+              <Link spy={true} smooth={true} to="bbout">
                 <li className="cursor-pointer">About</li>
-              </Link> */}
+              </Link>
               <Link spy={true} smooth={true} to="services">
                 <li className="cursor-pointer">Services</li>
               </Link>
