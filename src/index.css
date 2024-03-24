@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  body {
+    font-family: "Figtree";
+    font-weight: 500;
+  }
+  .hero button,
+  .contact button,
+  .thankyouMessage button,
+  .projects a {
+    @apply before:absolute before:-z-50 before:bg-gray-200 before:w-14 before:h-14 before:-left-5 before:rounded-[50%];
+  }
+}
