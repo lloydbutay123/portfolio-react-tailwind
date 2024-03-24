@@ -6,7 +6,8 @@ function App() {
   return (
     <>
         <Routes>
-          <Route exact path="/" element={<Main />} />
+          <Route index element={<Main />} />
+          <Route exact path="/portfolio-react-tailwind" element={<Main />} />
           <Route exact path="/success" element={<ThankyouMessage />} />
         </Routes>
     </>
