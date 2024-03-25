@@ -12,9 +12,11 @@
     font-family: "Figtree";
     font-weight: 500;
   }
+  .hero button,
+  .contactPreview button,
   .contact button,
   .thankyouMessage button,
-  .projects a {
+  .projectsPreview a {
     @apply before:absolute before:-z-50 before:bg-gray-200 before:w-14 before:h-14 before:-left-5 before:rounded-[50%];
   }
 }

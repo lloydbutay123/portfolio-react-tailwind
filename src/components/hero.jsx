@@ -1,7 +1,6 @@
 import React from "react";
 import SocialsLists from "../Helper/socials";
 import { MdCallMade } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 const hero = () => {
   return (
@@ -53,7 +52,7 @@ const hero = () => {
         </div>
       </div>
       <div className="mb-10">
-        <button className="relative flex items-center py-3 px-4 font-bold before:absolute before:-z-50 before:bg-gray-200 before:w-14 before:h-14 before:left-0 before:rounded-[50%]">
+        <button className="relative flex left-5 items-center py-3 font-bold">
           Drop me a line{" "}
           <span className="ml-3">
             <MdCallMade />

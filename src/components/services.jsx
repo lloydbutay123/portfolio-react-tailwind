@@ -31,7 +31,7 @@ const services = () => {
       <div className="lg:min-h-[100vh]">
         <div className="mb-10">
           <h1 className="text-[14vw] lg:text-[90px] font-bold break-normal">
-            Technologies <span className="block text-gray-200">& Tools</span>
+            Technologies <span className="block text-gray-400">& Tools</span>
           </h1>
         </div>
         <div className="flex justify-center">

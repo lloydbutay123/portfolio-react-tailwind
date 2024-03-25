@@ -1,20 +1,18 @@
-import Nav from "./nav";
 import Hero from "./hero";
-import Projects from "./projects";
+import ProjectsPreview from "./projectsPreview";
 import Services from "./services";
-import Contact from "./contact";
 import Footer from "./footer";
 import Quotes from "./quotes";
+import ContactPreview from "../components/contactPreview";
 
 const main = () => {
   return (
     <div>
-      <Nav />
       <Hero />
       <Services />
-      <Projects />
+      <ProjectsPreview />
       <Quotes />
-      <Contact />
+      <ContactPreview />
       <Footer />
     </div>
   );

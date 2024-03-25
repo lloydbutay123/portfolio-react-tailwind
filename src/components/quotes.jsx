@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import bgimg from "../assets/background_images/vector.png";
+import bgimg from "../assets/background_images/stonelogo.png";
 
 const quotes = () => {
   let randomQuotes = [];
