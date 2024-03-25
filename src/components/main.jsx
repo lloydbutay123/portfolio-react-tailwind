@@ -4,6 +4,7 @@ import Projects from "./projects";
 import Services from "./services";
 import Contact from "./contact";
 import Footer from "./footer";
+import Quotes from "./quotes";
 
 const main = () => {
   return (
@@ -12,6 +13,7 @@ const main = () => {
       <Hero />
       <Services />
       <Projects />
+      <Quotes />
       <Contact />
       <Footer />
     </div>

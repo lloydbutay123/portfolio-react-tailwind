@@ -15,8 +15,8 @@ const hero = () => {
 
         <div className="w-full col-span-3 md:col-span-1 flex items-end">
           <p className="text-left text-gray-500 pb-[30px]">
-            specialized in Web Design, UX / UI, Webflow, and Front End
-            Development.
+            Hi I'm John Lloyd Butay. A passionate Front-end Developer based in
+            the Philippines.
           </p>
         </div>
       </div>
@@ -53,13 +53,12 @@ const hero = () => {
         </div>
       </div>
       <div className="mb-10">
-      <button className="relative flex items-center py-3 px-4 font-bold before:absolute before:-z-50 before:bg-gray-200 before:w-14 before:h-14 before:left-0 before:rounded-[50%]">
+        <button className="relative flex items-center py-3 px-4 font-bold before:absolute before:-z-50 before:bg-gray-200 before:w-14 before:h-14 before:left-0 before:rounded-[50%]">
           Drop me a line{" "}
           <span className="ml-3">
             <MdCallMade />
           </span>
         </button>
-
       </div>
     </section>
   );
