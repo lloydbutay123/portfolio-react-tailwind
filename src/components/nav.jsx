@@ -57,8 +57,6 @@ const nav = () => {
             </li>
           </Link>
         </ul>
-        <Footer />
-
       </div>
     </>
   );
