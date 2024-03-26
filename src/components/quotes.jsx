@@ -31,7 +31,7 @@ const quotes = () => {
     >
       <div className="md:w-2/3">
         <div className="text-center">
-          <h1 className="text-[5vw] md:text-[40px] font-bold">" {quote.text} "</h1>
+          <h1 className="text-[5vw] md:text-[40px] font-bold mb-5">" {quote.text} "</h1>
           <p className="text-end text-gray-500">{quote.author}</p>
         </div>
       </div>

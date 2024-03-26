@@ -1,8 +1,10 @@
 import React from "react";
 import SocialsLists from "../Helper/socials";
-import { MdCallMade } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="hero px-[20px]" id="hero">
       <div className="grid gap-4 lg:grid-cols-4 mb-10 md:mb-20">
@@ -42,7 +44,7 @@ const hero = () => {
                 <a
                   href={social.link}
                   target="_blank"
-                  className="flex items-center mb-2 cursor-pointer gap-3"
+                  className="flex items-center mb-5 cursor-pointer gap-3"
                 >
                   {social.icon} {social.name}
                 </a>
@@ -52,10 +54,10 @@ const hero = () => {
         </div>
       </div>
       <div className="mb-10">
-        <button className="relative flex left-5 items-center py-3 font-bold">
-          Drop me a line{" "}
+        <button className="relative flex left-5 items-center py-3 font-bold" onClick={() => navigate("/about")}>
+          See more about me{" "}
           <span className="ml-3">
-            <MdCallMade />
+            <FaArrowRightLong />
           </span>
         </button>
       </div>

@@ -1,13 +1,12 @@
-import React, { useRef } from "react";
-import onlinelogo from "../assets/logo/img-logo.png";
-import { MdCallMade } from "react-icons/md";
-import { FaArrowDown, FaArrowRight } from "react-icons/fa";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
+import { IoSendSharp } from "react-icons/io5";
 
 const contact = () => {
   const form = useRef();
   const navigate = useNavigate();
+  const [name, setName] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -26,8 +25,11 @@ const contact = () => {
         }
       );
   };
+
+
+
   return (
-    <section className="contact px-[20px] py-[20px] mt-20" id="contact">
+    <section className="contact px-[20px] py-20" id="contact">
       <form
         className="w-full min-h-[100vh] flex items-center flex-col justify-center"
         ref={form}
@@ -94,7 +96,7 @@ const contact = () => {
                 required
               />
               <textarea
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
+                className="appearance-none block w-full bg-transparent h-44 text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
                 id="message"
                 name="message"
                 type="text"
@@ -103,9 +105,9 @@ const contact = () => {
               />
             </div>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end mb-10">
             <button type="submit" className="relative font-bold flex items-center">
-              Send message <FaArrowRight className="ml-3" />
+              Send message <IoSendSharp className="ml-3" />
             </button>
           </div>
         </div>
