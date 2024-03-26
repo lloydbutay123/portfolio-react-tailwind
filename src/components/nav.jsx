@@ -16,29 +16,45 @@ const nav = () => {
   const content = (
     <>
       <div className="md:hidden -z-50 block absolute top-16 w-full min-h-[100vh] left-0 right-0 bg-white">
-        <ul className="text-center text-xl py-5 px-10">
-          <a onClick={() => navigate("/")}>
-            <li className="text-5xl my-4 py-4 font-bold" onClick={handleClick}>
-              home
-            </li>
-          </a>
-          <a onClick={() => navigate("/about")}>
-            <li className="text-5xl my-4 py-4 font-bold" onClick={handleClick}>
-              about
-            </li>
-          </a>
-          <a onClick={() => navigate("/projects")}>
-            <li className="text-5xl my-4 py-4 font-bold" onClick={handleClick}>
-              projects
-            </li>
-          </a>
-          <a onClick={() => navigate("/contact")}>
-            <li className="text-5xl my-4 py-4 font-bold" onClick={handleClick}>
-              contact
-            </li>
-          </a>
-        </ul>
-        <Footer className="bg-none" />
+        <div className="flex flex-col min-h-[100vh] place-content-between">
+          <div className="flex justify-center">
+            <ul className="text-center text-xl py-5 px-10">
+              <a onClick={() => navigate("/")}>
+                <li
+                  className="text-5xl my-4 py-4 font-bold"
+                  onClick={handleClick}
+                >
+                  home
+                </li>
+              </a>
+              <a onClick={() => navigate("/about")}>
+                <li
+                  className="text-5xl my-4 py-4 font-bold"
+                  onClick={handleClick}
+                >
+                  about
+                </li>
+              </a>
+              <a onClick={() => navigate("/projects")}>
+                <li
+                  className="text-5xl my-4 py-4 font-bold"
+                  onClick={handleClick}
+                >
+                  projects
+                </li>
+              </a>
+              <a onClick={() => navigate("/contact")}>
+                <li
+                  className="text-5xl my-4 py-4 font-bold"
+                  onClick={handleClick}
+                >
+                  contact
+                </li>
+              </a>
+            </ul>
+          </div>
+          <Footer />
+        </div>
       </div>
     </>
   );

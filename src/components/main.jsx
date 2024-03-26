@@ -13,7 +13,6 @@ const main = () => {
       <ProjectsPreview />
       <Quotes />
       <ContactPreview />
-      <Footer />
     </div>
   );
 };

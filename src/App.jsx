@@ -5,6 +5,7 @@ import Nav from "./components/nav";
 import Contact from "./components/contact";
 import About from "./components/about";
 import Projects from "./components/projects";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/success" element={<ThankyouMessage />} />
       </Routes>
+      <Footer />
+
     </>
   );
 }
