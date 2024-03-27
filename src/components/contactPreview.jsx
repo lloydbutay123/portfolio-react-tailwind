@@ -25,7 +25,7 @@ const contactPreview = () => {
                 navigate("/contact");
               }}
               type="submit"
-              className="relative z-50 left-5 font-bold flex items-center"
+              className="relative z-50 left-5 font-bold flex items-center" aria-label="to contact button"
             >
               SAY HELLO <FaArrowRightLong className="ml-3" />
             </button>

@@ -93,12 +93,12 @@ const nav = () => {
         </div>
         <div>{click && content}</div>
         <div className="flex gap-4">
-        <button className="flex items-center font-bold">
+        <button className="flex items-center font-bold" aria-label="light theme">
           <CiLight size={30} />
           <span className="hidden md:block">Light</span>
         </button>
         <button
-          className="block md:hidden text-3xl transition-transform duration-150ms"
+          className="block md:hidden text-3xl transition-transform duration-150ms" aria-label="menubar button"
           onClick={handleClick}
         >
           {click ? <FaTimes /> : <img src={MenuBar} className="w-10" alt="svg navbar" />}

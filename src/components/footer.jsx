@@ -13,7 +13,7 @@ const footer = () => {
               <a
                 href={social.link}
                 target="_blank"
-                className="mx-4 md:mx-7"
+                className="mx-4 md:mx-7" aria-label={social.name}
                 key={social.id}
               >
                 {social.icon}

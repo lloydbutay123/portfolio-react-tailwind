@@ -54,7 +54,7 @@ const hero = () => {
         </div>
       </div>
       <div className="mb-10">
-        <button className="relative flex left-5 items-center py-3 font-bold" onClick={() => navigate("/about")}>
+        <button className="relative flex left-5 items-center py-3 font-bold" aria-label="to about page button" onClick={() => navigate("/about")}>
           See more about me{" "}
           <span className="ml-3">
             <FaArrowRightLong />

@@ -104,7 +104,7 @@ const contact = () => {
             </div>
           </div>
           <div className="flex justify-end mb-10">
-            <button type="submit" className="relative font-bold flex items-center">
+            <button type="submit" className="relative font-bold flex items-center" aria-label="send button">
               Send message <IoSendSharp className="ml-3" />
             </button>
           </div>

@@ -17,7 +17,7 @@ function ThankyouMessage() {
           </span>
         </p>
         <div className="flex justify-center">
-        <button className="relative flex items-center font-bold text-black p-4" onClick={() => navigate("/")}>
+        <button className="relative flex items-center font-bold text-black p-4" onClick={() => navigate("/")} aria-label="back to hme button">
           <IoMdArrowBack className="mr-3"/> Back to home
         </button>
 
