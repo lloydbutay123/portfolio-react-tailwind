@@ -23,8 +23,8 @@ const footer = () => {
         </div>
         <div className="flex items-center justify-center md:border-l-2 border-black px-4">
           <FaRegCopyright size={12} />
-          <p className="font-bold text-xs">
-            JOHN LLOYD BUTAY <span>{date}</span>
+          <p className="font-bold text-xs ml-2">
+            JOHN LLOYD BUTAY dsadas <span>{date}</span>
           </p>
         </div>
       </div>
