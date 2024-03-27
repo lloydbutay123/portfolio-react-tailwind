@@ -31,7 +31,7 @@ const about = () => {
       <div className="overflow-hidden md:flex min-h-[100vh] px-[40px] my-20">
         <div className="md:w-1/3">
           <p className="text-xs uppercase">
-            /01 <span className="mx-10 text-gray-500"> Wen Stor</span>
+            /01 <span className="mx-10 text-gray-500">Story</span>
           </p>
         </div>
         <div className="md:w-2/3 h-9">
