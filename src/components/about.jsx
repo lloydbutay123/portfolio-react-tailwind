@@ -10,7 +10,7 @@ const about = () => {
         <div className="w-full md:w-3/5 my-10">
           {aboutList.map((about) => {
             return (
-              <p className="text-[30px] font-light md:text-5xl leading-snug">
+              <p className="text-[30px] font-light md:text-5xl leading-loose">
                 {about.title}
               </p>
             );

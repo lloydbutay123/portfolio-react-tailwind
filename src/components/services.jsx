@@ -18,7 +18,7 @@ const services = () => {
                 className="w-full border-b-2 md:border-l-2 md:border-b-0 border-gray-200 md:pl-10 mb-5 py-5"
                 key={service.id}
               >
-                <h3 className="text-[10vw] md:text-[60px] text-gray-200">
+                <h3 className="text-[10vw] md:text-[60px] text-gray-500">
                   0{service.id}
                 </h3>
                 <h2 className="md:text-3xl mb-5">{service.title}</h2>
@@ -31,7 +31,7 @@ const services = () => {
       <div className="lg:min-h-[100vh] bg-gray-100 px-[20px] py-20">
         <div className="mb-10">
           <h1 className="text-[14vw] lg:text-[90px] font-bold break-normal">
-            Technologies <span className="block text-gray-400">& Tools</span>
+            Technologies <span className="block text-gray-500">& Tools</span>
           </h1>
         </div>
         <div className="flex justify-center">

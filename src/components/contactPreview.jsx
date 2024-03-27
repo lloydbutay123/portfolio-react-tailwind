@@ -32,7 +32,7 @@ const contactPreview = () => {
           </div>
           <img
             src={vector1}
-            className="absolute w-[150px] -left-20 md:left-10 top-[12vh]"
+            className="absolute w-[150px] -left-20 md:left-10 top-[12vh]" alt="vector background"
           />
         </div>
         <div className="hidden md:flex justify-center text-right items-center md:w-2/5 md:h-[100vh] text-white">

@@ -35,7 +35,7 @@ const quotes = () => {
           <p className="text-end text-gray-500">{quote.author}</p>
         </div>
       </div>
-      <img src={bgimg} className="absolute w-[60vw] md:w-[30%] opacity-30"/>
+      <img src={bgimg} className="absolute w-[60vw] md:w-[30%] opacity-30" alt="background image"/>
     </section>
   );
 };

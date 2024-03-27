@@ -20,7 +20,7 @@ const projects = () => {
           >
             <div className="w-full mb-10">
               <h1 className="text-[10vw] md:text-[60px]">
-                <span className="mr-5 text-gray-200 text-3xl">
+                <span className="mr-5 text-gray-500 text-3xl">
                   0{project.id}
                 </span>
                 {project.title}

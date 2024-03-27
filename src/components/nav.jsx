@@ -20,7 +20,7 @@ const nav = () => {
         <div className="flex flex-col min-h-[100vh] place-content-evenly">
           <div className="flex justify-center">
             <ul className="text-center text-xl py-5 px-10 font-bold text-gray-500">
-              <a onClick={() => navigate("/")}>
+              <a aria-label="home" onClick={() => navigate("/")}>
                 <li
                   className="text-5xl my-4 py-4 font-bold"
                   onClick={handleClick}
@@ -28,7 +28,7 @@ const nav = () => {
                   home
                 </li>
               </a>
-              <a onClick={() => navigate("/about")}>
+              <a aria-label="about" onClick={() => navigate("/about")}>
                 <li
                   className="text-5xl my-4 py-4 font-bold"
                   onClick={handleClick}
@@ -36,7 +36,7 @@ const nav = () => {
                   about
                 </li>
               </a>
-              <a onClick={() => navigate("/projects")}>
+              <a aria-label="projects" onClick={() => navigate("/projects")}>
                 <li
                   className="text-5xl my-4 py-4 font-bold"
                   onClick={handleClick}
@@ -44,7 +44,7 @@ const nav = () => {
                   projects
                 </li>
               </a>
-              <a onClick={() => navigate("/contact")}>
+              <a aria-label="contact" onClick={() => navigate("/contact")}>
                 <li
                   className="text-5xl my-4 py-4 font-bold"
                   onClick={handleClick}
@@ -69,23 +69,23 @@ const nav = () => {
     <nav className="sticky z-50 px-[20px]">
       <div className="h-10vh flex justify-between  lg:py-5 py-4 flex-1">
         <div className="flex items-center">
-          <a onClick={() => navigate("/")}>
-            <img src={logo} className="w-auto h-12 md:h-20 cursor-pointer" />
+          <a aria-label="logo" onClick={() => navigate("/")}>
+            <img src={logo} className="w-auto h-12 md:h-20 cursor-pointer" alt="logo" />
           </a>
         </div>
         <div className="lg:flex md:flex lg: flex-1 items-center justify-between font-normal hidden">
           <div className="m-auto ">
             <ul className="flex gap-10 mr-16 textt=[18px] font-bold text-gray-500">
-              <a onClick={() => navigate("/")}>
+              <a aria-label="home" onClick={() => navigate("/")}>
                 <li className="cursor-pointer">Home</li>
               </a>
-              <a onClick={() => navigate("/about")}>
+              <a aria-label="about" onClick={() => navigate("/about")}>
                 <li className="cursor-pointer">About</li>
               </a>
-              <a onClick={() => navigate("/projects")}>
+              <a aria-label="projects" onClick={() => navigate("/projects")}>
                 <li className="cursor-pointer">Projects</li>
               </a>
-              <a onClick={() => navigate("/contact")}>
+              <a aria-label="contact" onClick={() => navigate("/contact")}>
                 <li className="cursor-pointer">Drop me a line</li>
               </a>
             </ul>
@@ -101,7 +101,7 @@ const nav = () => {
           className="block md:hidden text-3xl transition-transform duration-150ms"
           onClick={handleClick}
         >
-          {click ? <FaTimes /> : <img src={MenuBar} className="w-10" />}
+          {click ? <FaTimes /> : <img src={MenuBar} className="w-10" alt="svg navbar" />}
         </button>
 
         </div>
