@@ -15,7 +15,7 @@ const services = () => {
           {ServicesList.map((service) => {
             return (
               <div
-                className="w-full border-b-2 md:border-l-2 md:border-b-0 border-gray-200 md:pl-10 mb-5 py-5"
+                className="w-full border-b-2 md:border-l-2 md:border-b-0 border-gray-200 md:p-10 mb-5 py-5"
                 key={service.id}
               >
                 <h3 className="text-[10vw] md:text-[60px] text-gray-500">

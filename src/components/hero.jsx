@@ -7,15 +7,15 @@ const hero = () => {
   const navigate = useNavigate();
   return (
     <section className="hero px-[20px]" id="hero">
-      <div className="grid gap-4 lg:grid-cols-4 mb-10 md:mb-20">
-        <div className="w-full col-span-3 text-left mb-3">
+      <div className="block md:flex py-[40px]">
+        <div className="md:5/6 text-left mb-3">
           <h1 className="text-left text-[19vw] lg:text-[200px] leading-none">
             Web <span className="block leading-none">Developer</span>
           </h1>
         </div>
 
-        <div className="w-full col-span-3 md:col-span-1 flex items-end">
-          <p className="text-left text-gray-500 pb-[30px]">
+        <div className="md:w-auto flex items-end justify-center">
+          <p className="text-left text-gray-500 pb-[55px]">
             Hi I'm John Lloyd Butay. A passionate Front-end Developer based in
             the Philippines.
           </p>

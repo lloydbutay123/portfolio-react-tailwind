@@ -6,13 +6,13 @@ const about = () => {
   document.title = "About | John Lloyd Butay";
   return (
     <section className="about min-h-[100vh] w-full" id="about">
-      <div className="overflow-hidden md:flex px-[40px] md:min-h-[100vh] justify-center items-center">
+      <div className="overflow-hidden md:flex px-[40px] justify-center items-center">
         <div className="w-full md:w-3/5 my-10">
           {aboutList.map((about) => {
             return (
-              <p className="text-[30px] font-light md:text-5xl leading-loose">
+              <h1 className="text-[30px] font-light md:text-5xl">
                 {about.title}
-              </p>
+              </h1>
             );
           })}
         </div>
