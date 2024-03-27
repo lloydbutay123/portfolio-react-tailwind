@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { IoSendSharp } from "react-icons/io5";
 
 const contact = () => {
+  document.title = "Contact | John Lloyd Butay";
   const form = useRef();
   const navigate = useNavigate();
-  const [name, setName] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,8 +25,6 @@ const contact = () => {
         }
       );
   };
-
-
 
   return (
     <section className="contact px-[20px] py-20" id="contact">

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaTimes, FaRegCopyright } from "react-icons/fa";
 import { CiMenuFries, CiLight } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
+import MenuBar from "../assets/icons/menubar.svg";
 
 const nav = () => {
   const [click, setClick] = useState(false);
@@ -91,6 +92,7 @@ const nav = () => {
           </div>
         </div>
         <div>{click && content}</div>
+        <div className="flex gap-4">
         <button className="flex items-center font-bold">
           <CiLight size={30} />
           <span className="hidden md:block">Light</span>
@@ -99,8 +101,10 @@ const nav = () => {
           className="block md:hidden text-3xl transition-transform duration-150ms"
           onClick={handleClick}
         >
-          {click ? <FaTimes /> : <CiMenuFries />}
+          {click ? <FaTimes /> : <img src={MenuBar} className="w-10" />}
         </button>
+
+        </div>
       </div>
     </nav>
   );

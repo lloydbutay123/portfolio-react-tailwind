@@ -1,5 +1,5 @@
 import React from "react";
-import ServicesList from "../Helper/services";
+import ServicesList from "../Helper/services.jsx";
 import Skills from "../Helper/skills.jsx";
 
 const services = () => {
