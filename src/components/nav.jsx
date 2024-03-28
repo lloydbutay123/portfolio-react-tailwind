@@ -70,7 +70,7 @@ const nav = () => {
 
   return (
     <header>
-      <nav className="h-10vh flex justify-between py-3 md:px-[40px]">
+      <nav className="flex justify-between px-5 py-5">
         <div className="flex items-center">
           <a aria-label="logo" onClick={() => navigate("/")}>
             <img
@@ -111,13 +111,13 @@ const nav = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed md:hidden z-[99999] w-full left-0 top-0 origin-top bg-white h-10vh py-3 md:px-[40px]"
+            className="fixed md:hidden z-[99999] w-full left-0 top-0 origin-top bg-white py-3 md:px-[40px]"
             variants={menuVar}
             initial="initial"
             animate="animate"
             exit="exit"
           >
-            <div className="flex justify-between">
+            <div className="flex justify-between px-5 py-5">
               <div className="flex items-center">
                 <a aria-label="logo" onClick={() => navigate("/")}>
                   <img
@@ -141,7 +141,7 @@ const nav = () => {
               variants={containerVar}
               initial="initial"
               animate="open"
-              className="flex flex-col min-h-[100vh] place-content-evenly"
+              className="flex flex-col min-h-[90vh] place-content-evenly"
             >
               <div className="flex justify-center">
                 <div className="text-center text-6xl font-bold text-gray-500">
