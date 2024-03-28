@@ -70,7 +70,7 @@ const nav = () => {
 
   return (
     <header>
-      <nav className="flex justify-between px-5 py-5">
+      <nav className="flex justify-between px-[20px] py-5">
         <div className="flex items-center">
           <a aria-label="logo" onClick={() => navigate("/")}>
             <img
@@ -117,31 +117,34 @@ const nav = () => {
             animate="animate"
             exit="exit"
           >
-            <div className="flex justify-between px-5 py-5">
-              <div className="flex items-center">
-                <a aria-label="logo" onClick={() => navigate("/")}>
-                  <img
-                    src={logo}
-                    className="w-auto h-12 md:h-20 cursor-pointer"
-                    alt="logo"
-                  />
-                </a>
-              </div>
-              <div>
-                <button
-                  className="block md:hidden text-3xl"
-                  aria-label="menubar button"
-                  onClick={toggleMenu}
-                >
-                  <FaTimes />
-                </button>
+            <div className="fixed w-full">
+              <div className="flex justify-between px-[20px] py-5">
+                <div className="flex items-center">
+                  <a aria-label="logo" onClick={() => navigate("/")}>
+                    <img
+                      src={logo}
+                      className="w-auto h-12 md:h-20 cursor-pointer"
+                      alt="logo"
+                    />
+                  </a>
+                </div>
+                <div>
+                  <button
+                    className="block md:hidden text-3xl"
+                    aria-label="menubar button"
+                    onClick={toggleMenu}
+                  >
+                    <FaTimes />
+                  </button>
+                </div>
               </div>
             </div>
+
             <motion.div
               variants={containerVar}
               initial="initial"
               animate="open"
-              className="flex flex-col h-[100vh] w-full place-content-evenly"
+              className="flex flex-col min-h-[100vh] w-full place-content-evenly"
             >
               <div className="flex justify-center">
                 <div className="text-center text-6xl font-bold text-gray-500">
