@@ -1,113 +1,182 @@
 import logo from "../assets/logo/main-logo.png";
 import { useState } from "react";
 import { FaTimes, FaRegCopyright } from "react-icons/fa";
-import { CiMenuFries, CiLight } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
 import MenuBar from "../assets/icons/menubar.svg";
+import { AnimatePresence, motion } from "framer-motion";
+
+const navLinks = [
+  { title: "home", label: "home", href: "/" },
+  { title: "about", label: "about", href: "/about" },
+  { title: "projects", label: "projects", href: "/projects" },
+  { title: "contact", label: "contact", href: "/contact" },
+];
 
 const nav = () => {
-  const [click, setClick] = useState(false);
+  const [open, setOpen] = useState(false);
+  const toggleMenu = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
   const navigate = useNavigate();
   const date = new Date().getFullYear();
 
-  const handleClick = () => {
-    setClick(!click);
+  const menuVar = {
+    initial: {
+      scaleY: 0,
+    },
+    animate: {
+      scaleY: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    },
+    exit: {
+      scaleY: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
   };
 
-  const content = (
-    <>
-      <div className="md:hidden -z-50 block absolute w-full min-h-[100vh] left-0 right-0 bg-white">
-        <div className="flex flex-col min-h-[100vh] place-content-evenly">
-          <div className="flex justify-center">
-            <ul className="text-center text-xl py-5 px-10 font-bold text-gray-500">
-              <a aria-label="home" onClick={() => navigate("/")}>
-                <li
-                  className="text-5xl my-4 py-4 font-bold"
-                  onClick={handleClick}
-                >
-                  home
-                </li>
-              </a>
-              <a aria-label="about" onClick={() => navigate("/about")}>
-                <li
-                  className="text-5xl my-4 py-4 font-bold"
-                  onClick={handleClick}
-                >
-                  about
-                </li>
-              </a>
-              <a aria-label="projects" onClick={() => navigate("/projects")}>
-                <li
-                  className="text-5xl my-4 py-4 font-bold"
-                  onClick={handleClick}
-                >
-                  projects
-                </li>
-              </a>
-              <a aria-label="contact" onClick={() => navigate("/contact")}>
-                <li
-                  className="text-5xl my-4 py-4 font-bold"
-                  onClick={handleClick}
-                >
-                  contact
-                </li>
-              </a>
-            </ul>
-          </div>
-          <div className="flex items-center justify-center text-black">
-            <FaRegCopyright size={12} />
-            <p className="ml-2 font-bold text-xs">
-              JOHN LLOYD BUTAY <span>{date}</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+  const containerVar = {
+    initial: {
+      transition: {
+        staggerChildren: 0.09,
+      },
+    },
+    open: {
+      transition: {
+        staggerChildren: 0.09,
+      },
+    },
+  };
+
+  const mobileLinkVars = {
+    initial: {
+      y: "30vh",
+      transition: {
+        duration: 0.5,
+      },
+    },
+    open: {
+      y: 0,
+      transition: {
+        duration: 0.7,
+      },
+    },
+  };
 
   return (
-    <nav className="sticky z-50 px-[20px]">
-      <div className="h-10vh flex justify-between  lg:py-5 py-4 flex-1">
+    <header>
+      <nav className="h-10vh flex justify-between py-3 md:px-[40px]">
         <div className="flex items-center">
           <a aria-label="logo" onClick={() => navigate("/")}>
-            <img src={logo} className="w-auto h-12 md:h-20 cursor-pointer" alt="logo" />
+            <img
+              src={logo}
+              className="w-auto h-12 md:h-20 cursor-pointer"
+              alt="logo"
+            />
           </a>
         </div>
-        <div className="lg:flex md:flex lg: flex-1 items-center justify-between font-normal hidden">
+        <div className="hidden md:flex lg:flex-1">
           <div className="m-auto ">
             <ul className="flex gap-10 mr-16 textt=[18px] font-bold text-gray-500">
-              <a aria-label="home" onClick={() => navigate("/")}>
-                <li className="cursor-pointer">Home</li>
-              </a>
-              <a aria-label="about" onClick={() => navigate("/about")}>
-                <li className="cursor-pointer">About</li>
-              </a>
-              <a aria-label="projects" onClick={() => navigate("/projects")}>
-                <li className="cursor-pointer">Projects</li>
-              </a>
-              <a aria-label="contact" onClick={() => navigate("/contact")}>
-                <li className="cursor-pointer">Drop me a line</li>
-              </a>
+              {navLinks.map((navlink) => {
+                return (
+                  <li className="cursor-pointer" onClick={toggleMenu}>
+                    <a
+                      aria-label={navlink.label}
+                      onClick={() => navigate(navlink.href)}
+                    >
+                      {navlink.title}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
-        <div>{click && content}</div>
         <div className="flex gap-4">
-        <button className="flex items-center font-bold" aria-label="light theme">
-          <CiLight size={30} />
-          <span className="hidden md:block">Light</span>
-        </button>
-        <button
-          className="block md:hidden text-3xl transition-transform duration-150ms" aria-label="menubar button"
-          onClick={handleClick}
-        >
-          {click ? <FaTimes /> : <img src={MenuBar} className="w-10" alt="svg navbar" />}
-        </button>
-
+          <button
+            className="block md:hidden text-3xl"
+            aria-label="menubar button"
+            onClick={toggleMenu}
+          >
+            <img src={MenuBar} className="w-10" alt="svg navbar" />
+          </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="fixed md:hidden z-[99999] w-full left-0 top-0 origin-top bg-white h-10vh py-3 md:px-[40px]"
+            variants={menuVar}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <div className="flex justify-between">
+              <div className="flex items-center">
+                <a aria-label="logo" onClick={() => navigate("/")}>
+                  <img
+                    src={logo}
+                    className="w-auto h-12 md:h-20 cursor-pointer"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div>
+                <button
+                  className="block md:hidden text-3xl"
+                  aria-label="menubar button"
+                  onClick={toggleMenu}
+                >
+                  <FaTimes />
+                </button>
+              </div>
+            </div>
+            <motion.div
+              variants={containerVar}
+              initial="initial"
+              animate="open"
+              className="flex flex-col min-h-[100vh] place-content-evenly"
+            >
+              <div className="flex justify-center">
+                <div className="text-center text-6xl font-bold text-gray-500">
+                  {navLinks.map((navlink, index) => {
+                    return (
+                      <div className="overflow-hidden">
+                        <motion.div
+                          variants={mobileLinkVars}
+                          className="py-5 cursor-pointer"
+                          onClick={toggleMenu}
+                        >
+                          <a
+                            aria-label={navlink.label}
+                            onClick={() => navigate(navlink.href)}
+                          >
+                            {navlink.title}
+                          </a>
+                        </motion.div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="flex items-center justify-center text-black">
+                <FaRegCopyright size={12} />
+                <p className="ml-2 font-bold text-xs">
+                  JOHN LLOYD BUTAY <span>{date}</span>
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 };
-
 export default nav;
+
