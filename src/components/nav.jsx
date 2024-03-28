@@ -141,7 +141,7 @@ const nav = () => {
               variants={containerVar}
               initial="initial"
               animate="open"
-              className="flex flex-col min-h-[90vh] place-content-evenly"
+              className="flex flex-col h-[100vh] w-full place-content-evenly"
             >
               <div className="flex justify-center">
                 <div className="text-center text-6xl font-bold text-gray-500">
@@ -165,9 +165,9 @@ const nav = () => {
                   })}
                 </div>
               </div>
-              <div className="flex items-center justify-center text-black">
-                <FaRegCopyright size={12} />
-                <p className="ml-2 font-bold text-xs">
+              <div className="flex items-center justify-center">
+                <FaRegCopyright size={16} />
+                <p className="font-bold text-base ml-2">
                   JOHN LLOYD BUTAY <span>{date}</span>
                 </p>
               </div>
@@ -179,4 +179,3 @@ const nav = () => {
   );
 };
 export default nav;
-
