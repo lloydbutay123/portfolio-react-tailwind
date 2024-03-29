@@ -6,10 +6,10 @@ import MenuBar from "../assets/icons/menubar.svg";
 import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
-  { title: "home", label: "home", href: "/" },
-  { title: "about", label: "about", href: "/about" },
-  { title: "projects", label: "projects", href: "/projects" },
-  { title: "contact", label: "contact", href: "/contact" },
+  { title: "Home", label: "home", href: "/" },
+  { title: "About", label: "about", href: "/about" },
+  { title: "Projects", label: "projects", href: "/projects" },
+  { title: "Contact", label: "contact", href: "/contact" },
 ];
 
 const nav = () => {
@@ -82,20 +82,24 @@ const nav = () => {
         </div>
         <div className="hidden md:flex lg:flex-1">
           <div className="m-auto ">
-            <ul className="flex gap-10 mr-16 textt=[18px] font-bold text-gray-500">
-              {navLinks.map((navlink) => {
+            <div className="flex gap-10 mr-16 textt=[18px] font-bold text-gray-500">
+              {navLinks.map((navlink, index) => {
                 return (
-                  <li className="cursor-pointer" onClick={toggleMenu}>
+                  <div
+                    className="cursor-pointer"
+                    onClick={toggleMenu}
+                    key={index}
+                  >
                     <a
                       aria-label={navlink.label}
                       onClick={() => navigate(navlink.href)}
                     >
                       {navlink.title}
                     </a>
-                  </li>
+                  </div>
                 );
               })}
-            </ul>
+            </div>
           </div>
         </div>
         <div className="flex gap-4">
@@ -150,7 +154,7 @@ const nav = () => {
                 <div className="text-center text-6xl font-bold text-gray-500">
                   {navLinks.map((navlink, index) => {
                     return (
-                      <div className="overflow-hidden">
+                      <div className="overflow-hidden" key={index}>
                         <motion.div
                           variants={mobileLinkVars}
                           className="py-5 cursor-pointer"

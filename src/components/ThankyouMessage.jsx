@@ -10,7 +10,7 @@ function ThankyouMessage() {
       id="thankyouMessage"
     >
       <div className="text-center">
-        <h1 className="text-[15vw] lg:text-[60px]">Thanks for reaching out!</h1>
+        <h1 className="text-[15vw] lg:text-[90px] font-bold">Thanks for reaching out!</h1>
         <p className="mb-10">
           <span>
             Your message just showed up in my inbox. Talk to you soon!

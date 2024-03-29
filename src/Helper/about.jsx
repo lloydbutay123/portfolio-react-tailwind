@@ -12,9 +12,9 @@ const aboutList = [
       "I'am a passionate Web Developer, specialized in Web Design, UX / UI, Webflow, and Front End Development.",
     contacts: [
       {
-        id: 1,
         email: "johnlloydbutay123@gmail.com",
-        phone: "09567223090",
+        phone1: "09567223090",
+        phone2: "09070343386",
         address: "#14 Bungon, City of Batac, Ilocos Norte Philippines",
       },
     ],

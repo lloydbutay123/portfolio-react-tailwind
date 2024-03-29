@@ -2,6 +2,10 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import { IoSendSharp } from "react-icons/io5";
+import onlinelogo from "../assets/logo/img-logo.png";
+import { BsArrowDownRight } from "react-icons/bs";
+import forms from "../Helper/form";
+import aboutList from "../Helper/about";
 
 const contact = () => {
   document.title = "Contact | John Lloyd Butay";
@@ -27,86 +31,89 @@ const contact = () => {
   };
 
   return (
-    <section className="contact px-[20px] py-20" id="contact">
-      <form
-        className="w-full min-h-[100vh] flex items-center flex-col justify-center"
-        ref={form}
-        onSubmit={sendEmail}
-        method="POST"
-        id="form"
-      >
-        <div className="md:w-[60%]">
-          <div>
-            <h1 className="text-[15vw] lg:text-[60px] mb-5 font-bold">
-              Better Together.
-            </h1>
-            <p className="mb-5">
-              Do you fancy saying hi to me or you want to get started with your
-              project and you need my help? Feel free to contact me.
-            </p>
+    <section className="contact px-[20px] min-h-[100vh]" id="contact">
+      <div className="md:flex mb-20">
+        <div className="md:w-2/3 md:px-20 py-[20px]">
+          <h1 className="text-[12vw] md:text-[80px] leading-none">
+            Let's start a project together
+          </h1>
+        </div>
+        <div className="w-1/3 flex items-end py-[20px]">
+          <div className="block">
+            <img src={onlinelogo} className="w-[100px] mb-5" />
+            <BsArrowDownRight size={25} />
           </div>
-          <div className="flex flex-wrap -mx-3">
-            <div className="w-full md:w-1/2 px-3">
-              <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
-                id="fName"
-                name="fName"
-                type="text"
-                placeholder="First Name"
-                required
-              />
-            </div>
-            <div className="w-full md:w-1/2 px-3">
-              <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
-                id="lName"
-                name="lName"
-                type="text"
-                placeholder="Last Name"
-                required
-              />
-            </div>
-          </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full px-3">
-              <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Email"
-                required
-              />
-              <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
-                id="phone"
-                name="phone"
-                type="text"
-                placeholder="Phone"
-                required
-              />
-              <input
-                className="appearance-none block w-full bg-transparent text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
-                id="subject"
-                name="subject"
-                type="text"
-                placeholder="Subject"
-                required
-              />
-              <textarea
-                className="appearance-none block w-full bg-transparent h-44 text-gray-700 border-b-2 border-gray-200 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-200"
-                id="message"
-                name="message"
-                type="text"
-                placeholder="Message"
-                required
-              />
+        </div>
+      </div>
+
+      <form ref={form} onSubmit={sendEmail} method="POST" id="form">
+        <div className="block md:flex">
+          <div className="md:w-2/3 md:px-20">
+            {forms.map((textInput) => {
+              return (
+                <div
+                  className="flex gap-20 border-t-2 border-gray-300 py-[20px]"
+                  key={textInput.key}
+                >
+                  <div>
+                    <p className="text-xs font-bold text-gray-500">0{textInput.key}</p>
+                  </div>
+                  <div className="block w-full">
+                    <label className="text-xl font-bold" for={textInput.name}>
+                      {textInput.label}
+                    </label>
+                    <input
+                      className="appearance-none block w-full bg-transparent text-gray-700 py-3 mb-3 leading-tight focus:outline-none "
+                      id={textInput.id}
+                      name={textInput.name}
+                      type={textInput.type}
+                      placeholder={textInput.placeholder}
+                      required
+                    />
+                  </div>
+                </div>
+              );
+            })}
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="relative font-bold flex items-center py-20"
+                aria-label="send button"
+              >
+                Send message <IoSendSharp className="ml-3" />
+              </button>
             </div>
           </div>
-          <div className="flex justify-end mb-10">
-            <button type="submit" className="relative font-bold flex items-center" aria-label="send button">
-              Send message <IoSendSharp className="ml-3" />
-            </button>
+
+          <div className="w-1/3">
+            <div className="mb-5">
+              <h6 className="text-xs mb-3 text-bold text-gray-500">Contact Details</h6>
+              {aboutList.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.contacts.map((c, i) => (
+                      <div key={i}>
+                        <p className="text-sm">{c.phone1}</p>
+                        <p className="text-sm">{c.phone2}</p>
+                        <p className="text-sm">{c.email}</p>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mb-5">
+              <h6 className="text-xs mb-3 text-bold text-gray-500">Address Details</h6>
+              {aboutList.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.contacts.map((c, i) => (
+                      <p className="text-sm" key={i}>{c.address}</p>
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </form>

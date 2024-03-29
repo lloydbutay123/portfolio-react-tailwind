@@ -12,43 +12,33 @@ const contactPreview = () => {
       id="contactPreview"
     >
       <div className="block md:flex">
-        <div className="relative md:w-3/5 flex justify-center pt-24">
-          <div className="text-white z-50">
-            <h1 className="text-3xl md:text-6xl font-bold mb-10">
-              Let's work together.
+        <div className="relative h-[100vh] w-full text-center flex items-center justify-center pt-24">
+          <div className="text-white z-50 items-center flex justify-center flex-col">
+            <h1 className="text-3xl md:text-[80px] font-bold mb-10">
+              Better Together.
             </h1>
-            <p className="mb-20">
-              Let's work together to build something great.
+            <p className="mb-20 w-2/3">
+              Do you fancy saying hi to me or you want to get started with your
+              project and you need my help? Feel free to contact me.
             </p>
-            <button
-              onClick={() => {
-                navigate("/contact");
-              }}
-              type="submit"
-              className="relative z-50 left-5 font-bold flex items-center" aria-label="to contact button"
-            >
-              SAY HELLO <FaArrowRightLong className="ml-3" />
-            </button>
+            <div className="flex justify-center">
+              <button
+                onClick={() => {
+                  navigate("/contact");
+                }}
+                type="submit"
+                className="relative z-50 font-bold flex items-center"
+                aria-label="to contact button"
+              >
+                SAY HELLO <FaArrowRightLong className="ml-3" />
+              </button>
+            </div>
           </div>
           <img
             src={vector1}
-            className="absolute w-[150px] -left-20 md:left-10 top-[12vh]" alt="vector background"
+            className="absolute w-[150px] -left-20 md:left-10 top-[12vh]"
+            alt="vector background"
           />
-        </div>
-        <div className="hidden md:flex justify-center text-right items-center md:w-2/5 md:h-[100vh] text-white">
-          {aboutList.map((item, index) => {
-            return (
-              <div key={index}>
-                {item.contacts.map((c, i) => (
-                  <div className="col" key={i}>
-                    <p className="py-2">{c.email}</p>
-                    <p className="py-2">{c.phone}</p>
-                    <p className="py-2">{c.address}</p>
-                  </div>
-                ))}{" "}
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>

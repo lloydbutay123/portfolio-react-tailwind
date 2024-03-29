@@ -44,9 +44,9 @@ const hero = () => {
                 <a
                   href={social.link}
                   target="_blank"
-                  className="flex items-center mb-5 cursor-pointer gap-3"
+                  className="flex items-center mb-3 cursor-pointer"
                 >
-                  {social.icon} {social.name}
+                  {social.name}
                 </a>
               </div>
             );

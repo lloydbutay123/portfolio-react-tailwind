@@ -1,31 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SocialsLists from "../Helper/socials.jsx";
 import { FaRegCopyright } from "react-icons/fa";
 const footer = () => {
-  const date = new Date().getFullYear();
+  const date = new Date();
+  const year = date.getFullYear();
+  const [time, setTime] = useState(new Date());
+  useEffect(() => {
+    setInterval(() => {
+      setTime(new Date())
+      
+    }, 1000);
+  })
 
   return (
-    <footer className="block py-20 w-full bg-black text-white">
-      <div className="md:flex justify-center items-center text-center">
-        <div className="flex items-center justify-center mx-2 mb-5 md:mb-0">
-          {SocialsLists.map((social) => {
-            return (
-              <a
-                href={social.link}
-                target="_blank"
-                className="mx-4 md:mx-7" aria-label={social.name}
-                key={social.id}
-              >
-                {social.icon}
-              </a>
-            );
-          })}
+    <footer className="block py-10 w-full bg-black text-white px-[20px]">
+      <div className="md:flex gap-4 justify-between items-center">
+        <div className="block justify-between mb-5 md:mb-0">
+          <p className="uppercase text-xs text-gray-400 py-3">Socials</p>
+          <div className="flex flex-wrap border-b-2 md:border-none border-gray-400 gap-5 pb-10 md:pb-0">
+            {SocialsLists.map((social) => {
+              return (
+                <a className="text-sm"
+                  href={social.link}
+                  target="_blank"
+                  aria-label={social.name}
+                  key={social.id}
+                >
+                  {social.name}
+                </a>
+              );
+            })}
+          </div>
         </div>
-        <div className="flex items-center justify-center md:border-l-2 border-black px-4">
-          <FaRegCopyright size={12} />
-          <p className="font-bold text-xs ml-2">
-            JOHN LLOYD BUTAY <span>{date}</span>
-          </p>
+
+        <div className="flex gap-5 justify-between">
+          <div className="block items-center justify-center md:border-l-2 border-black">
+            <p className="flex items-center uppercase text-xs text-gray-400 py-3">Version</p>
+            <p className="flex items-center text-sm">
+              <span>{year}</span> <FaRegCopyright className="mx-1" size={12} />
+              Edition
+            </p>
+          </div>
+          <div className="block">
+            <p className="uppercase text-xs text-gray-400 py-3">Local Time</p>
+            <p className="text-sm">
+              {time.toLocaleTimeString()}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

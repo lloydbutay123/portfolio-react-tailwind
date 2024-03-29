@@ -3,31 +3,31 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-
 const SocialsLists = [
     {
         id : 1,
-        name : "facebook",
+        name : "Facebook",
         link : "https://web.facebook.com/johnlloyd.butay.fullaccount/?_rdc=1&_rdr",
         icon : <FaFacebook />
     },
     {
         id : 2,
-        name : "github",
+        name : "Github",
         link : "github.com/lloydbutay123",
         icon : <FaGithub />
     },
     {
         id : 3,
-        name : "instagram",
+        name : "Instagram",
         link : "https://www.instagram.com/engr.buts/",
         icon : <FaInstagram />
     },
     {
         id : 4,
-        name : "linkedin",
+        name : "Linkedin",
         link : "",
         icon : <FaLinkedin />
     },
     {
         id : 5,
-        name : "twitter",
+        name : "Twitter",
         link : "",
         icon : <FaTwitter />
     },

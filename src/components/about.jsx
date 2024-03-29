@@ -6,20 +6,21 @@ const about = () => {
   document.title = "About | John Lloyd Butay";
   return (
     <section className="about min-h-[100vh] w-full" id="about">
-      <div className="overflow-hidden md:flex px-[40px] justify-center items-center">
+      <div className="px-[20px] overflow-hidden md:flex justify-center items-center">
         <div className="w-full md:w-3/5 my-10">
-          {aboutList.map((about) => {
+          {aboutList.map((about, index) => {
             return (
-              <h1 className="text-[30px] font-light md:text-5xl">
+              <h1 className="text-[30px] font-light md:text-5xl" key={index}>
                 {about.title}
               </h1>
             );
           })}
         </div>
         <div className="w-full md:w-2/5 flex justify-center py-10">
-          {aboutList.map((about) => {
+          {aboutList.map((about, index) => {
             return (
               <img
+                key={index}
                 src={about.img}
                 className="w-auto md:w-[70%]"
                 alt="About image"
@@ -28,7 +29,7 @@ const about = () => {
           })}
         </div>
       </div>
-      <div className="overflow-hidden md:flex min-h-[100vh] px-[40px] my-20">
+      <div className="px-[20px] overflow-hidden md:flex min-h-[100vh] my-20">
         <div className="md:w-1/3">
           <p className="text-xs uppercase">
             /01 <span className="mx-10 text-gray-500">Story</span>
@@ -50,7 +51,7 @@ const about = () => {
           })}
         </div>
       </div>
-      <div className="overflow-hidden md:flex min-h-[100vh] px-[40px] my-20">
+      <div className="px-[20px] overflow-hidden md:flex min-h-[100vh] my-20">
         <div className="md:w-1/3">
           <p className="text-xs uppercase">
             /02 <span className="mx-10 text-gray-500">Education</span>
@@ -73,7 +74,7 @@ const about = () => {
           })}
         </div>
       </div>
-      <div className="overflow-hidden md:flex h-full px-[40px] py-[40px]">
+      <div className="px-[20px] overflow-hidden md:flex h-full py-[40px]">
         <div className="md:w-1/3 h-9 ">
           <p className="text-xs uppercase">
             /03 <span className="mx-10 text-gray-500">Work Experience</span>
@@ -96,7 +97,7 @@ const about = () => {
           })}
         </div>
       </div>
-      <div className="block overflow-auto md:flex min-h-[100vh] px-[40px] py-[40px]">
+      <div className="block overflow-auto md:flex min-h-[100vh] px-[20px] py-[40px]">
         <div className="md:w-1/3 h-9 ">
           <p className="text-xs uppercase">
             /04 <span className="mx-10 text-gray-500">Trainings</span>
