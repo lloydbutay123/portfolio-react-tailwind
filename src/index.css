@@ -10,6 +10,7 @@
 @layer base {
   * {
     @apply box-border;
+    @apply transition-colors duration-500;
   }
   body {
     font-family: 'visuelt-pro', sans-serif;

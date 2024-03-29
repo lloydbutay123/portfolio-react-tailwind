@@ -1,9 +1,10 @@
-import logo from "../assets/logo/main-logo.png";
+import logo from "../assets/logo/main-logo.svg";
 import { useState } from "react";
 import { FaTimes, FaRegCopyright } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import MenuBar from "../assets/icons/menubar.svg";
+import { CiMenuFries } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
+import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const navLinks = [
   { title: "Home", label: "home", href: "/" },
@@ -12,7 +13,7 @@ const navLinks = [
   { title: "Contact", label: "contact", href: "/contact" },
 ];
 
-const nav = () => {
+const nav = ({darkMode, setDarkMode}) => {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -20,6 +21,9 @@ const nav = () => {
   const navigate = useNavigate();
   const date = new Date().getFullYear();
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  }
   const menuVar = {
     initial: {
       scaleY: 0,
@@ -70,15 +74,13 @@ const nav = () => {
 
   return (
     <header>
-      <nav className="flex justify-between px-[20px] py-5">
+      <nav className="dark:bg-black flex justify-between px-[20px] py-5">
         <div className="flex items-center">
-          <a aria-label="logo" onClick={() => navigate("/")}>
-            <img
-              src={logo}
-              className="w-auto h-12 md:h-20 cursor-pointer"
-              alt="logo"
-            />
-          </a>
+          <img
+            src={logo}
+            className="w-[80px] cursor-pointer"
+            onClick={() => navigate("/")}
+          />
         </div>
         <div className="hidden md:flex lg:flex-1">
           <div className="m-auto ">
@@ -102,20 +104,27 @@ const nav = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
+          <button
+            className="block text-3xl"
+            aria-label="darkmode button"
+            onClick={toggleDarkMode}
+          >
+            {darkMode ? <MdLightMode className="dark:text-white font-bold" /> : <MdDarkMode className="dark:text-white font-bold" />}
+          </button>
           <button
             className="block md:hidden text-3xl"
             aria-label="menubar button"
             onClick={toggleMenu}
           >
-            <img src={MenuBar} className="w-10" alt="svg navbar" />
+            <CiMenuFries className="dark:text-white font-bold" />
           </button>
         </div>
       </nav>
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed md:hidden z-[99999] w-full left-0 top-0 origin-top bg-white py-3 md:px-[40px]"
+            className="fixed dark:bg-black md:hidden z-[99999] w-full left-0 top-0 origin-top bg-white py-3 md:px-[40px]"
             variants={menuVar}
             initial="initial"
             animate="animate"
@@ -138,7 +147,7 @@ const nav = () => {
                     aria-label="menubar button"
                     onClick={toggleMenu}
                   >
-                    <FaTimes />
+                    <FaTimes className="dark:text-white" />
                   </button>
                 </div>
               </div>
@@ -172,7 +181,7 @@ const nav = () => {
                   })}
                 </div>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="dark:text-white flex items-center justify-center">
                 <FaRegCopyright size={16} />
                 <p className="font-bold text-base ml-2">
                   JOHN LLOYD BUTAY <span>{date}</span>

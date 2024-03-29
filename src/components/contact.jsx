@@ -31,17 +31,17 @@ const contact = () => {
   };
 
   return (
-    <section className="contact px-[20px] min-h-[100vh]" id="contact">
+    <section className="dark:bg-black contact px-[20px] min-h-[100vh]" id="contact">
       <div className="md:flex mb-20">
         <div className="md:w-2/3 md:px-20 py-[20px]">
-          <h1 className="text-[12vw] md:text-[80px] leading-none">
+          <h1 className="dark:text-white text-[12vw] md:text-[80px] leading-none">
             Let's start a project together
           </h1>
         </div>
         <div className="w-1/3 flex items-end py-[20px]">
           <div className="block">
             <img src={onlinelogo} className="w-[100px] mb-5" />
-            <BsArrowDownRight size={25} />
+            <BsArrowDownRight size={25} className="dark:text-white" />
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ const contact = () => {
                     <p className="text-xs font-bold text-gray-500">0{textInput.key}</p>
                   </div>
                   <div className="block w-full">
-                    <label className="text-xl font-bold" for={textInput.name}>
+                    <label className="dark:text-white text-xl font-bold" for={textInput.name}>
                       {textInput.label}
                     </label>
                     <input
@@ -77,7 +77,7 @@ const contact = () => {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="relative font-bold flex items-center py-20"
+                className="relative z-50 dark:text-white font-bold flex items-center py-20"
                 aria-label="send button"
               >
                 Send message <IoSendSharp className="ml-3" />
@@ -92,7 +92,7 @@ const contact = () => {
                 return (
                   <div key={index}>
                     {item.contacts.map((c, i) => (
-                      <div key={i}>
+                      <div key={i} className="dark:text-white">
                         <p className="text-sm">{c.phone1}</p>
                         <p className="text-sm">{c.phone2}</p>
                         <p className="text-sm">{c.email}</p>
@@ -102,11 +102,11 @@ const contact = () => {
                 );
               })}
             </div>
-            <div className="mb-5">
+            <div>
               <h6 className="text-xs mb-3 text-bold text-gray-500">Address Details</h6>
               {aboutList.map((item, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} className="dark:text-white">
                     {item.contacts.map((c, i) => (
                       <p className="text-sm" key={i}>{c.address}</p>
                     ))}

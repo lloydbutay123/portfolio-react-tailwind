@@ -7,11 +7,14 @@ import About from "./components/about";
 import Projects from "./components/projects";
 import Footer from "./components/footer";
 import ScrollToTop from "./components/scrollToTop";
+import { useState } from "react";
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <>
-      <Nav />
+    <div className={`${darkMode && "dark"}`}>
+      <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
       <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<Main />} />
@@ -22,7 +25,7 @@ function App() {
       </Routes>
       <Footer />
 
-    </>
+    </div>
   );
 }
 

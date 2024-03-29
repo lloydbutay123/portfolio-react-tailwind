@@ -26,12 +26,12 @@ const quotes = () => {
 
   return (
     <section
-      className="relative quote min-h-[100vh] px-[20px] w-full flex justify-center items-center"
+      className="dark:bg-black relative quote min-h-[100vh] px-[20px] w-full flex justify-center items-center"
       id="quote"
     >
       <div className="md:w-2/3">
         <div className="text-center">
-          <h1 className="text-[5vw] md:text-[40px] font-bold mb-5">" {quote.text} "</h1>
+          <h1 className="dark:text-white text-[5vw] md:text-[40px] font-bold mb-5">" {quote.text} "</h1>
           <p className="text-end text-gray-500">{quote.author}</p>
         </div>
       </div>

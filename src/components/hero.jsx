@@ -6,10 +6,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const hero = () => {
   const navigate = useNavigate();
   return (
-    <section className="hero px-[20px]" id="hero">
+    <section className="hero dark:bg-black px-[20px]" id="hero">
       <div className="block md:flex py-[40px]">
         <div className="md:5/6 text-left mb-3">
-          <h1 className="text-left text-[19vw] lg:text-[200px] leading-none">
+          <h1 className="dark:text-white text-left text-[19vw] lg:text-[200px] leading-none">
             Web <span className="block leading-none">Developer</span>
           </h1>
         </div>
@@ -23,7 +23,7 @@ const hero = () => {
       </div>
       <div className="grid gap-4 md:grid-cols-6">
         <div className="col-span-5">
-          <p className="text-[20px] lg:text-[20px] md:w-2/3 mb-5">
+          <p className="dark:text-white text-[20px] lg:text-[20px] md:w-2/3 mb-5">
             Your friendly neighborhood frontend developer, web developer, and
             Software Engineer. I spend my days (and often nights) painting the
             Internet canvas with{" "}
@@ -44,7 +44,7 @@ const hero = () => {
                 <a
                   href={social.link}
                   target="_blank"
-                  className="flex items-center mb-3 cursor-pointer"
+                  className="flex dark:text-white items-center mb-3 cursor-pointer"
                 >
                   {social.name}
                 </a>
@@ -53,8 +53,8 @@ const hero = () => {
           })}
         </div>
       </div>
-      <div className="mb-10">
-        <button className="relative flex left-5 items-center py-3 font-bold" aria-label="to about page button" onClick={() => navigate("/about")}>
+      <div>
+        <button className="dark:text-white z-50 relative flex left-5 items-center py-3 font-bold" aria-label="to about page button" onClick={() => navigate("/about")}>
           See more about me{" "}
           <span className="ml-3">
             <FaArrowRightLong />
