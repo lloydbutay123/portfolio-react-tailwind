@@ -2,7 +2,6 @@ import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import vector1 from "../assets/background_images/Hipster.png";
-import aboutList from "../Helper/about";
 
 const contactPreview = () => {
   const navigate = useNavigate();

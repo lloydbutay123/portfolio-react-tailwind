@@ -80,6 +80,7 @@ const nav = ({darkMode, setDarkMode}) => {
             src={logo}
             className="w-[80px] cursor-pointer"
             onClick={() => navigate("/")}
+            alt="logo"
           />
         </div>
         <div className="hidden md:flex lg:flex-1">

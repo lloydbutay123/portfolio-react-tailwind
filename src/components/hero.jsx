@@ -27,9 +27,11 @@ const hero = () => {
             Your friendly neighborhood frontend developer, web developer, and
             Software Engineer. I spend my days (and often nights) painting the
             Internet canvas with{" "}
-            <span className="font-bold hover:bg-black hover:text-white">
-              PROJECTS
-            </span>{" "}
+            <a onClick={() => navigate("/projects")}>
+              <span className="font-bold cursor-pointer hover:bg-black hover:text-white">
+                PROJECTS
+              </span>{" "}
+            </a>
             and lines of code, turning zeroes and ones into immersive,
             interactive experiences.
           </p>
@@ -54,7 +56,11 @@ const hero = () => {
         </div>
       </div>
       <div>
-        <button className="dark:text-white z-50 relative flex left-5 items-center py-3 font-bold" aria-label="to about page button" onClick={() => navigate("/about")}>
+        <button
+          className="dark:text-white z-50 relative flex left-5 items-center py-3 font-bold"
+          aria-label="to about page button"
+          onClick={() => navigate("/about")}
+        >
           See more about me{" "}
           <span className="ml-3">
             <FaArrowRightLong />

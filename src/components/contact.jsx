@@ -59,7 +59,7 @@ const contact = () => {
                     <p className="text-xs font-bold text-gray-500">0{textInput.key}</p>
                   </div>
                   <div className="block w-full">
-                    <label className="dark:text-white text-xl font-bold" for={textInput.name}>
+                    <label className="dark:text-white text-xl font-bold" >
                       {textInput.label}
                     </label>
                     <input
