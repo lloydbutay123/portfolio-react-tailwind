@@ -2,6 +2,7 @@ import React from "react";
 import SocialsLists from "../Helper/socials";
 import { useNavigate } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
+import aboutList from "../Helper/about";
 
 const hero = () => {
   const navigate = useNavigate();
@@ -10,15 +11,22 @@ const hero = () => {
       <div className="block md:flex py-[40px]">
         <div className="md:5/6 text-left mb-3">
           <h1 className="dark:text-white text-left text-[19vw] lg:text-[200px] leading-none">
-            Web <span className="block leading-none">Developer</span>
+            Web Developer
           </h1>
         </div>
 
         <div className="md:w-auto flex items-end justify-center">
-          <p className="text-left text-gray-500 pb-[55px]">
-            Hi I'm John Lloyd Butay. A passionate Front-end Developer based in
-            the Philippines.
-          </p>
+          {aboutList.map((item, index) => {
+            return (
+              <div key={index}>
+                {item.story.map((c, i) => (
+                  <p className="text-left text-gray-500 pb-[55px]" key={i}>
+                    {c.introduction}
+                  </p>
+                ))}
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="grid gap-4 md:grid-cols-6">
@@ -28,7 +36,7 @@ const hero = () => {
             Software Engineer. I spend my days (and often nights) painting the
             Internet canvas with{" "}
             <a onClick={() => navigate("/projects")}>
-              <span className="font-bold cursor-pointer hover:bg-black hover:text-white">
+              <span className="font-bold cursor-pointer hover:bg-black dark:text-gray-500 dark:hover:bg-white dark:hover:text-black hover:text-white">
                 PROJECTS
               </span>{" "}
             </a>

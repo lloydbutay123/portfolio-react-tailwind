@@ -4,7 +4,6 @@ import aboutimg from "../assets/background_images/aboutimg.png";
 
 const aboutList = [
   {
-    id: 1,
     name: "John Lloyd Butay",
     img: aboutimg,
     dob: "12/29/1999",
@@ -86,7 +85,7 @@ const aboutList = [
     ],
     story: [
       {
-        id: 1,
+        introduction: "Hi I'm John Lloyd Butay. A passionate Front-end Developer based in the Philippines.",
         text1:
           "I’am John Lloyd Butay. I reside in the Philippines. I graduated from Mariano Marcos State University's Computer Engineering program. I started drawing and creating at an early age, and the majority of my design talents and expertise are self-taught. I became interested in programming after learning about web development in high school. It interested me and drew me in, so I chose to follow this job. Even though I pursued a career as a coder, my natural gift for arts and design lingered. As a result, I learned myself about multimedia design. I am capable of creating professional and dynamic websites by combining cutting-edge technology with my programming experience.",
         text2:

@@ -12,15 +12,21 @@
     @apply box-border;
     @apply transition-colors duration-500;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-family: 'visuelt-pro', sans-serif;
     font-weight: 500;
   }
   .hero button,
   .contactPreview button,
-  .contact button,
+  .contact .sendButton,
   .thankyouMessage button,
   .projectsPreview a {
     @apply before:absolute before:-z-50 before:bg-gray-400 before:w-14 before:h-14 before:-left-5 before:rounded-[50%];
+  }
+  .darkmodeLogo {
+    filter: brightness(0) invert(1);
   }
 }

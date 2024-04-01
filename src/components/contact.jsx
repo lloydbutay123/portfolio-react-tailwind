@@ -6,6 +6,7 @@ import onlinelogo from "../assets/logo/img-logo.png";
 import { BsArrowDownRight } from "react-icons/bs";
 import forms from "../Helper/form";
 import aboutList from "../Helper/about";
+import SocialsLists from "../Helper/socials";
 
 const contact = () => {
   document.title = "Contact | John Lloyd Butay";
@@ -31,7 +32,10 @@ const contact = () => {
   };
 
   return (
-    <section className="dark:bg-black contact px-[20px] min-h-[100vh]" id="contact">
+    <section
+      className="dark:bg-black contact px-[20px] min-h-[100vh]"
+      id="contact"
+    >
       <div className="md:flex mb-20">
         <div className="md:w-2/3 md:px-20 py-[20px]">
           <h1 className="dark:text-white text-[12vw] md:text-[80px] leading-none">
@@ -52,18 +56,20 @@ const contact = () => {
             {forms.map((textInput) => {
               return (
                 <div
-                  className="flex gap-20 border-t-2 border-gray-300 py-[20px]"
+                  className="flex gap-20 border-t-2 border-gray-500 py-[20px]"
                   key={textInput.key}
                 >
                   <div>
-                    <p className="text-xs font-bold text-gray-500">0{textInput.key}</p>
+                    <p className="text-xs font-bold text-gray-500">
+                      0{textInput.key}
+                    </p>
                   </div>
                   <div className="block w-full">
-                    <label className="dark:text-white text-xl font-bold" >
+                    <label className="dark:text-white text-xl font-bold">
                       {textInput.label}
                     </label>
                     <input
-                      className="appearance-none block w-full bg-transparent text-gray-700 py-3 mb-3 leading-tight focus:outline-none "
+                      className="appearance-none block w-full bg-transparent text-gray-700 dark:text-white py-3 mb-3 leading-tight focus:outline-none "
                       id={textInput.id}
                       name={textInput.name}
                       type={textInput.type}
@@ -77,7 +83,7 @@ const contact = () => {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="relative z-50 dark:text-white font-bold flex items-center py-20"
+                className="sendButton relative z-50 dark:text-white font-bold flex items-center py-20"
                 aria-label="send button"
               >
                 Send message <IoSendSharp className="ml-3" />
@@ -85,31 +91,53 @@ const contact = () => {
             </div>
           </div>
 
-          <div className="w-1/3">
-            <div className="mb-5">
-              <h6 className="text-xs mb-3 text-bold text-gray-500">Contact Details</h6>
+          <div className="md:w-1/3">
+            <div className="mb-10">
+              <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">
+                Contact Details
+              </h6>
               {aboutList.map((item, index) => {
                 return (
                   <div key={index}>
                     {item.contacts.map((c, i) => (
                       <div key={i} className="dark:text-white">
-                        <p className="text-sm">{c.phone1}</p>
-                        <p className="text-sm">{c.phone2}</p>
-                        <p className="text-sm">{c.email}</p>
+                        <a className="text-sm block mb-2" href="tel: 09567223090">{c.phone1}</a>
+                        <a className="text-sm block mb-2" href="tel: 09567223090">{c.phone2}</a>
+                        <a className="text-sm block mb-2" href="mailto: johnlloydbutay123@gmail.com">{c.email}</a>
                       </div>
                     ))}
                   </div>
                 );
               })}
             </div>
-            <div>
-              <h6 className="text-xs mb-3 text-bold text-gray-500">Address Details</h6>
+            <div className="mb-10">
+              <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">
+                Address Details
+              </h6>
               {aboutList.map((item, index) => {
                 return (
                   <div key={index} className="dark:text-white">
                     {item.contacts.map((c, i) => (
-                      <p className="text-sm" key={i}>{c.address}</p>
+                      <p className="text-sm leading-1" key={i}>
+                        {c.address}
+                      </p>
                     ))}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="md:block mb-10">
+              <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">Socials</h6>
+              {SocialsLists.map((social) => {
+                return (
+                  <div className="block" key={social.id}>
+                    <a
+                      href={social.link}
+                      target="_blank"
+                      className="flex dark:text-white items-center mb-2 cursor-pointer"
+                    >
+                      {social.name}
+                    </a>
                   </div>
                 );
               })}

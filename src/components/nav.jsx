@@ -13,7 +13,7 @@ const navLinks = [
   { title: "Contact", label: "contact", href: "/contact" },
 ];
 
-const nav = ({darkMode, setDarkMode}) => {
+const nav = ({ darkMode, setDarkMode }) => {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -23,7 +23,7 @@ const nav = ({darkMode, setDarkMode}) => {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-  }
+  };
   const menuVar = {
     initial: {
       scaleY: 0,
@@ -76,12 +76,21 @@ const nav = ({darkMode, setDarkMode}) => {
     <header>
       <nav className="dark:bg-black flex justify-between px-[20px] py-5">
         <div className="flex items-center">
-          <img
-            src={logo}
-            className="w-[80px] cursor-pointer"
-            onClick={() => navigate("/")}
-            alt="logo"
-          />
+          {darkMode ? (
+            <img
+              src={logo}
+              className="darkmodeLogo w-[80px] cursor-pointer"
+              onClick={() => navigate("/")}
+              alt="logo"
+            />
+          ) : (
+            <img
+              src={logo}
+              className="w-[80px] cursor-pointer"
+              onClick={() => navigate("/")}
+              alt="logo"
+            />
+          )}
         </div>
         <div className="hidden md:flex lg:flex-1">
           <div className="m-auto ">
@@ -111,7 +120,11 @@ const nav = ({darkMode, setDarkMode}) => {
             aria-label="darkmode button"
             onClick={toggleDarkMode}
           >
-            {darkMode ? <MdLightMode className="dark:text-white font-bold" /> : <MdDarkMode className="dark:text-white font-bold" />}
+            {darkMode ? (
+              <MdLightMode className="dark:text-white font-bold" />
+            ) : (
+              <MdDarkMode className="dark:text-white font-bold" />
+            )}
           </button>
           <button
             className="block md:hidden text-3xl"
