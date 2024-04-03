@@ -1,17 +1,10 @@
 const ProjectLists = [
     {
         id : 1,
-        title : "Youtube UI",
-        text : "Web Design",
-        date : "02-24-2024",
-        link : "https://lloydbutay123.github.io/youtube-by-jlnb/"
-    },
-    {
-        id : 2,
-        title : "Image Gallery",
-        text : "Web Design/javascript",
-        date : "02-21-2024",
-        link : "https://jlnb-gallery.netlify.app/"
+        title : "Youtube Clone",
+        text : "Web Design, React, Javascript, Tailwind, API",
+        date : "03-04-2024",
+        link : "https://lloydbutay123.github.io/youtube-clone/"
     },
     {
         id : 3,
