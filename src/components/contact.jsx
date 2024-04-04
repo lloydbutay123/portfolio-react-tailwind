@@ -101,9 +101,9 @@ const contact = () => {
                   <div key={index}>
                     {item.contacts.map((c, i) => (
                       <div key={i} className="dark:text-white">
-                        <a className="text-sm block mb-2" href="tel: 09567223090">{c.phone1}</a>
-                        <a className="text-sm block mb-2" href="tel: 09567223090">{c.phone2}</a>
-                        <a className="text-sm block mb-2" href="mailto: johnlloydbutay123@gmail.com">{c.email}</a>
+                        <a className="text-sm block mb-2" href={`tel:${c.phone1}`}>{c.phone1}</a>
+                        <a className="text-sm block mb-2" href={`tel:${c.phone2}`}>{c.phone2}</a>
+                        <a className="text-sm block mb-2" href={`mailto:${c.email}`}>{c.email}</a>
                       </div>
                     ))}
                   </div>

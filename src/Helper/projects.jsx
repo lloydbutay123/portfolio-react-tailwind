@@ -7,14 +7,14 @@ const ProjectLists = [
         link : "https://lloydbutay123.github.io/youtube-clone/"
     },
     {
-        id : 3,
+        id : 2,
         title : "Simon Game",
         text : "Web Design/ Javascript",
         date : "02-28-2024",
         link : "https://lloydbutay123.github.io/Simon-Game/"
     },
     {
-        id : 4,
+        id : 3,
         title : "Home Project",
         text : "Web Design/ Javascript",
         date : "03-07-2024",
