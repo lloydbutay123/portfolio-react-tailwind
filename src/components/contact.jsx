@@ -110,7 +110,7 @@ const contact = () => {
                 );
               })}
             </div>
-            <div className="mb-10">
+            <div className="py-5">
               <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">
                 Address Details
               </h6>
@@ -126,7 +126,7 @@ const contact = () => {
                 );
               })}
             </div>
-            <div className="md:block mb-10">
+            <div className="hidden md:block py-5">
               <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">Socials</h6>
               {SocialsLists.map((social) => {
                 return (

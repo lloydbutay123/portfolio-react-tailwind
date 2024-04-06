@@ -15,7 +15,7 @@ const projects = () => {
       {ProjectLists.map((project) => {
         return (
           <div
-            className="dark:bg-black grid px-[20px] py-10 md:grid-cols-2 md:mb-0 border-b-2 bg-gray-100 border-gray-200 break-words"
+            className="dark:bg-black grid px-[20px] py-10 md:grid-cols-2 md:mb-0 border-b-2 bg-gray-100 border-gray-500 break-words"
             key={project.id}
           >
             <div className="w-full mb-10">
