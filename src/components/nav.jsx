@@ -1,20 +1,22 @@
 import logo from "../assets/logo/main-logo.svg";
 import { useState } from "react";
 import { FaTimes, FaRegCopyright } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const navLinks = [
-  { title: "Home", label: "home", href: "/" },
-  { title: "About", label: "about", href: "/about" },
-  { title: "Projects", label: "projects", href: "/projects" },
-  { title: "Contact", label: "contact", href: "/contact" },
+  { id: 1, title: "Home", label: "home", href: "/" },
+  { id: 2, title: "About", label: "about", href: "/about" },
+  { id: 3, title: "Projects", label: "projects", href: "/projects" },
+  { id: 4, title: "Contact", label: "contact", href: "/contact" },
 ];
 
 const nav = ({ darkMode, setDarkMode }) => {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -79,14 +81,14 @@ const nav = ({ darkMode, setDarkMode }) => {
           {darkMode ? (
             <img
               src={logo}
-              className="darkmodeLogo w-[80px] cursor-pointer"
+              className="darkmodeLogo w-[60px] h-full cursor-pointer"
               onClick={() => navigate("/")}
               alt="logo"
             />
           ) : (
             <img
               src={logo}
-              className="w-[80px] cursor-pointer"
+              className="w-[60px] cursor-pointer"
               onClick={() => navigate("/")}
               alt="logo"
             />
@@ -94,21 +96,28 @@ const nav = ({ darkMode, setDarkMode }) => {
         </div>
         <div className="hidden md:flex lg:flex-1">
           <div className="m-auto ">
-            <div className="flex gap-10 mr-16 textt=[18px] font-bold text-gray-500">
+            <div className="flex gap-10 mr-16 text=[18px] font-bold text-gray-500">
               {navLinks.map((navlink, index) => {
                 return (
                   <div
-                    className="cursor-pointer"
+                    className="relative flex justify-center cursor-pointer"
                     onClick={toggleMenu}
                     key={index}
                   >
                     <a
                       aria-label={navlink.label}
                       onClick={() => navigate(navlink.href)}
+                      className={`${
+                        navlink.href === pathname
+                          ? "font-extrabold text-black dark:text-white"
+                          : ""
+                      }`}
                     >
                       {navlink.title}
                     </a>
+                    {navlink.href === pathname ? <div className="absolute -bottom-2 h-2 w-2 rounded-full bg-black dark:bg-white"></div> : ""}
                   </div>
+                  
                 );
               })}
             </div>
@@ -147,13 +156,21 @@ const nav = ({ darkMode, setDarkMode }) => {
             <div className="fixed w-full">
               <div className="flex justify-between px-[20px] py-5">
                 <div className="flex items-center">
-                  <a aria-label="logo" onClick={() => navigate("/")}>
+                  {darkMode ? (
+                    <img
+                      src={logo}
+                      className="darkmodeLogo w-auto h-12 md:h-20 cursor-pointer"
+                      onClick={() => navigate("/")}
+                      alt="logo"
+                    />
+                  ) : (
                     <img
                       src={logo}
                       className="w-auto h-12 md:h-20 cursor-pointer"
+                      onClick={() => navigate("/")}
                       alt="logo"
                     />
-                  </a>
+                  )}
                 </div>
                 <div>
                   <button
@@ -174,21 +191,30 @@ const nav = ({ darkMode, setDarkMode }) => {
               className="flex flex-col min-h-[100vh] w-full place-content-evenly"
             >
               <div className="flex justify-center">
-                <div className="text-center text-6xl font-bold text-gray-500">
+                <div className="text-center text-5xl gap-5 font-bold text-gray-500">
                   {navLinks.map((navlink, index) => {
                     return (
                       <div className="overflow-hidden" key={index}>
                         <motion.div
                           variants={mobileLinkVars}
-                          className="py-5 cursor-pointer"
+                          className="relative py-8 flex justify-center items-center cursor-pointer"
                           onClick={toggleMenu}
                         >
                           <a
                             aria-label={navlink.label}
                             onClick={() => navigate(navlink.href)}
+                            className={`${
+                              navlink.href === pathname
+                                ? "text-black dark:text-white"
+                                : ""
+                            }`}
                           >
                             {navlink.title}
                           </a>
+
+                          <p className="absolute -z-50 text-8xl">
+                            {navlink.href === pathname ? "0" + navlink.id : ""}
+                          </p>
                         </motion.div>
                       </div>
                     );

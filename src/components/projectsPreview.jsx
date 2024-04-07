@@ -8,7 +8,7 @@ const projectsPreview = () => {
       className="dark:bg-black projectsPreview w-fll min-h-[100vh] pt-20"
       id="projectsPreview"
     >
-      <div>
+      <div className="px-[20px]">
         <div className="mb-10 px-[20px] min-h-[50vh]">
           <h1 className="dark:text-white text-[14vw] lg:text-[90px] font-bold">
             Crafted with love.

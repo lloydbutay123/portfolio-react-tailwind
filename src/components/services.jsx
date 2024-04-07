@@ -15,14 +15,20 @@ const services = () => {
           {ServicesList.map((service) => {
             return (
               <div
-                className="w-full border-b-2 md:border-l-2 md:border-b-0 border-gray-200 md:p-10 mb-5 py-5"
+                className="w-full md:p-10 mb-5"
                 key={service.id}
               >
-                <h3 className="text-[10vw] md:text-[60px] text-gray-500">
-                  0{service.id}
-                </h3>
-                <h2 className="dark:text-white md:text-3xl mb-5">{service.title}</h2>
-                <p className="dark:text-white">{service.text}</p>
+                <div className="border-b-2 border-gray-500">
+                  <h3 className="text-[10vw] md:text-[60px] text-gray-500">
+                    0{service.id}
+                  </h3>
+                </div>
+                <div className="py-[20px]">
+                  <h2 className="dark:text-white md:text-3xl mb-5">
+                    {service.title}
+                  </h2>
+                  <p className="dark:text-white">{service.text}</p>
+                </div>
               </div>
             );
           })}
