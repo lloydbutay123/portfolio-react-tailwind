@@ -104,7 +104,7 @@ const nav = ({ darkMode, setDarkMode }) => {
                     onClick={toggleMenu}
                     key={index}
                   >
-                    <a
+                    <div
                       aria-label={navlink.label}
                       onClick={() => navigate(navlink.href)}
                       className={`${
@@ -114,7 +114,7 @@ const nav = ({ darkMode, setDarkMode }) => {
                       }`}
                     >
                       {navlink.title}
-                    </a>
+                    </div>
                     {navlink.href === pathname ? <div className="absolute -bottom-2 h-2 w-2 rounded-full bg-black dark:bg-white"></div> : ""}
                   </div>
                   
@@ -200,7 +200,7 @@ const nav = ({ darkMode, setDarkMode }) => {
                           className="relative py-8 flex justify-center items-center cursor-pointer"
                           onClick={toggleMenu}
                         >
-                          <a
+                          <div
                             aria-label={navlink.label}
                             onClick={() => navigate(navlink.href)}
                             className={`${
@@ -210,7 +210,7 @@ const nav = ({ darkMode, setDarkMode }) => {
                             }`}
                           >
                             {navlink.title}
-                          </a>
+                          </div>
 
                           <p className="absolute -z-50 text-8xl">
                             {navlink.href === pathname ? "0" + navlink.id : ""}
