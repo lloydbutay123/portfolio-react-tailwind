@@ -107,7 +107,7 @@ const nav = ({ darkMode, setDarkMode }) => {
                     <div
                       aria-label={navlink.label}
                       onClick={() => navigate(navlink.href)}
-                      className={`${
+                      className={`hover:line-through hover:decoration-2 hover:text-black ${
                         navlink.href === pathname
                           ? "font-extrabold text-black dark:text-white"
                           : ""

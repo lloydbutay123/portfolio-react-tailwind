@@ -31,18 +31,29 @@ const hero = () => {
       </div>
       <div className="grid gap-4 md:grid-cols-6">
         <div className="col-span-5">
-          <p className="dark:text-white text-[20px] lg:text-[20px] md:w-2/3 mb-5">
+          <p className="dark:text-white text-[20px] lg:text-[20px] md:w-2/3 mb-10">
             Your friendly neighborhood frontend developer, web developer, and
             Software Engineer. I spend my days (and often nights) painting the
             Internet canvas with{" "}
-            <div onClick={() => navigate("/projects")}>
-              <span className="font-bold cursor-pointer hover:bg-black dark:text-gray-500 dark:hover:bg-white dark:hover:text-black hover:text-white">
-                PROJECTS
-              </span>{" "}
-            </div>
+            <span
+              className="font-bold cursor-pointer hover:bg-black dark:text-gray-500 dark:hover:bg-white dark:hover:text-black hover:text-white"
+              onClick={() => navigate("/projects")}
+            >
+              PROJECTS
+            </span>{" "}
             and lines of code, turning zeroes and ones into immersive,
             interactive experiences.
           </p>
+          <button
+            className="dark:text-white z-50 relative flex left-5 items-center py-3 font-bold"
+            aria-label="to about page button"
+            onClick={() => navigate("/about")}
+          >
+            See more about me{" "}
+            <span className="ml-3">
+              <FaArrowRightLong />
+            </span>
+          </button>
         </div>
         <div className="hidden md:block">
           <h2 className="border-b-2 border-gray-500 mb-2 pb-2 text-gray-500">
@@ -54,7 +65,7 @@ const hero = () => {
                 <a
                   href={social.link}
                   target="_blank"
-                  className="flex dark:text-white items-center mb-3 cursor-pointer"
+                  className="flex dark:text-white items-center mb-3 cursor-pointer hover:line-through hover:decoration-2"
                 >
                   {social.name}
                 </a>
@@ -62,18 +73,6 @@ const hero = () => {
             );
           })}
         </div>
-      </div>
-      <div>
-        <button
-          className="dark:text-white z-50 relative flex left-5 items-center py-3 font-bold"
-          aria-label="to about page button"
-          onClick={() => navigate("/about")}
-        >
-          See more about me{" "}
-          <span className="ml-3">
-            <FaArrowRightLong />
-          </span>
-        </button>
       </div>
     </section>
   );

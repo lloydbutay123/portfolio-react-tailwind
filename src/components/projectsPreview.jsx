@@ -21,10 +21,10 @@ const projectsPreview = () => {
         {ProjectLists.map((project) => {
           return (
             <div
-              className="dark:bg-black grid px-[20px] py-10 md:grid-cols-2 md:mb-0 border-b-2 border-gray-500 break-words"
+              className="dark:bg-black w-full py-10 md:flex justify-between items-center md:mb-0 border-b-2 border-gray-500 break-words"
               key={project.id}
             >
-              <div className="w-full mb-10">
+              <div className="mb-10">
                 <h1 className="dark:text-white text-[10vw] md:text-[60px]">
                   <span className="mr-5 text-gray-500 text-3xl">
                     0{project.id}
@@ -33,7 +33,7 @@ const projectsPreview = () => {
                 </h1>
                 <p className="dark:text-white ml-16 md:ml-20">{project.text}</p>
               </div>
-              <div className="w-full flex justify-end py-10 items-end">
+              <div className="py-10 flex justify-end">
                 <a
                   href={project.link}
                   target="_blank"
