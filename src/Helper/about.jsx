@@ -1,5 +1,3 @@
-import amalogo from "../assets/logo/ama_logo.png";
-import mmsulogo from "../assets/logo/mmsu_logo.png";
 import aboutimg from "../assets/background_images/aboutimg.webp";
 
 const aboutList = [
@@ -20,14 +18,12 @@ const aboutList = [
     education: [
       {
         id: 1,
-        logo: mmsulogo,
         name: "Mariano Marcos State University",
         course: "Bachelor of Science in Computer Engineering",
         year: "2018-2022",
       },
       {
         id: 2,
-        logo: amalogo,
         name: "AMA Computer College Laoag",
         course: "Information and Communications Technology",
         year: "2016-2018",
