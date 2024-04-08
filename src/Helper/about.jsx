@@ -1,6 +1,6 @@
 import amalogo from "../assets/logo/ama_logo.png";
 import mmsulogo from "../assets/logo/mmsu_logo.png";
-import aboutimg from "../assets/background_images/aboutimg.png";
+import aboutimg from "../assets/background_images/aboutimg.webp";
 
 const aboutList = [
   {

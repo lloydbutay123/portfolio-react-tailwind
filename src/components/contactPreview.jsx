@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import vector1 from "../assets/background_images/Hipster.png";
+import vector1 from "../assets/background_images/Hipster.webp";
 
 const contactPreview = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const contactPreview = () => {
       <div className="block md:flex">
         <div className="relative h-[100vh] w-full text-center flex items-center justify-center pt-24">
           <div className="text-white z-50 items-center flex justify-center flex-col">
-            <h1 className="text-3xl md:text-[80px] font-bold mb-10">
+            <h1 className="text-3xl md:text-8xl font-bold mb-10">
               Better Together.
             </h1>
             <p className="mb-20 w-2/3">
