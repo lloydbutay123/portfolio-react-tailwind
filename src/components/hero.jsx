@@ -35,11 +35,11 @@ const hero = () => {
             Your friendly neighborhood frontend developer, web developer, and
             Software Engineer. I spend my days (and often nights) painting the
             Internet canvas with{" "}
-            <a onClick={() => navigate("/projects")}>
+            <div onClick={() => navigate("/projects")}>
               <span className="font-bold cursor-pointer hover:bg-black dark:text-gray-500 dark:hover:bg-white dark:hover:text-black hover:text-white">
                 PROJECTS
               </span>{" "}
-            </a>
+            </div>
             and lines of code, turning zeroes and ones into immersive,
             interactive experiences.
           </p>
