@@ -12,11 +12,9 @@ const contactPreview = () => {
     >
       <div className="block md:flex">
         <div className="relative h-[100vh] w-full text-center flex items-center justify-center pt-24">
-          <div className="text-white z-50 items-center flex justify-center flex-col">
-            <h1 className="text-3xl md:text-8xl font-bold mb-10">
-              Better Together.
-            </h1>
-            <p className="mb-20 w-2/3">
+          <div className="text-white z-50 items-center flex justify-center flex-col space-y-10">
+            <h1 className="text-4xl md:text-8xl font-bold">Better Together.</h1>
+            <p className="md:w-2/3 text-md">
               Do you fancy saying hi to me or you want to get started with your
               project and you need my help? Feel free to contact me.
             </p>
@@ -26,7 +24,7 @@ const contactPreview = () => {
                 aria-label="to about page button"
                 onClick={() => navigate("/contact")}
               >
-                Say Hello{" "}
+                Drop me a line{" "}
                 <span className="ml-3">
                   <FaArrowRightLong />
                 </span>

@@ -9,7 +9,7 @@ const projectsPreview = () => {
       id="projectsPreview"
     >
       <div className="px-[20px]">
-        <div className="mb-10 px-[20px] min-h-[50vh]">
+        <div className="mb-10 px-[20px] min-h-[60vh]">
           <h1 className="dark:text-white text-[14vw] lg:text-[90px] font-bold">
             Crafted with love.
           </h1>
@@ -25,8 +25,8 @@ const projectsPreview = () => {
               key={project.id}
             >
               <div className="mb-10">
-                <h1 className="dark:text-white text-[10vw] md:text-[60px]">
-                  <span className="mr-5 text-gray-500 text-3xl">
+                <h1 className="dark:text-white text-4xl md:text-6xl font-medium">
+                  <span className="mr-5 text-gray-500 text-sm">
                     0{project.id}
                   </span>
                   {project.title}

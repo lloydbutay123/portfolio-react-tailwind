@@ -7,7 +7,7 @@ const services = () => {
     <section className="services w-full" id="services">
       <div className="dark:bg-black lg:min-h-[100vh] px-[20px] py-20">
         <div className="mb-10">
-          <h2 className="dark:text-white text-[12vw] lg:text-[90px] font-normal">
+          <h2 className="dark:text-white text-4xl lg:text-5xl font-medium">
             I can help you with ...
           </h2>
         </div>
@@ -15,18 +15,18 @@ const services = () => {
           {ServicesList.map((service) => {
             return (
               <div
-                className="w-full md:p-10 mb-5"
+                className="w-full md:pr-10 mb-5"
                 key={service.id}
               >
-                <div className="border-b-2 border-gray-500">
-                  <h3 className="text-[10vw] md:text-[60px] text-gray-500">
+                <div className="border-b-2 border-gray-500 py-5">
+                  <h3 className="text-5xl text-gray-500 font-medium">
                     0{service.id}
                   </h3>
                 </div>
-                <div className="py-[20px]">
-                  <h2 className="dark:text-white md:text-3xl mb-5">
+                <div className="py-5">
+                  <h2 className="dark:text-white md:text-xl mb-5 font-medium">
                     {service.title}
-                  </h2>
+                  </h2> 
                   <p className="dark:text-white">{service.text}</p>
                 </div>
               </div>
@@ -36,7 +36,7 @@ const services = () => {
       </div>
       <div className="lg:min-h-[100vh] px-[20px] py-20 dark:bg-black">
         <div className="mb-10">
-          <h1 className="dark:text-white text-[14vw] lg:text-[90px] font-bold break-normal">
+          <h1 className="dark:text-white text-[14vw] lg:text-[90px] font-bold break-normal leading-none">
             Technologies <span className="block text-gray-500">& Tools</span>
           </h1>
         </div>
@@ -45,7 +45,7 @@ const services = () => {
             {Skills.map((skill) => {
               return (
                 <div
-                  className="dark:text-white w-full flex justify-center text-[50px]"
+                  className="dark:text-white w-full flex justify-center text-5xl"
                   key={skill.name}
                 >
                   {skill.icon}

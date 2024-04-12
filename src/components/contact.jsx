@@ -151,7 +151,7 @@ const contact = () => {
                     <a
                       href={social.link}
                       target="_blank"
-                      className="flex dark:text-white items-center mb-2 cursor-pointer"
+                      className="flex text-sm dark:text-white items-center mb-2 cursor-pointer"
                     >
                       {social.name}
                     </a>

@@ -56,7 +56,7 @@ const hero = () => {
           </button>
         </div>
         <div className="hidden space-y-3 w-full md:block">
-          <h2 className="border-b-2 border-gray-500 mb-2 pb-2 text-gray-500">
+          <h2 className="border-b-2 text-sm border-gray-500 mb-2 pb-2 text-gray-500">
             Lets get connected
           </h2>
           {SocialsLists.map((social) => {
@@ -65,7 +65,7 @@ const hero = () => {
                 <a
                   href={social.link}
                   target="_blank"
-                  className="relative dark:text-white after:absolute after:content-[''] after:bg-black dark:after:bg-white after:h-[3px] after:w-0 after:left-0 after:top-2.5 after:duration-300 hover:after:w-full transition ease-in-out delay-150 hover:translate-x-3 duration-500"
+                  className="relative text-sm dark:text-white after:absolute after:content-[''] after:bg-black dark:after:bg-white after:h-[3px] after:w-0 after:left-0 after:top-2 after:duration-300 hover:after:w-full transition ease-in-out delay-150 hover:translate-x-3 duration-500"
                 >
                   {social.name}
                 </a>

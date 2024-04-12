@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import bgimg from "../assets/background_images/stonelogo.webp";
+import { BsDashLg } from "react-icons/bs";
 
 const quotes = () => {
   let randomQuotes = [];
@@ -32,7 +33,7 @@ const quotes = () => {
       <div className="md:w-2/3">
         <div className="text-center">
           <h1 className="dark:text-white text-[5vw] md:text-[40px] font-bold mb-5">" {quote.text} "</h1>
-          <p className="text-end text-gray-500">{quote.author}</p>
+          <p className="text-end text-gray-500 flex justify-end items-center"><BsDashLg />{quote.author}</p>
         </div>
       </div>
       <img src={bgimg} className="absolute w-[60vw] md:w-[30%] opacity-30" alt="background image"/>
