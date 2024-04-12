@@ -45,7 +45,7 @@ const hero = () => {
             interactive experiences.
           </p>
           <button
-            className="dark:text-white z-50 relative flex left-5 items-center py-3 font-bold"
+            className="dark:text-white z-50 relative flex left-5 items-center font-bold"
             aria-label="to about page button"
             onClick={() => navigate("/about")}
           >
@@ -55,17 +55,17 @@ const hero = () => {
             </span>
           </button>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden space-y-3 w-full md:block">
           <h2 className="border-b-2 border-gray-500 mb-2 pb-2 text-gray-500">
             Lets get connected
           </h2>
           {SocialsLists.map((social) => {
             return (
-              <div className="block" key={social.id}>
+              <div className="flex" key={social.id}>
                 <a
                   href={social.link}
                   target="_blank"
-                  className="flex dark:text-white items-center mb-3 cursor-pointer hover:line-through hover:decoration-2"
+                  className="relative dark:text-white after:absolute after:content-[''] after:bg-black dark:after:bg-white after:h-[3px] after:w-0 after:left-0 after:top-2.5 after:duration-300 hover:after:w-full transition ease-in-out delay-150 hover:translate-x-3 duration-500"
                 >
                   {social.name}
                 </a>

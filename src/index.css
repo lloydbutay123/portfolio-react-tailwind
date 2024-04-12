@@ -24,7 +24,7 @@
   .contact .sendButton,
   .thankyouMessage button,
   .projectsPreview a {
-    @apply before:absolute before:-z-50 before:bg-gray-400 before:w-14 before:h-14 before:-left-5 before:rounded-[50%];
+    @apply before:absolute before:-z-50 before:bg-gray-400 before:w-14 before:h-14 before:-left-5 before:rounded-[50%] hover:before:rounded-full before:duration-300 hover:before:w-[125%] hover:translate-x-3 transition-all ease-in-out duration-500;
   }
   .darkmodeLogo {
     filter: brightness(0) invert(1);

@@ -18,13 +18,15 @@ function ThankyouMessage() {
           </span>
         </p>
         <div className="flex justify-center">
-          <button
-            className="relative dark:text-white text-default z-50 flex items-center font-bold text-black p-4"
-            onClick={() => navigate("/")}
-            aria-label="back to hme button"
-          >
-            <IoMdArrowBack className="mr-3" /> Back to home
-          </button>
+        <button 
+                className="dark:text-white z-50 relative flex left-5 items-center font-bold"
+                aria-label="to about page button"
+                onClick={() => navigate("/")}
+              > <span className="mr-3">
+                  <IoMdArrowBack />
+                </span>
+                Back to Home{" "}
+              </button>
         </div>
       </div>
     </section>

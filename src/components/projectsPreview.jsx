@@ -21,7 +21,7 @@ const projectsPreview = () => {
         {ProjectLists.map((project) => {
           return (
             <div
-              className="dark:bg-black w-full py-10 md:flex justify-between items-center md:mb-0 border-b-2 border-gray-500 break-words"
+              className="cursor-pointer dark:bg-black w-full py-10 md:flex justify-between items-center md:mb-0 border-b-2 border-gray-500 break-words"
               key={project.id}
             >
               <div className="mb-10">
@@ -33,13 +33,17 @@ const projectsPreview = () => {
                 </h1>
                 <p className="dark:text-white ml-16 md:ml-20">{project.text}</p>
               </div>
-              <div className="py-10 flex justify-end">
+              <div className="pr-7 flex justify-end left-20">
                 <a
                   href={project.link}
                   target="_blank"
-                  className="dark:text-white relative flex z-50 font-bold items-center text-black uppercase"
+                  className="dark:text-white z-50 relative inline-flex items-center font-bold uppercase"
+                  aria-label="to project"
                 >
-                  View Project <FaArrowRightLong className="ml-2" />
+                  View Project{" "}
+                  <span className="ml-3">
+                    <FaArrowRightLong />
+                  </span>
                 </a>
               </div>
             </div>

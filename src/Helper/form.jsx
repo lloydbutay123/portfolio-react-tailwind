@@ -18,7 +18,7 @@ const form = [
     {
         key : 3,
         id : "orgName",
-        label : "What's name of your organization? ",
+        label : "What is the name of your organization? ",
         name : "orgName",
         type : "text",
         placeholder : "jlnb organization *"

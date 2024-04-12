@@ -22,14 +22,14 @@ const contactPreview = () => {
             </p>
             <div className="flex justify-center">
               <button
-                onClick={() => {
-                  navigate("/contact");
-                }}
-                type="submit"
-                className="relative z-50 font-bold flex items-center"
-                aria-label="to contact button"
+                className="dark:text-white z-50 relative flex left-5 items-center font-bold"
+                aria-label="to about page button"
+                onClick={() => navigate("/contact")}
               >
-                SAY HELLO <FaArrowRightLong className="ml-3" />
+                Say Hello{" "}
+                <span className="ml-3">
+                  <FaArrowRightLong />
+                </span>
               </button>
             </div>
           </div>

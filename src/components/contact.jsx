@@ -69,7 +69,7 @@ const contact = () => {
                       {textInput.label}
                     </label>
                     <input
-                      className="appearance-none block w-full bg-transparent text-gray-700 dark:text-white py-3 mb-3 leading-tight focus:outline-none "
+                      className="appearance-none w-full bg-transparent text-gray-700 dark:text-white py-3 mb-3 leading-tight focus:outline-none"
                       id={textInput.id}
                       name={textInput.name}
                       type={textInput.type}
@@ -80,10 +80,10 @@ const contact = () => {
                 </div>
               );
             })}
-            <div className="flex justify-end">
+            <div className="flex justify-end pr-10">
               <button
                 type="submit"
-                className="sendButton relative z-50 dark:text-white font-bold flex items-center py-20"
+                className="sendButton py-20 dark:text-white z-50 relative flex left-5 items-center font-bold"
                 aria-label="send button"
               >
                 Send message <IoSendSharp className="ml-3" />
@@ -101,9 +101,24 @@ const contact = () => {
                   <div key={index}>
                     {item.contacts.map((c, i) => (
                       <div key={i} className="dark:text-white">
-                        <a className="text-sm block mb-2" href={`tel:${c.phone1}`}>{c.phone1}</a>
-                        <a className="text-sm block mb-2" href={`tel:${c.phone2}`}>{c.phone2}</a>
-                        <a className="text-sm block mb-2" href={`mailto:${c.email}`}>{c.email}</a>
+                        <a
+                          className="text-sm block mb-2"
+                          href={`tel:${c.phone1}`}
+                        >
+                          {c.phone1}
+                        </a>
+                        <a
+                          className="text-sm block mb-2"
+                          href={`tel:${c.phone2}`}
+                        >
+                          {c.phone2}
+                        </a>
+                        <a
+                          className="text-sm block mb-2"
+                          href={`mailto:${c.email}`}
+                        >
+                          {c.email}
+                        </a>
                       </div>
                     ))}
                   </div>
@@ -127,7 +142,9 @@ const contact = () => {
               })}
             </div>
             <div className="hidden md:block py-5">
-              <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">Socials</h6>
+              <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">
+                Socials
+              </h6>
               {SocialsLists.map((social) => {
                 return (
                   <div className="block" key={social.id}>
