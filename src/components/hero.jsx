@@ -20,7 +20,7 @@ const hero = () => {
             return (
               <div key={index}>
                 {item.story.map((c, i) => (
-                  <p className="text-left text-gray-500 pb-[55px]" key={i}>
+                  <p className="text-left text-md text-gray-500 md:pb-[55px]" key={i}>
                     {c.introduction}
                   </p>
                 ))}
@@ -31,7 +31,7 @@ const hero = () => {
       </div>
       <div className="flex">
         <div className="md:w-5/6">
-          <p className="dark:text-white text-[20px] lg:text-[20px] md:w-2/3 mb-10">
+          <p className="dark:text-white text-lg md:w-2/3 mb-10">
             Your friendly neighborhood frontend developer, web developer, and
             Software Engineer. I spend my days (and often nights) painting the
             Internet canvas with{" "}
