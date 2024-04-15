@@ -1,6 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { IoMdArrowBack } from "react-icons/io";
-import { HiArrowLongLeft } from "react-icons/hi2";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 function ThankyouMessage() {

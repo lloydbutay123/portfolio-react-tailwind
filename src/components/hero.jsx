@@ -29,8 +29,8 @@ const hero = () => {
           })}
         </div>
       </div>
-      <div className="grid gap-4 md:grid-cols-6">
-        <div className="col-span-5">
+      <div className="flex">
+        <div className="md:w-5/6">
           <p className="dark:text-white text-[20px] lg:text-[20px] md:w-2/3 mb-10">
             Your friendly neighborhood frontend developer, web developer, and
             Software Engineer. I spend my days (and often nights) painting the
@@ -55,7 +55,7 @@ const hero = () => {
             </span>
           </button>
         </div>
-        <div className="hidden space-y-3 w-full md:block">
+        <div className="hidden md:block w-1/6 space-y-2">
           <h2 className="border-b-2 text-sm border-gray-500 mb-2 pb-2 text-gray-500">
             Lets get connected
           </h2>

@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
+import aboutList from "../Helper/about";
 
 const navLinks = [
   { id: 1, title: "Home", label: "home", href: "/" },
@@ -81,14 +82,14 @@ const nav = ({ darkMode, setDarkMode }) => {
           {darkMode ? (
             <img
               src={logo}
-              className="darkmodeLogo w-[60px] h-full cursor-pointer"
+              className="darkmodeLogo w-16 cursor-pointer"
               onClick={() => navigate("/")}
               alt="logo"
             />
           ) : (
             <img
               src={logo}
-              className="w-[60px] cursor-pointer"
+              className="w-16 cursor-pointer"
               onClick={() => navigate("/")}
               alt="logo"
             />
@@ -157,14 +158,14 @@ const nav = ({ darkMode, setDarkMode }) => {
                   {darkMode ? (
                     <img
                       src={logo}
-                      className="darkmodeLogo w-auto h-12 md:h-20 cursor-pointer"
+                      className="darkmodeLogo w-16 cursor-pointer"
                       onClick={() => navigate("/")}
                       alt="logo"
                     />
                   ) : (
                     <img
                       src={logo}
-                      className="w-auto h-12 md:h-20 cursor-pointer"
+                      className="w-16 cursor-pointer"
                       onClick={() => navigate("/")}
                       alt="logo"
                     />
@@ -221,9 +222,13 @@ const nav = ({ darkMode, setDarkMode }) => {
               </div>
               <div className="dark:text-white flex items-center justify-center">
                 <FaRegCopyright size={16} />
-                <p className="font-bold text-base ml-2">
-                  JOHN LLOYD BUTAY <span>{date}</span>
-                </p>
+                {aboutList.map((item, index) => {
+                  return (
+                    <p className="font-bold text-base ml-2" key={index}>
+                      {item.name} <span>{date}</span>
+                    </p>
+                  );
+                })}
               </div>
             </motion.div>
           </motion.div>
