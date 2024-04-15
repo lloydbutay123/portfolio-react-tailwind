@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
+import { HiArrowLongLeft } from "react-icons/hi2";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 function ThankyouMessage() {
   const navigate = useNavigate();
@@ -18,15 +20,17 @@ function ThankyouMessage() {
           </span>
         </p>
         <div className="flex justify-center">
-        <button 
-                className="dark:text-white z-50 relative flex left-5 items-center font-bold"
-                aria-label="to about page button"
-                onClick={() => navigate("/")}
-              > <span className="mr-3">
-                  <IoMdArrowBack />
-                </span>
-                Back to Home{" "}
-              </button>
+          <button
+            className="dark:text-white z-50 relative flex left-5 items-center font-bold"
+            aria-label="to about page button"
+            onClick={() => navigate("/")}
+          >
+            {" "}
+            <span className="mr-3">
+              <FaArrowLeftLong />
+            </span>
+            Back to Home{" "}
+          </button>
         </div>
       </div>
     </section>

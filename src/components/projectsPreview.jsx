@@ -9,7 +9,7 @@ const projectsPreview = () => {
       id="projectsPreview"
     >
       <div className="px-[20px]">
-        <div className="mb-10 px-[20px] min-h-[60vh]">
+        <div className="mb-10 px-[20px] md:min-h-screen">
           <h1 className="dark:text-white text-[14vw] lg:text-[90px] font-bold">
             Crafted with love.
           </h1>
