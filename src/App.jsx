@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/projects" element={<Projects />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/success" element={<ThankyouMessage />} />
-        <Route path="/*" element={<Error darkMode={darkMode} setDarkMode={setDarkMode} />} />
+        <Route exact path="*" element={<Error darkMode={darkMode} setDarkMode={setDarkMode} />} />
       </Routes>
       <Footer />
     </div>
