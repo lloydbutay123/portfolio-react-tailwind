@@ -9,7 +9,7 @@ const projectsPreview = () => {
       id="projectsPreview"
     >
       <div className="px-[20px]">
-        <div className="mb-10 px-[20px] md:min-h-screen">
+        <div className="mb-10 md:min-h-screen">
           <h1 className="dark:text-white text-[14vw] lg:text-[90px] font-bold">
             Crafted with love.
           </h1>
@@ -17,7 +17,6 @@ const projectsPreview = () => {
             This are a selections of my recent works.
           </h2>
         </div>
-
         {ProjectLists.map((project) => {
           return (
             <div

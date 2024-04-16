@@ -7,10 +7,9 @@ const footer = () => {
   const [time, setTime] = useState(new Date());
   useEffect(() => {
     setInterval(() => {
-      setTime(new Date())
-      
+      setTime(new Date());
     }, 1000);
-  })
+  });
 
   return (
     <footer className="block py-10 w-full bg-black text-white px-[20px]">
@@ -20,7 +19,8 @@ const footer = () => {
           <div className="flex flex-wrap border-b-2 md:border-none border-gray-400 gap-5 pb-10 md:pb-0">
             {SocialsLists.map((social) => {
               return (
-                <a className="text-sm"
+                <a
+                  className="text-sm"
                   href={social.link}
                   target="_blank"
                   aria-label={social.name}
@@ -32,10 +32,11 @@ const footer = () => {
             })}
           </div>
         </div>
-
         <div className="flex gap-5 justify-between">
           <div className="block items-center justify-center md:border-l-2 border-black">
-            <p className="flex items-center uppercase text-xs text-gray-400 py-3">Version</p>
+            <p className="flex items-center uppercase text-xs text-gray-400 py-3">
+              Version
+            </p>
             <p className="flex items-center text-sm">
               <span>{year}</span> <FaRegCopyright className="mx-1" size={12} />
               Edition
@@ -43,8 +44,8 @@ const footer = () => {
           </div>
           <div className="block">
             <p className="uppercase text-xs text-gray-400 py-3">Local Time</p>
-            <p className="text-sm">
-              {time.toLocaleTimeString()}
+            <p className="text-sm uppercase">
+              {time.toLocaleTimeString().replace(/(.*)\D\d+/, "$1")}
             </p>
           </div>
         </div>

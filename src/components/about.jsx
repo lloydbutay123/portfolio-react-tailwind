@@ -52,8 +52,8 @@ const about = () => {
                       className="dark:text-white text-[18px] leading-loose"
                       key={i}
                     >
-                      <p className="my-10">{c.text1}</p>
-                      <p>{c.text2}</p>
+                      <p className="my-10 text-md">{c.text1}</p>
+                      <p className="text-md">{c.text2}</p>
                     </div>
                   ))}
                 </div>
@@ -79,9 +79,9 @@ const about = () => {
                       className="dark:text-white text-[18px] leading-loose"
                       key={i}
                     >
-                      <h2 className="uppercase font-bold">{c.name}</h2>
-                      <p>{c.course}</p>
-                      <p className="text-gray-500">{c.year}</p>
+                      <h2 className="uppercase font-bold text-md">{c.name}</h2>
+                      <p className="text-md">{c.course}</p>
+                      <p className="text-gray-500 text-sm">{c.year}</p>
                     </div>
                   ))}
                 </div>
@@ -107,9 +107,9 @@ const about = () => {
                       className="dark:text-white text-[18px] leading-loose"
                       key={i}
                     >
-                      <h2 className="uppercase font-bold">{c.name}</h2>
-                      <p>{c.title}</p>
-                      <p className="text-gray-500">{c.year}</p>
+                      <h2 className="uppercase font-bold text-md">{c.name}</h2>
+                      <p className="text-md">{c.title}</p>
+                      <p className="text-gray-500 text-sm">{c.year}</p>
                     </div>
                   ))}
                 </div>
@@ -135,9 +135,9 @@ const about = () => {
                       className="dark:text-white text-[18px] leading-loose"
                       key={i}
                     >
-                      <h2 className="uppercase font-bold">{c.name}</h2>
-                      <p>{c.company}</p>
-                      <p className="text-gray-500">{c.issuedOn}</p>
+                      <h2 className="uppercase font-bold text-md">{c.name}</h2>
+                      <p className="text-md">{c.company}</p>
+                      <p className="text-gray-500 text-sm">{c.issuedOn}</p>
                     </div>
                   ))}
                 </div>

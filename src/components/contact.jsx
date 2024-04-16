@@ -45,7 +45,11 @@ const contact = () => {
         <div className="w-1/3 flex items-end py-[20px]">
           <div className="block">
             <img src={onlinelogo} className="w-[100px] mb-5" />
-            <BsArrowDownRight size={25} className="dark:text-white" />
+            <BsArrowDownRight
+              size={25}
+              className="dark:text-white"
+              onClick={() => navigate("/404")}
+            />
           </div>
         </div>
       </div>
@@ -103,16 +107,14 @@ const contact = () => {
                       <div key={i} className="dark:text-white">
                         <a
                           className="text-sm block mb-2"
-                          href={`tel:${c.phone1}`}
+                          href={`tel:${c.phone}`}
                         >
-                          {c.phone1}
+                          {c.phone}
                         </a>
-                        <a
-                          className="text-sm block mb-2"
-                          href={`tel:${c.phone2}`}
-                        >
-                          {c.phone2}
-                        </a>
+                      </div>
+                    ))}
+                    {item.contacts.map((c, i) => (
+                      <div key={i} className="dark:text-white">
                         <a
                           className="text-sm block mb-2"
                           href={`mailto:${c.email}`}

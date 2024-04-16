@@ -2,7 +2,7 @@ import logo from "../assets/logo/main-logo.svg";
 import { useState } from "react";
 import { FaTimes, FaRegCopyright } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
-import { CiMenuFries } from "react-icons/ci";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import aboutList from "../Helper/about";
@@ -139,7 +139,7 @@ const nav = ({ darkMode, setDarkMode }) => {
             aria-label="menubar button"
             onClick={toggleMenu}
           >
-            <CiMenuFries className="dark:text-white font-bold" />
+            <HiOutlineMenuAlt4 className="dark:text-white font-bold" />
           </button>
         </div>
       </nav>
@@ -182,7 +182,6 @@ const nav = ({ darkMode, setDarkMode }) => {
                 </div>
               </div>
             </div>
-
             <motion.div
               variants={containerVar}
               initial="initial"
