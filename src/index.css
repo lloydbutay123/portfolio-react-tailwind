@@ -10,7 +10,7 @@
 @layer base {
   * {
     @apply box-border;
-    @apply transition-colors duration-500;
+    @apply transition-colors duration-300;
   }
   html {
     scroll-behavior: smooth;

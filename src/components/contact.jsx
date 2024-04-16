@@ -54,7 +54,12 @@ const contact = () => {
         </div>
       </div>
 
-      <form ref={form} onSubmit={sendEmail} method="POST" id="form">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        method="POST"
+        id="form"
+      >
         <div className="block md:flex">
           <div className="md:w-2/3 md:px-20">
             {forms.map((textInput) => {
@@ -69,7 +74,10 @@ const contact = () => {
                     </p>
                   </div>
                   <div className="block w-full">
-                    <label className="dark:text-white text-xl font-bold">
+                    <label
+                      className="dark:text-white text-xl font-bold"
+                      htmlFor={textInput.id}
+                    >
                       {textInput.label}
                     </label>
                     <input
@@ -79,6 +87,7 @@ const contact = () => {
                       type={textInput.type}
                       placeholder={textInput.placeholder}
                       required
+                      autoComplete="on"
                     />
                   </div>
                 </div>
