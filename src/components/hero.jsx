@@ -10,9 +10,16 @@ const hero = () => {
     <section className="hero dark:bg-black px-[20px]" id="hero">
       <div className="block md:flex py-[40px]">
         <div className="md:5/6 text-left mb-3">
-          <h1 className="dark:text-white text-left text-[19vw] lg:text-[200px] leading-none">
-            Web Developer
-          </h1>
+          {aboutList.map((item, index) => {
+            return (
+              <h1
+                className="dark:text-white text-left text-[19vw] lg:text-[200px] leading-none"
+                key={index}
+              >
+                {item.title}
+              </h1>
+            );
+          })}
         </div>
 
         <div className="md:w-auto flex items-end justify-center">
@@ -20,7 +27,10 @@ const hero = () => {
             return (
               <div key={index}>
                 {item.story.map((c, i) => (
-                  <p className="text-left text-md text-gray-500 md:pb-[55px]" key={i}>
+                  <p
+                    className="text-left text-md text-gray-500 md:pb-[55px]"
+                    key={i}
+                  >
                     {c.introduction}
                   </p>
                 ))}
@@ -31,19 +41,13 @@ const hero = () => {
       </div>
       <div className="flex">
         <div className="md:w-5/6">
-          <p className="dark:text-white text-lg md:w-2/3 mb-10">
-            Your friendly neighborhood frontend developer, web developer, and
-            Software Engineer. I spend my days (and often nights) painting the
-            Internet canvas with{" "}
-            <span
-              className="font-bold cursor-pointer hover:bg-black dark:text-gray-500 dark:hover:bg-white dark:hover:text-black hover:text-white"
-              onClick={() => navigate("/projects")}
-            >
-              PROJECTS
-            </span>{" "}
-            and lines of code, turning zeroes and ones into immersive,
-            interactive experiences.
-          </p>
+          {aboutList.map((item, index) => {
+            return (
+              <p className="dark:text-white text-lg md:w-2/3 mb-10" key={index}>
+                {item.introduction}
+              </p>
+            );
+          })}
           <button
             className="dark:text-white z-50 relative flex left-5 items-center font-bold"
             aria-label="to about page button"

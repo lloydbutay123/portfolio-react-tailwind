@@ -80,10 +80,10 @@ const contact = () => {
                 </div>
               );
             })}
-            <div className="flex justify-end pr-10">
+            <div className="flex justify-end pr-10 my-20">
               <button
                 type="submit"
-                className="sendButton py-20 dark:text-white z-50 relative flex left-5 items-center font-bold"
+                className="sendButton dark:text-white z-50 relative flex left-5 items-center font-bold"
                 aria-label="send button"
               >
                 Send message <IoSendSharp className="ml-3" />

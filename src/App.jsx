@@ -8,6 +8,7 @@ import Projects from "./components/projects";
 import Footer from "./components/footer";
 import ScrollToTop from "./components/scrollToTop";
 import { useState } from "react";
+import Error from "./components/404";
 
 function App() {
 
@@ -22,9 +23,9 @@ function App() {
         <Route exact path="/projects" element={<Projects />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/success" element={<ThankyouMessage />} />
+        <Route exact path="*" element={<Error darkMode={darkMode} setDarkMode={setDarkMode} />} />
       </Routes>
       <Footer />
-
     </div>
   );
 }

@@ -14,7 +14,7 @@ const about = () => {
                 className="dark:text-white text-[30px] font-light md:text-5xl"
                 key={index}
               >
-                {about.title}
+                {about.description}
               </h1>
             );
           })}
