@@ -1,5 +1,5 @@
 import Main from "./components/main";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ThankyouMessage from "./components/ThankyouMessage";
 import Nav from "./components/nav";
 import Contact from "./components/contact";
@@ -23,7 +23,8 @@ function App() {
         <Route exact path="/projects" element={<Projects />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/success" element={<ThankyouMessage />} />
-        <Route exact path="*" element={<Error darkMode={darkMode} setDarkMode={setDarkMode} />} />
+        <Route exact path="/404" element={<Error darkMode={darkMode} setDarkMode={setDarkMode} />} />
+        <Route exact path="*" element={<Navigate to='/404'/>} />
       </Routes>
       <Footer />
     </div>
