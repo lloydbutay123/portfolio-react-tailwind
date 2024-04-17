@@ -75,12 +75,9 @@ const about = () => {
               return (
                 <div key={index} className="space-y-10">
                   {item.education.map((c, i) => (
-                    <div
-                      className="dark:text-white text-[18px] leading-loose"
-                      key={i}
-                    >
+                    <div className="dark:text-white text-[18px]" key={i}>
                       <h2 className="uppercase font-bold text-md">{c.name}</h2>
-                      <p className="text-md">{c.course}</p>
+                      <p className="text-sm">{c.course}</p>
                       <p className="text-gray-500 text-sm">{c.year}</p>
                     </div>
                   ))}
@@ -103,12 +100,9 @@ const about = () => {
               return (
                 <div key={index} className="space-y-10">
                   {item.experience.map((c, i) => (
-                    <div
-                      className="dark:text-white text-[18px] leading-loose"
-                      key={i}
-                    >
+                    <div className="dark:text-white text-[18px]" key={i}>
                       <h2 className="uppercase font-bold text-md">{c.name}</h2>
-                      <p className="text-md">{c.title}</p>
+                      <p className="text-sm">{c.title}</p>
                       <p className="text-gray-500 text-sm">{c.year}</p>
                     </div>
                   ))}
@@ -131,12 +125,9 @@ const about = () => {
               return (
                 <div key={index} className="space-y-10">
                   {item.trainings.map((c, i) => (
-                    <div
-                      className="dark:text-white text-[18px] leading-loose"
-                      key={i}
-                    >
+                    <div className="dark:text-white text-[18px]" key={i}>
                       <h2 className="uppercase font-bold text-md">{c.name}</h2>
-                      <p className="text-md">{c.company}</p>
+                      <p className="text-sm">{c.company}</p>
                       <p className="text-gray-500 text-sm">{c.issuedOn}</p>
                     </div>
                   ))}

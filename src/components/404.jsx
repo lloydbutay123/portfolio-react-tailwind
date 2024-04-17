@@ -12,9 +12,9 @@ const error = ({ darkMode }) => {
       <div className="block md:flex dark:bg-black min-h-screen w-full px-[20px] items-center top-0">
         <div className="md:w-1/2">
           {darkMode ? (
-            <img src={errorImgDark} className="w-full" alt="404"/>
+            <img src={errorImgDark} className="w-full" alt="404" />
           ) : (
-            <img src={errorImg} className="w-full" alt="404"/>
+            <img src={errorImg} className="w-full" alt="404" />
           )}
         </div>
         <div className="md:w-1/2 space-y-10 md:px-20">

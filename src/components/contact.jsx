@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import { IoSendSharp } from "react-icons/io5";
@@ -54,12 +54,7 @@ const contact = () => {
         </div>
       </div>
 
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        method="POST"
-        id="form"
-      >
+      <form ref={form} onSubmit={sendEmail} method="POST" id="form">
         <div className="block md:flex">
           <div className="md:w-2/3 md:px-20">
             {forms.map((textInput) => {
