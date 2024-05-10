@@ -7,13 +7,13 @@ const aboutList = [
     dob: "12/29/1999",
     title: "Web Developer",
     introduction:
-      "Your friendly neighborhood frontend developer, web developer, and Software Engineer. I spend my days (and often nights) painting the Internet canvas with Projects and lines of code, turning zeroes and ones into immersive, interactive experiences.",
+      "Your friendly neighborhood Full-stack developer, and Software Engineer. I spend my days (and often nights) painting the Internet canvas with Projects and lines of code, turning zeroes and ones into immersive, interactive experiences.",
     description:
       "I'am a passionate Web Developer, specialized in Web Design, UX / UI, Webflow, and Front End Development.",
     story: [
       {
         introduction:
-          "Hi I'm John Lloyd Butay. A passionate Front-end Developer based in the Philippines.",
+          "Hi I'm John Lloyd Butay. A passionate Full-stack Developer based in the Philippines.",
         text1:
           "I’am John Lloyd Butay. I reside in the Philippines. I graduated from Mariano Marcos State University's Computer Engineering program. I started drawing and creating at an early age, and the majority of my design talents and expertise are self-taught. I became interested in programming after learning about web development in high school. It interested me and drew me in, so I chose to follow this job. Even though I pursued a career as a coder, my natural gift for arts and design lingered. As a result, I learned myself about multimedia design. I am capable of creating professional and dynamic websites by combining cutting-edge technology with my programming experience.",
         text2:
@@ -43,6 +43,11 @@ const aboutList = [
         course: "Information and Communications Technology",
         year: "2016-2018",
       },
+      {
+        name: "Batac National High School- Bungon Campus",
+        course: "",
+        year: "2012-2016",
+      }
     ],
     experience: [
       {
