@@ -69,7 +69,7 @@ const about = () => {
           </div>
           <div className="md:w-2/3">
             <h1 className="dark:text-white text-xl font-bold mb-10">
-              Academics footsteps
+              Academics footprints
             </h1>
             {aboutList.map((item, index) => {
               return (
@@ -94,7 +94,7 @@ const about = () => {
           </div>
           <div className="md:w-2/3">
             <h1 className="dark:text-white text-xl font-bold mb-10">
-              Career footsteps
+              Career footprints
             </h1>
             {aboutList.map((item, index) => {
               return (
