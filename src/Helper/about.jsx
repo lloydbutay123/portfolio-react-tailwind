@@ -15,9 +15,9 @@ const aboutList = [
         introduction:
           "Hi I'm John Lloyd Butay. A passionate Full-stack Developer based in the Philippines.",
         text1:
-          "I’am John Lloyd Butay. I reside in the Philippines. I graduated from Mariano Marcos State University's Computer Engineering program. I started drawing and creating at an early age, and the majority of my design talents and expertise are self-taught. I became interested in programming after learning about web development in high school. It interested me and drew me in, so I chose to follow this job. Even though I pursued a career as a coder, my natural gift for arts and design lingered. As a result, I learned myself about multimedia design. I am capable of creating professional and dynamic websites by combining cutting-edge technology with my programming experience.",
+          "Hey, I'm John Lloyd Butay and I use Lloyd as my nickname on social media. I am a Web Developer focusing on Front-end Development, and a Software Engineer. Passionate about pop music, I like to create portraits and universes around what I listen to and I am always curious to learn more about new technologies and creative coding.",
         text2:
-          "I will not stick around on just doing Front End development projects. My goal is to take it to the next level of becoming a Full Stack Developer and become one of the world's top designers, so now, I am working towards it. I have prepared myself to accept the challenges into this ever changing world and I will try my very best to achieve my dreams and goals.",
+          "",
       },
     ],
     contacts: [
@@ -53,7 +53,12 @@ const aboutList = [
       {
         name: "CCK City Network, Inc.",
         title: "Software Engineer",
-        year: "Jan 2022- June 2022",
+        year: "Jan 09, 2023 - June 11, 2023",
+      },
+      {
+        name: "Asianlink.ai",
+        title: "Full-stack Developer",
+        year: "May 15, 2024 - PRESENT",
       },
     ],
     trainings: [
