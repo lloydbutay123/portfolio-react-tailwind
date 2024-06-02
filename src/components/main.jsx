@@ -5,7 +5,7 @@ import Quotes from "./quotes";
 import ContactPreview from "../components/contactPreview";
 
 const main = () => {
-  document.title = "John Lloyd Butay | Career Portfolio"
+  document.title = "Hanz Ivan Sanchez | Career Portfolio"
   return (
     <div>
       <Hero />
