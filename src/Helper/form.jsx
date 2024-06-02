@@ -5,7 +5,7 @@ const form = [
         label : "What's your name?",
         name : "name",
         type : "text",
-        placeholder : "John Lloyd Butay *"
+        placeholder : "Hanz Ivan Sanchez *"
     },
     {
         key : 2,
@@ -13,7 +13,7 @@ const form = [
         label : "What's your email?",
         name : "email",
         type : "email",
-        placeholder : "johnlloydbutay123@gmail.com *"
+        placeholder : "hanzivansanchez@gmail.com *"
     },
     {
         key : 3,
@@ -21,7 +21,7 @@ const form = [
         label : "What is the name of your organization? ",
         name : "orgName",
         type : "text",
-        placeholder : "jlnb organization *"
+        placeholder : "hims organization *"
     },
     {
         key : 4,
@@ -29,7 +29,7 @@ const form = [
         label : "What type of service are you looking for?",
         name : "services",
         type : "text",
-        placeholder : "Web Developement, Web Design ... *"
+        placeholder : "English Teacher, Tutorial ... *"
     },
     {
         key : 5,
@@ -37,7 +37,7 @@ const form = [
         label : "Your message",
         name : "message",
         type : "text",
-        placeholder : "Hello Lloyd, can you help me with... *"
+        placeholder : "Hello Hanz, can you help me with... *"
     },
 ]
 

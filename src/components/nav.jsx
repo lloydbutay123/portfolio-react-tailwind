@@ -1,4 +1,4 @@
-import logo from "../assets/logo/main-logo.svg";
+
 import { useState } from "react";
 import { FaTimes, FaRegCopyright } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -80,19 +80,9 @@ const nav = ({ darkMode, setDarkMode }) => {
       <nav className="dark:bg-black flex justify-between px-[20px] py-5">
         <div className="flex items-center">
           {darkMode ? (
-            <img
-              src={logo}
-              className="darkmodeLogo w-16 cursor-pointer"
-              onClick={() => navigate("/")}
-              alt="logo"
-            />
+            ""
           ) : (
-            <img
-              src={logo}
-              className="w-16 cursor-pointer"
-              onClick={() => navigate("/")}
-              alt="logo"
-            />
+            ""
           )}
         </div>
         <div className="hidden md:flex lg:flex-1">
@@ -156,19 +146,9 @@ const nav = ({ darkMode, setDarkMode }) => {
               <div className="flex justify-between px-[20px] py-5">
                 <div className="flex items-center">
                   {darkMode ? (
-                    <img
-                      src={logo}
-                      className="darkmodeLogo w-16 cursor-pointer"
-                      onClick={() => navigate("/")}
-                      alt="logo"
-                    />
+                    ""
                   ) : (
-                    <img
-                      src={logo}
-                      className="w-16 cursor-pointer"
-                      onClick={() => navigate("/")}
-                      alt="logo"
-                    />
+                    ""
                   )}
                 </div>
                 <div>

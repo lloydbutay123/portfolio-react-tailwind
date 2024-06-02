@@ -1,25 +1,12 @@
 const ProjectLists = [
     {
         id : 1,
-        title : "Youtube Clone",
-        text : "Web Design, React, Javascript, Tailwind, API",
-        date : "03-04-2024",
-        link : "https://lloydbutay123.github.io/youtube-clone/"
+        title : "News Paper Writing",
+        text : "News Writing, Editorial Writing, Lay outing",
+        date : "29-05-2024",
+        link : ""
     },
-    {
-        id : 2,
-        title : "Simon Game",
-        text : "Web Design/ Javascript",
-        date : "02-28-2024",
-        link : "https://lloydbutay123.github.io/Simon-Game/"
-    },
-    {
-        id : 3,
-        title : "Home Project",
-        text : "Web Design/ Javascript",
-        date : "03-07-2024",
-        link : "https://web-builder-home-assignment.netlify.app/"
-    },
+    
     
 ]
 

@@ -1,18 +1,18 @@
 const ServicesList = [
     {
         id : 1,
-        title : "Development",
-        text : "Bringing visuals to life through developing highly functional web solutions.",
+        title : "Tutorial",
+        text : "Providing tutorial services as an English teacher involves personalized instruction to help students improve their language skills, comprehension, and fluency.",
     },
     {
         id : 2,
-        title : "Design",
-        text : "I make web designs that engage your audience and create the user experience you want.",
+        title : "Editor",
+        text : "We offer professional editing services to enhance and transform your pictures and videos, ensuring they look their best for any occasion.",
     },
     {
         id : 3,
-        title : "eCommerce",
-        text : "Get the best of both worlds for your website, capture your brand identity and get fully functional features.",
+        title : "Creative Writer",
+        text : "Providing a creative writing service involves offering personalized and imaginative content creation, helping clients articulate their ideas and stories with eloquence and originality.",
     },
     
 ]

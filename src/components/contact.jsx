@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import { IoSendSharp } from "react-icons/io5";
-import onlinelogo from "../assets/logo/img-logo.webp";
+import onlinelogo from "../assets/background_images/Hanz.png";
 import { BsArrowDownRight } from "react-icons/bs";
 import forms from "../Helper/form";
 import aboutList from "../Helper/about";

@@ -3,7 +3,7 @@ import aboutList from "../Helper/about";
 import ContactPreview from "./contactPreview";
 
 const about = () => {
-  document.title = "About | John Lloyd Butay";
+  document.title = "About | Hanz Ivan Sanchez";
   return (
     <section className="dark:bg-black about min-h-[100vh] w-full" id="about">
       <div className="px-[20px] overflow-hidden md:flex justify-center items-center min-h-screen">
