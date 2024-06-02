@@ -9,7 +9,7 @@ import aboutList from "../Helper/about";
 import SocialsLists from "../Helper/socials";
 
 const contact = () => {
-  document.title = "Contact | John Lloyd Butay";
+  document.title = "Contact | Hanz Ivan Sanchez";
   const form = useRef();
   const navigate = useNavigate();
 
