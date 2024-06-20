@@ -5,11 +5,11 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const projectsPreview = () => {
   return (
     <section
-      className="dark:bg-black projectsPreview w-fll min-h-[100vh] pt-20"
+      className="dark:bg-black projectsPreview w-full pt-20"
       id="projectsPreview"
     >
       <div className="px-[20px]">
-        <div className="mb-10 md:min-h-screen">
+        <div className="mb-10">
           <h1 className="dark:text-white text-[14vw] lg:text-[90px] font-bold">
             Crafted with love.
           </h1>

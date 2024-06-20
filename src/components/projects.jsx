@@ -3,7 +3,7 @@ import ContactPreview from "./contactPreview";
 import ProjectsPreview from "./projectsPreview.jsx";
 
 const projects = () => {
-  document.title = "Projects | Hanz Ivan Sanchez";
+  document.title = "Projects | John Lloyd Butay";
   return (
     <section className="dark:bg-black">
       <ProjectsPreview />

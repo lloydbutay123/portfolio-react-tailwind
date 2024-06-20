@@ -7,13 +7,13 @@ import aboutList from "../Helper/about";
 const hero = () => {
   const navigate = useNavigate();
   return (
-    <section className="hero dark:bg-black px-[20px]" id="hero">
+    <section className="hero dark:bg-black px-[20px] h-screen" id="hero">
       <div className="block md:flex py-[40px]">
-        <div className="md:5/6 text-left mb-3">
+        <div className="md:w-4/5 text-left mb-3">
           {aboutList.map((item, index) => {
             return (
               <h1
-                className="dark:text-white text-left text-[19vw] lg:text-[200px] leading-none"
+                className="dark:text-white text-left text-[14vw]  leading-none"
                 key={index}
               >
                 {item.title}
@@ -22,13 +22,13 @@ const hero = () => {
           })}
         </div>
 
-        <div className="md:w-auto flex items-end justify-center">
+        <div className="md:w-1/5 flex items-end justify-center">
           {aboutList.map((item, index) => {
             return (
               <div key={index}>
                 {item.story.map((c, i) => (
                   <p
-                    className="text-left text-md text-gray-500 md:pb-[55px]"
+                    className="text-left text-md text-gray-500"
                     key={i}
                   >
                     {c.introduction}
@@ -40,10 +40,10 @@ const hero = () => {
         </div>
       </div>
       <div className="flex">
-        <div className="md:w-5/6">
+        <div className="md:w-4/5">
           {aboutList.map((item, index) => {
             return (
-              <p className="dark:text-white text-lg md:w-2/3 mb-10" key={index}>
+              <p className="dark:text-white text-lg md:w-4/5 mb-10" key={index}>
                 {item.introduction}
               </p>
             );
