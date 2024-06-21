@@ -7,7 +7,7 @@ import aboutList from "../Helper/about";
 const hero = () => {
   const navigate = useNavigate();
   return (
-    <section className="hero dark:bg-black px-[20px] h-screen" id="hero">
+    <section className="hero dark:bg-black px-[20px] h-screen md:h-auto" id="hero">
       <div className="block md:flex py-[40px]">
         <div className="md:w-4/5 text-left mb-3">
           {aboutList.map((item, index) => {

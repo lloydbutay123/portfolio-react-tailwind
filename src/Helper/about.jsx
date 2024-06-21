@@ -98,7 +98,7 @@ const aboutList = [
           "https://www.udemy.com/certificate/UC-5ffa4249-e97f-4cf7-9ca2-eb5b8639cce5/",
       },
       {
-        name: "Coustumer Experience Delivery Associate - OJT",
+        name: "Costumer Experience Service Delivery Associate - OJT",
         company: "Philippine Long Distance Telephone Company",
         issuedOn: "2022",
         verify: "",
