@@ -20,7 +20,7 @@ const ProjectLists = [
         date : "03-07-2024",
         link : "https://web-builder-home-assignment.netlify.app/"
     },
-    
+
 ]
 
 export default ProjectLists;

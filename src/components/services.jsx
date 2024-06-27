@@ -5,7 +5,7 @@ import Skills from "../Helper/skills.jsx";
 const services = () => {
   return (
     <section className="services w-full" id="services">
-      <div className="dark:bg-black lg:min-h-[100vh] px-[20px] py-20">
+      <div className="dark:bg-black px-[20px] py-20">
         <div className="mb-10">
           <h2 className="dark:text-white text-4xl lg:text-5xl font-medium">
             I can help you with ...
@@ -31,7 +31,7 @@ const services = () => {
           })}
         </div>
       </div>
-      <div className="lg:min-h-[100vh] px-[20px] py-20 dark:bg-black">
+      <div className="px-[20px] py-20 dark:bg-black">
         <div className="mb-10">
           <h1 className="dark:text-white text-[14vw] lg:text-[90px] font-bold break-normal leading-none">
             Technologies <span className="block text-gray-500">& Tools</span>

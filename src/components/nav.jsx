@@ -6,24 +6,20 @@ import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 import aboutList from "../Helper/about";
-
 const navLinks = [
   { id: 1, title: "Home", label: "home", href: "/" },
   { id: 2, title: "About", label: "about", href: "/about" },
   { id: 3, title: "Projects", label: "projects", href: "/projects" },
   { id: 4, title: "Contact", label: "contact", href: "/contact" },
 ];
-
 const nav = ({ darkMode, setDarkMode }) => {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
-
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
   const navigate = useNavigate();
   const date = new Date().getFullYear();
-
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
@@ -46,7 +42,6 @@ const nav = ({ darkMode, setDarkMode }) => {
       },
     },
   };
-
   const containerVar = {
     initial: {
       transition: {
@@ -59,7 +54,6 @@ const nav = ({ darkMode, setDarkMode }) => {
       },
     },
   };
-
   const mobileLinkVars = {
     initial: {
       y: "30vh",
@@ -74,7 +68,6 @@ const nav = ({ darkMode, setDarkMode }) => {
       },
     },
   };
-
   return (
     <header>
       <nav className="dark:bg-black flex justify-between px-[20px] py-5">
@@ -209,7 +202,6 @@ const nav = ({ darkMode, setDarkMode }) => {
                           >
                             {navlink.title}
                           </div>
-
                           <p className="absolute -z-50 text-8xl">
                             {navlink.href === pathname ? "0" + navlink.id : ""}
                           </p>
