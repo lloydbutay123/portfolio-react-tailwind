@@ -75,7 +75,7 @@ const Services = () => {
         </motion.div>
 
         <div className="flex justify-center">
-          <div className="grid w-5/6 grid-cols-3 md:grid-cols-6 gap-5">
+          <div className="grid w-5/6 grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-5">
             {Skills.map((item, index) => (
               <motion.a
                 className="dark:text-white w-full flex justify-center text-5xl"
@@ -87,7 +87,7 @@ const Services = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={slideRight}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6 }}
               >
                 {item.icon}
               </motion.a>
