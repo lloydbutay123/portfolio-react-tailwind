@@ -15,6 +15,6 @@ export default {
     },
   },
   plugins: [],
-  darkMode : "class",
+  darkMode: 'media', // Automatically adopt the system preference
 }
 

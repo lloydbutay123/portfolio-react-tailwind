@@ -14,7 +14,7 @@ const ServicesList = [
         title : "eCommerce",
         text : "Get the best of both worlds for your website, capture your brand identity and get fully functional features.",
     },
-    
+
 ]
 
 export default ServicesList;

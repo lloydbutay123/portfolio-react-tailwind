@@ -1,4 +1,4 @@
-import { TbBrandFramerMotion, TbBrandVscode } from "react-icons/tb";
+import { TbBrandFramerMotion, TbBrandReactNative, TbBrandVscode } from "react-icons/tb";
 import { BiLogoNetlify, BiLogoJquery } from "react-icons/bi";
 import {
   SiCanva,
@@ -19,6 +19,8 @@ import {
   FaAws,
   FaChrome,
   FaNpm,
+  FaFigma,
+  FaJava
 } from "react-icons/fa";
 
 const Skills = [
@@ -118,9 +120,24 @@ const Skills = [
     link: "https://tailwindui.com/",
   },
   {
+    name: "Tailwind",
+    icon: <FaFigma />,
+    link: "https://tailwindui.com/",
+  },
+  {
     name: "Framer Motion",
     icon: <TbBrandFramerMotion />,
     link: "https://www.framer.com/motion/",
+  },
+  {
+    name: "React Native",
+    icon: <TbBrandReactNative />,
+    link: "https://reactnative.dev/",
+  },
+  {
+    name: "Java",
+    icon: <FaJava />,
+    link: "https://www.javatpoint.com/java-tutorial",
   },
 ];
 

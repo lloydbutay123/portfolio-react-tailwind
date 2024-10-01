@@ -12,8 +12,8 @@ const footer = () => {
   });
 
   return (
-    <footer className="block py-10 w-full bg-black text-white px-[20px]">
-      <div className="md:flex gap-4 justify-between items-center">
+    <footer className="block lg:flex flex-col items-center w-full bg-black text-white p-[20px] md:p-[40px]">
+      <div className="md:flex w-full lg:max-w-[1056px] gap-4 justify-between items-center">
         <div className="block justify-between mb-5 md:mb-0">
           <p className="uppercase text-xs text-gray-400 py-3">Socials</p>
           <div className="flex flex-wrap border-b-2 md:border-none border-gray-400 gap-5 pb-10 md:pb-0">
