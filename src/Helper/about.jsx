@@ -7,15 +7,15 @@ const aboutList = [
     dob: "12/29/1999",
     title: "Web Developer",
     introduction:
-      "Your friendly neighborhood Full-stack developer, and Software Engineer. I spend my days (and often nights) painting the Internet canvas with Projects and lines of code, turning zeroes and ones into immersive, interactive experiences.",
+      "Your friendly neighborhood Full-stack Developer, turning code into captivating digital experiences. By day (and often night), I craft immersive, interactive projects—bringing ideas to life, one line of code at a time.",
     description:
-      "I'am a passionate Web Developer, specialized in Web Design, UX / UI, Webflow, and Front End Development.",
+      "I'am a passionate Web Developer, with a love for creating dynamic, user-friendly websites and applications.",
     story: [
       {
         introduction:
           "Hi I'm John Lloyd Butay. A passionate Full-stack Developer based in the Philippines.",
         text1:
-          "Hey, I'm John Lloyd Butay and I use Lloyd as my nickname on social media. I am a Web Developer focusing on Front-end Development, and a Software Engineer. Passionate about pop music, I like to create portraits and universes around what I listen to and I am always curious to learn more about new technologies and creative coding.",
+          "Hey, I'm John Lloyd Butay and I use Lloyd as my nickname on social media. I'm a Web Developer with a deep passion for creating seamless, user-friendly digital experiences. I love diving into new technologies, constantly expanding my knowledge and skill set to stay ahead in the fast-paced world of tech. Whether it’s exploring the latest frameworks or optimizing code, I’m always eager to learn and push the boundaries of what’s possible. For me, coding is more than just a job—it’s a craft I’m excited to keep honing every day.",
         text2:
           "",
       },
@@ -44,7 +44,7 @@ const aboutList = [
         year: "2016-2018",
       },
       {
-        name: "Batac National High School- Bungon Campus",
+        name: "Batac National High School - Bungon Campus",
         course: "",
         year: "2012-2016",
       }

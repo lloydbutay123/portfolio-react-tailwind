@@ -112,7 +112,7 @@ const About = () => {
                 variants={slideLeft} // Slide from left to right
                 transition={{ duration: 0.6 }}
               >
-                Academics footprints
+                Academic Milestones
               </motion.h1>
               {aboutList.map((item, index) => (
                 <div key={index} className="space-y-10">
@@ -157,7 +157,7 @@ const About = () => {
                 variants={slideLeft} // Slide from left to right
                 transition={{ duration: 0.6 }}
               >
-                Career footprints
+                Professional Milestones
               </motion.h1>
               {aboutList.map((item, index) => (
                 <div key={index} className="space-y-10">

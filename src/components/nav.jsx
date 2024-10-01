@@ -11,7 +11,7 @@ const navLinks = [
   { id: 3, title: "Projects", label: "projects", href: "/projects" },
   { id: 4, title: "Contact", label: "contact", href: "/contact" },
 ];
-const nav = () => {
+const nav = ({ darkMode, setDarkMode }) => {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   const toggleMenu = () => {
@@ -67,18 +67,10 @@ const nav = () => {
   return (
     <header className="flex justify-between md:justify-center py-5 px-[20px] dark:bg-black">
       <nav className="dark:bg-black flex justify-between w-full lg:w-[1056px]">
-        <div className="flex items-center">
-         
+        <div className="flex items-center">  
             <img
               src={logo}
               className="darkmodeLogo w-16 cursor-pointer"
-              onClick={() => navigate("/")}
-              alt="logo"
-            />
-          
-            <img
-              src={logo}
-              className="w-16 cursor-pointer"
               onClick={() => navigate("/")}
               alt="logo"
             />
