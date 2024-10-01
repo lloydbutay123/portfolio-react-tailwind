@@ -16,8 +16,8 @@ const Services = () => {
   };
 
   return (
-    <section className="flex flex-col items-center p-[20px] md:p-[40px] space-y-[40px]" id="services">
-      <div className="dark:bg-black w-full lg:max-w-[1056px]">
+    <section className="flex flex-col items-center p-[20px] md:p-[40px] space-y-[40px] dark:bg-black" id="services">
+      <div className=" w-full lg:max-w-[1056px]">
         <motion.div
           className="mb-10"
           initial="hidden"
@@ -60,7 +60,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="w-full lg:max-w-[1056px] dark:bg-black py-[80px]">
+      <div className="w-full lg:max-w-[1056px]  py-[80px]">
         <motion.div
           className="mb-10"
           initial="hidden"

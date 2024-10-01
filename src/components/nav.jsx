@@ -4,7 +4,6 @@ import { FaTimes, FaRegCopyright } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
-import { MdLightMode, MdDarkMode } from "react-icons/md";
 import aboutList from "../Helper/about";
 const navLinks = [
   { id: 1, title: "Home", label: "home", href: "/" },
@@ -12,7 +11,7 @@ const navLinks = [
   { id: 3, title: "Projects", label: "projects", href: "/projects" },
   { id: 4, title: "Contact", label: "contact", href: "/contact" },
 ];
-const nav = ({ darkMode, setDarkMode }) => {
+const nav = () => {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
   const toggleMenu = () => {
@@ -20,9 +19,6 @@ const nav = ({ darkMode, setDarkMode }) => {
   };
   const navigate = useNavigate();
   const date = new Date().getFullYear();
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
   const menuVar = {
     initial: {
       scaleY: 0,
@@ -69,24 +65,23 @@ const nav = ({ darkMode, setDarkMode }) => {
     },
   };
   return (
-    <header className="flex justify-between md:justify-center py-5 px-[20px]">
+    <header className="flex justify-between md:justify-center py-5 px-[20px] dark:bg-black">
       <nav className="dark:bg-black flex justify-between w-full lg:w-[1056px]">
         <div className="flex items-center">
-          {darkMode ? (
+         
             <img
               src={logo}
               className="darkmodeLogo w-16 cursor-pointer"
               onClick={() => navigate("/")}
               alt="logo"
             />
-          ) : (
+          
             <img
               src={logo}
               className="w-16 cursor-pointer"
               onClick={() => navigate("/")}
               alt="logo"
             />
-          )}
         </div>
         <div className="hidden md:flex lg:flex-1">
           <div className="m-auto ">
@@ -117,17 +112,6 @@ const nav = ({ darkMode, setDarkMode }) => {
         </div>
         <div className="flex items-center gap-4">
           <button
-            className="block text-3xl"
-            aria-label="darkmode button"
-            onClick={toggleDarkMode}
-          >
-            {darkMode ? (
-              <MdLightMode className="dark:text-white font-bold" />
-            ) : (
-              <MdDarkMode className="dark:text-white font-bold" />
-            )}
-          </button>
-          <button
             className="block md:hidden text-3xl"
             aria-label="menubar button"
             onClick={toggleMenu}
@@ -147,22 +131,13 @@ const nav = ({ darkMode, setDarkMode }) => {
           >
             <div className="fixed w-full">
               <div className="flex justify-between px-[20px] py-5">
-                <div className="flex items-center">
-                  {darkMode ? (
+                <div className="flex items-center">                
                     <img
                       src={logo}
                       className="darkmodeLogo w-16 cursor-pointer"
                       onClick={() => navigate("/")}
                       alt="logo"
                     />
-                  ) : (
-                    <img
-                      src={logo}
-                      className="w-16 cursor-pointer"
-                      onClick={() => navigate("/")}
-                      alt="logo"
-                    />
-                  )}
                 </div>
                 <div>
                   <button
