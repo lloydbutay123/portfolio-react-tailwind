@@ -69,8 +69,8 @@ const nav = ({ darkMode, setDarkMode }) => {
     },
   };
   return (
-    <header>
-      <nav className="dark:bg-black flex justify-between px-[20px] py-5">
+    <header className="flex justify-between md:justify-center py-5 px-[20px]">
+      <nav className="dark:bg-black flex justify-between w-full lg:w-[1056px]">
         <div className="flex items-center">
           {darkMode ? (
             <img
