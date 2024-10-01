@@ -90,7 +90,7 @@ const nav = ({ darkMode, setDarkMode }) => {
                       onClick={() => navigate(navlink.href)}
                       className={`relative hover:text-black dark:hover:text-white after:absolute after:content-[''] after:bg-black dark:after:bg-white after:h-[3px] after:w-0 after:left-0 after:top-2.5 after:duration-300 hover:after:w-full transition-all ease-in-out delay-150 hover:translate-x-3 duration-500 ${
                         navlink.href === pathname
-                          ? "font-extrabold text-black dark:text-white before:absolute before:h-2 before:w-2 before:-bottom-2 before:left-[40%] before:rounded-full before:bg-black dark:before:bg-white"
+                          ? "font-extrabold text-black text-[16px] md:text-[20px] dark:text-white before:absolute before:h-2 before:w-2 before:-bottom-2 before:left-[40%] before:rounded-full before:bg-black dark:before:bg-white"
                           : ""
                       }`}
                     >

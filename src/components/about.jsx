@@ -27,7 +27,7 @@ const About = () => {
           <div className="flex items-center">
             {aboutList.map((about, index) => (
               <motion.h1
-                className="text-3xl dark:text-white font-light"
+                className="text-3xl dark:text-white"
                 key={index}
                 initial="hidden"
                 whileInView="visible"
