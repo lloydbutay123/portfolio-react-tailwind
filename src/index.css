@@ -7,6 +7,11 @@
   src: url('./assets//fonts/visuelt-pro-/VisueltPro-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'visuelt-pro-bold';
+  src: url('./assets/fonts/visuelt-pro-/VisueltPro-Bold.woff2');
+}
+
 @layer base {
   * {
     @apply box-border;
@@ -15,8 +20,12 @@
   html {
     scroll-behavior: smooth;
   }
-  body {
+  p {
     font-family: 'visuelt-pro', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'visuelt-pro-bold', sans-serif;
     font-weight: 500;
   }
   .hero button,

@@ -7,7 +7,7 @@ import onlinelogo from "../assets/logo/img-logo.webp";
 import { BsArrowDownRight } from "react-icons/bs";
 import forms from "../Helper/form";
 import aboutList from "../Helper/about";
-import SocialsLists from "../Helper/socials";
+import Tagline from "./tagline";
 
 const Contact = () => {
   document.title = "Contact | John Lloyd Butay";
@@ -45,7 +45,7 @@ const Contact = () => {
 
   return (
     <section
-      className="lg:flex flex-col items-center dark:bg-black contact p-[20px] md:p-[40px] min-h-[100vh]"
+      className="lg:flex flex-col items-center overflow-x-hidden dark:bg-black contact p-[20px] md:p-[40px] min-h-[100vh]"
       id="contact"
     >
       {/* Title and Logo Section */}
@@ -58,9 +58,9 @@ const Contact = () => {
           variants={slideLeft}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="dark:text-white text-[12vw] md:text-[80px] leading-none">
+          <p className="dark:text-white text-[12vw] md:text-[80px] leading-none">
             Let's start a project together
-          </h1>
+          </p>
         </motion.div>
         <motion.div
           className="w-1/3 flex items-end py-[20px]"
@@ -104,13 +104,13 @@ const Contact = () => {
                 </div>
                 <div className="block w-full">
                   <label
-                    className="dark:text-white text-[16px] md:text-[20px] font-bold"
+                    className="dark:text-white text-[18px] leading-[1em] md:text-[20px] font-bold"
                     htmlFor={textInput.id}
                   >
                     {textInput.label}
                   </label>
                   <input
-                    className="appearance-none w-full text-sm md:text-md bg-transparent text-gray-700 dark:text-white py-3 mb-3 leading-tight focus:outline-none"
+                    className="appearance-none w-full text-[16px] leading-[1em] md:text-md bg-transparent text-gray-700 dark:text-white py-3 mb-3 focus:outline-none"
                     id={textInput.id}
                     name={textInput.name}
                     type={textInput.type}
@@ -181,22 +181,6 @@ const Contact = () => {
                       {c.address}
                     </p>
                   ))}
-                </div>
-              ))}
-            </div>
-            <div className="hidden md:block py-5">
-              <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">
-                Socials
-              </h6>
-              {SocialsLists.map((social) => (
-                <div className="block" key={social.id}>
-                  <a
-                    href={social.link}
-                    target="_blank"
-                    className="flex text-sm dark:text-white items-center mb-2 cursor-pointer"
-                  >
-                    {social.name}
-                  </a>
                 </div>
               ))}
             </div>

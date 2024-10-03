@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
-import SocialsLists from "../Helper/socials";
-import { useNavigate } from "react-router-dom";
-import { FaArrowRightLong } from "react-icons/fa6";
 import aboutList from "../Helper/about";
 
+const navLinks = [
+  { id: 2, title: "About", label: "about", href: "#about" },
+  { id: 3, title: "Work", label: "Work", href: "#projects" },
+  { id: 3, title: "Services", label: "Services", href: "#services" },
+  { id: 4, title: "Contact", label: "contact", href: "#contact" },
+];
+
 const Hero = () => {
-  const navigate = useNavigate();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true); // Trigger animation as soon as the component mounts
+  }, []);
 
   // Define sliding animation variants
   const slideLeftToRight = {
@@ -19,104 +27,74 @@ const Hero = () => {
     visible: { opacity: 1, x: 0 },   // Slide into position
   };
 
+  const slideBottomToTop = {
+    hidden: { opacity: 0, y: 100 },  // Start from the bottom
+    visible: { opacity: 1, y: 0 },   // Slide into position
+  };
+
   return (
-    <section className="hero md:flex flex-col items-center justify-center dark:bg-black p-[20px] md:p-[40px] h-screen space-y-[10px]" id="hero">
+    <section className="hero flex flex-col justify-center overflow-hidden dark:bg-black p-[16px] md:p-[40px] h-screen space-y-[10px] overflow-x-hidden" id="hero">
       <div className="md:flex w-full lg:max-w-[1056px] justify-between space-y-[10px] pb-[40px] md:pb-0">
         {/* Title Section */}
-        <motion.div
-          className="w-full md:w-[700px]"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideLeftToRight}
-          transition={{ duration: 0.6 }}
-        >
-          {aboutList.map((item, index) => (
-            <h1
-              className="dark:text-white text-6xl md:text-8xl lg:text-[130px] leading-none"
-              key={index}
-            >
-              {item.title}
-            </h1>
-          ))}
-        </motion.div>
-
-        {/* Story Section */}
-        <motion.div
-          className="flex items-end w-full md:w-[300px]"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideRightToLeft}
-          transition={{ duration: 0.6, delay: 0.2 }} // Add delay to stagger animation
-        >
-          {aboutList.map((item, index) => (
-            <div key={index}>
-              {item.story.map((c, i) => (
-                <p
-                  className="text-left text-[16px] md:text-[20px] text-gray-500"
-                  key={i}
-                >
-                  {c.introduction}
-                </p>
-              ))}
-            </div>
-          ))}
-        </motion.div>
+        <div className="flex flex-col space-y-[8px] w-full md:w-[700px]">
+          {navLinks.map((item, index) => {
+            return (
+              <motion.div key={index} 
+              initial="hidden"
+              animate={isMounted ? "visible" : "hidden"}
+              variants={slideLeftToRight}
+              transition={{ duration: 0.6 }}>
+                <a href={item.href} className="text-[48px] md:text-[20px] dark:text-white uppercase font-[700] leading-[0.8em]" key={index}>{item.title}</a>
+              </motion.div>
+            )
+          })}
+        </div>
       </div>
 
       <div className="md:flex w-full lg:max-w-[1056px] justify-between space-y-[10px] pb-[40px] md:pb-0">
         {/* Introduction Section */}
         <motion.div
-          className="w-full md:w-[700px]"
+          className="flex flex-col gap-[34px] w-full md:w-[700px]"
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate={isMounted ? "visible" : "hidden"}
           variants={slideLeftToRight}
           transition={{ duration: 0.6, delay: 0.4 }} // Add more delay
         >
           {aboutList.map((item, index) => (
-            <p className="dark:text-white text-[16px] md:text-[20px] md:w-4/5 mb-10" key={index}>
-              {item.introduction}
-            </p>
-          ))}
-          <button
-            className="dark:text-white text-[16px] md:text-[20px] z-50 relative flex left-5 items-center font-bold"
-            aria-label="to about page button"
-            onClick={() => navigate("/about")}
-          >
-            See more about me{" "}
-            <span className="ml-3">
-              <FaArrowRightLong />
-            </span>
-          </button>
-        </motion.div>
-
-        {/* Social Links Section */}
-        <motion.div
-          className="hidden md:block w-full md:w-[300px] space-y-2"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideRightToLeft}
-          transition={{ duration: 0.6, delay: 0.6 }} // Add stagger for the social links
-        >
-          <h2 className="border-b-2 text-sm border-gray-500 mb-2 pb-2 text-gray-500">
-            Let's get connected
-          </h2>
-          {SocialsLists.map((social) => (
-            <div className="flex" key={social.id}>
-              <a
-                href={social.link}
-                target="_blank"
-                className="relative text-sm dark:text-white after:absolute after:content-[''] after:bg-black dark:after:bg-white after:h-[3px] after:w-0 after:left-0 after:top-2 after:duration-300 hover:after:w-full transition ease-in-out delay-150 hover:translate-x-3 duration-500"
-              >
-                {social.name}
-              </a>
+            <div key={index}>
+              <p className="dark:text-white text-[18px] md:text-[20px] md:w-4/5 font-[500] leading-[1em]">
+                {item.introduction}
+              </p>
             </div>
           ))}
         </motion.div>
       </div>
+
+      <motion.div className="flex justify-end"
+        initial="hidden"
+        animate={isMounted ? "visible" : "hidden"}
+        variants={slideRightToLeft}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <motion.div
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 10, ease:"linear", repeat: Infinity }}
+          className="size-14 bg-[#FF3C00]"
+        />
+      </motion.div>
+
+      {/* Ensure the text stays at the bottom of the screen */}
+      <motion.div className="absolute bottom-0 left-0 right-0 flex justify-center items-end"
+        initial="hidden"
+        animate={isMounted ? "visible" : "hidden"} // Controlled animation
+        variants={slideBottomToTop}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-[12vw] lg:text-[8vw] xl:text-[6vw] font-[1500] text-[#FF3C00] leading-none uppercase">
+          LloydVision®
+        </h1>
+    </motion.div>
     </section>
   );
 };

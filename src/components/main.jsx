@@ -1,8 +1,8 @@
 import Hero from "./hero";
-import ProjectsPreview from "./projectsPreview";
+import Projects from "./projects";
+import About from "./about";
 import Services from "./services";
-import Quotes from "./quotes";
-import ContactPreview from "../components/contactPreview";
+import Contact from "./contact";
 
 const main = () => {
   document.title = "John Lloyd Butay | Career Portfolio"
@@ -10,9 +10,9 @@ const main = () => {
     <div>
       <Hero />
       <Services />
-      <ProjectsPreview />
-      <Quotes />
-      <ContactPreview />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 };

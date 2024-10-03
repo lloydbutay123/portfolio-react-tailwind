@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import aboutList from "../Helper/about";
-import ContactPreview from "./contactPreview";
 
 const About = () => {
   document.title = "About | John Lloyd Butay";
@@ -20,14 +19,14 @@ const About = () => {
 
   return (
     <section className="dark:bg-black about min-h-[100vh] w-full" id="about">
-      <div className="md:flex flex-col items-center p-[20px] md:p-[40px] space-y-[40px]">
+      <div className="md:flex flex-col items-center p-[20px] md:p-[40px] space-y-[40px] overflow-x-hidden">
         
         {/* About Description and Image Section */}
         <div className="md:flex lg:max-w-[1056px] gap-[40px] space-y-[40px]">
           <div className="flex items-center">
             {aboutList.map((about, index) => (
-              <motion.h1
-                className="text-3xl dark:text-white"
+              <motion.p
+                className="text-3xl dark:text-white leading-[1em]"
                 key={index}
                 initial="hidden"
                 whileInView="visible"
@@ -36,7 +35,7 @@ const About = () => {
                 transition={{ duration: 0.6 }}
               >
                 {about.description}
-              </motion.h1>
+              </motion.p>
             ))}
           </div>
           <div>
@@ -66,7 +65,7 @@ const About = () => {
             </div>
             <div className="md:w-2/3">
               <motion.h1
-                className="dark:text-white text-xl font-bold mb-10"
+                className="dark:text-white text-[21px] font-bold mb-10"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -79,7 +78,7 @@ const About = () => {
                 <div key={index}>
                   {item.story.map((c, i) => (
                     <motion.div
-                      className="dark:text-white text-[16px] md:text-[20px] leading-loose"
+                      className="dark:text-white text-[18px] md:text-[20px] leading-[1em]"
                       key={i}
                       initial="hidden"
                       whileInView="visible"
@@ -105,7 +104,7 @@ const About = () => {
             </div>
             <div className="md:w-2/3">
               <motion.h1
-                className="dark:text-white text-xl font-bold mb-10"
+                className="dark:text-white text-[21px] font-bold mb-10"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -126,11 +125,11 @@ const About = () => {
                       variants={slideRight} // Slide from left to right
                       transition={{ duration: 0.6 }}
                     >
-                      <h2 className="uppercase font-bold text-[16px] md:text-[20px]">
+                      <h2 className="uppercase font-bold text-[18px] md:text-[20px] leading-[1em]">
                         {c.name}
                       </h2>
-                      <p className="text-sm md:text-md">{c.course}</p>
-                      <p className="text-gray-500 text-sm md:text-md">
+                      <p className="text-[16px] md:text-md leading-[1em]">{c.course}</p>
+                      <p className="text-gray-500 text-[16px] md:text-md leading-[1em]">
                         {c.year}
                       </p>
                     </motion.div>
@@ -150,7 +149,7 @@ const About = () => {
             </div>
             <div className="md:w-2/3">
               <motion.h1
-                className="dark:text-white text-xl font-bold mb-10"
+                className="dark:text-white text-[21px] font-bold mb-10"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -171,11 +170,11 @@ const About = () => {
                       variants={slideRight} // Slide from left to right
                       transition={{ duration: 0.6 }}
                     >
-                      <h2 className="uppercase font-bold text-[16px] md:text-[20px]">
+                      <h2 className="uppercase font-bold text-[18px] md:text-[20px] leading-[1em]">
                         {c.name}
                       </h2>
-                      <p className="text-sm md:text-md">{c.title}</p>
-                      <p className="text-gray-500 text-sm md:text-md">
+                      <p className="text-[16px] leading-[1em] md:text-md">{c.title}</p>
+                      <p className="text-gray-500 text-[16px] leading-[1em] md:text-md">
                         {c.year}
                       </p>
                     </motion.div>
@@ -194,7 +193,7 @@ const About = () => {
             </div>
             <div className="md:w-2/3">
               <motion.h1
-                className="dark:text-white text-xl font-bold mb-10"
+                className="dark:text-white text-[21px] font-bold mb-10"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -215,11 +214,11 @@ const About = () => {
                       variants={slideRight} // Slide from left to right
                       transition={{ duration: 0.6 }}
                     >
-                      <h2 className="uppercase font-bold text-[16px] md:text-[20px]">
+                      <h2 className="uppercase font-bold text-[18px] leading-[1em] md:text-[20px]">
                         {c.name}
                       </h2>
-                      <p className="text-sm md:text-md">{c.company}</p>
-                      <p className="text-gray-500 text-sm md:text-md">
+                      <p className="text-[16px] leading-[1em] md:text-md">{c.company}</p>
+                      <p className="text-gray-500 text-[16px] leading-[1em] md:text-md">
                         {c.issuedOn}
                       </p>
                     </motion.div>
@@ -230,7 +229,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <ContactPreview />
     </section>
   );
 };
