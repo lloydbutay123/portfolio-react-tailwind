@@ -11,6 +11,7 @@ const About = () => {
     visible: { opacity: 1, x: 0 },
   };
 
+  // Define variants for sliding animations (from right to left)
   const slideRight = {
     hidden: { opacity: 0, x: 100 },
     visible: { opacity: 1, x: 0 },
@@ -22,7 +23,7 @@ const About = () => {
       <div className="md:flex flex-col items-center p-[20px] md:p-[40px] space-y-[40px] overflow-x-hidden">
         
         {/* About Description and Image Section */}
-        <div className="md:flex lg:max-w-[1056px] gap-[40px] space-y-[40px]">
+        {/* <div className="md:flex w-fullgap-[40px] space-y-[40px]">
           <div className="flex items-center">
             {aboutList.map((about, index) => (
               <motion.p
@@ -53,18 +54,29 @@ const About = () => {
               />
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Story Section */}
-        <div className="lg:max-w-[1056px]">
+        <div className="w-full">
           <div className="block md:flex mb-20">
-            <div className="w-1/3">
+            <motion.div className="w-1/3"
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
+            variants={slideLeft}
+            transition={{ duration: 0.6 }}>
               <p className="dark:text-white text-xs uppercase flex items-center">
                 /01 <span className="mx-10 text-gray-500">Story</span>
               </p>
-            </div>
-            <div className="md:w-2/3">
-              <motion.h1
+            </motion.div>
+            <motion.div className="md:w-2/3"
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
+            variants={slideRight} // Slide from right to left
+            transition={{ duration: 0.6 }}
+            >
+              <h1
                 className="dark:text-white text-[21px] font-bold mb-10"
                 initial="hidden"
                 whileInView="visible"
@@ -73,11 +85,11 @@ const About = () => {
                 transition={{ duration: 0.6 }}
               >
                 Persistence and Hardwork
-              </motion.h1>
+              </h1>
               {aboutList.map((item, index) => (
                 <div key={index}>
                   {item.story.map((c, i) => (
-                    <motion.div
+                    <div
                       className="dark:text-white text-[18px] md:text-[20px] leading-[1em]"
                       key={i}
                       initial="hidden"
@@ -88,11 +100,11 @@ const About = () => {
                     >
                       <p className="my-10">{c.text1}</p>
                       <p>{c.text2}</p>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
           {/* Education Section */}
