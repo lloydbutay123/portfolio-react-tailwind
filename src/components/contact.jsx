@@ -45,11 +45,11 @@ const Contact = () => {
 
   return (
     <section
-      className="lg:flex flex-col items-center overflow-x-hidden dark:bg-black contact p-[20px] md:p-[40px] min-h-[100vh]"
+      className="lg:flex flex-col items-center overflow-x-hidden dark:bg-black contact p-[24px] min-h-[100vh]"
       id="contact"
     >
       {/* Title and Logo Section */}
-      <div className="lg:max-w-[1056px] md:flex mb-20">
+      <div className="w-full lg:pt-[136px] lg:px-[96px] md:flex mb-20 xl:pt-[96px] xl:px-[136px]">
         <motion.div
           className="md:w-2/3"
           initial="hidden"
@@ -82,7 +82,7 @@ const Contact = () => {
       </div>
 
       {/* Form Section */}
-      <form ref={form} onSubmit={sendEmail} method="POST" id="form">
+      <form ref={form} onSubmit={sendEmail} method="POST" id="form" className="w-full lg:px-[96px] xl:px-[136px]">
         <div className="block md:flex md:gap-[40px]">
           <motion.div
             className="md:w-2/3"

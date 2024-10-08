@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectLists from "../Helper/projects.jsx";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion"; // Import Framer Motion
 
 const projectsPreview = () => {
+
+  useEffect(() => {
+    document.title = "Projects | John Lloyd Butay";
+  });
   // Define slide variants for left-to-right animation
   const slideLeft = {
     hidden: { opacity: 0, x: -100 },
@@ -17,10 +21,10 @@ const projectsPreview = () => {
 
   return (
     <section
-      className="dark:bg-black projectsPreview w-full flex flex-col overflow-x-hidden items-center p-[20px] md:p-[40px]"
+      className="dark:bg-black projectsPreview w-full flex flex-col overflow-x-hidden items-center p-[24px]"
       id="projects"
     >
-      <div className="w-full lg:max-w-[1056px]">
+      <div className="w-full lg:px-[96px] xl:px-[136px]">
         <motion.div
           className="mb-10"
           initial="hidden"

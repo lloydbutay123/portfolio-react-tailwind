@@ -1,15 +1,15 @@
-import aboutimg from "../assets/background_images/aboutimg.webp";
+import aboutimg from "../assets/background_images/johnlloyd.png";
 
 const aboutList = [
   {
     name: "John Lloyd Butay",
     img: aboutimg,
     dob: "12/29/1999",
-    title: "Web Developer",
+    title: "Full Stack Developer | Software Engineer",
     introduction:
       "Your friendly neighborhood Full-stack Developer, turning code into captivating digital experiences. By day (and often night), I craft immersive, interactive projects—bringing ideas to life, one line of code at a time.",
     description:
-      "I'am a passionate Web Developer, with a love for creating dynamic, user-friendly websites and applications.",
+      "Crafting code, building connections, and shaping digital dreams into reality.",
     story: [
       {
         introduction:

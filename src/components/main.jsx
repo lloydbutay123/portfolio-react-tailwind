@@ -3,6 +3,7 @@ import Projects from "./projects";
 import About from "./about";
 import Services from "./services";
 import Contact from "./contact";
+import Service from "./service";
 
 const main = () => {
   document.title = "John Lloyd Butay | Career Portfolio"
@@ -10,8 +11,8 @@ const main = () => {
     <div>
       <Hero />
       <About />
-      <Services />
       <Projects />
+      <Service />
       <Contact />
     </div>
   );
