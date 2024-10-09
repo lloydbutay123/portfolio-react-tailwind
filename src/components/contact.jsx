@@ -7,7 +7,8 @@ import onlinelogo from "../assets/logo/img-logo.webp";
 import { BsArrowDownRight } from "react-icons/bs";
 import forms from "../Helper/form";
 import aboutList from "../Helper/about";
-import Tagline from "./tagline";
+import AnimatedComponent from "./Motion/AnimatedComponent";
+import RotatingComponent from "./Motion/RotatingComponent";
 
 const Contact = () => {
   document.title = "Contact | John Lloyd Butay";
@@ -32,43 +33,24 @@ const Contact = () => {
       );
   };
 
-  // Define variants for sliding animations
-  const slideLeft = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  const slideRight = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
     <section
-      className="lg:flex flex-col items-center overflow-x-hidden dark:bg-black contact p-[24px] min-h-[100vh]"
+      className="lg:flex flex-col items-center overflow-x-hidden dark:bg-black contact p-[24px] lg:min-h-[100vh]"
       id="contact"
     >
       {/* Title and Logo Section */}
       <div className="w-full lg:pt-[136px] lg:px-[96px] md:flex mb-20 xl:pt-[96px] xl:px-[136px]">
-        <motion.div
+        <AnimatedComponent
           className="md:w-2/3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideLeft}
-          transition={{ duration: 0.6 }}
+          animationType="slideLeft"
         >
           <p className="dark:text-white text-[12vw] md:text-[80px] leading-none">
             Let's start a project together
           </p>
-        </motion.div>
-        <motion.div
+        </AnimatedComponent>
+        <AnimatedComponent
           className="w-1/3 flex items-end py-[20px]"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideRight}
-          transition={{ duration: 0.6 }}
+          animationType="slideRight"
         >
           <div className="block">
             <img src={onlinelogo} className="w-[100px] mb-5" alt="Logo" />
@@ -78,19 +60,15 @@ const Contact = () => {
               onClick={() => navigate("/404")}
             />
           </div>
-        </motion.div>
+        </AnimatedComponent>
       </div>
 
       {/* Form Section */}
       <form ref={form} onSubmit={sendEmail} method="POST" id="form" className="w-full lg:px-[96px] xl:px-[136px]">
         <div className="block md:flex md:gap-[40px]">
-          <motion.div
+          <AnimatedComponent
             className="md:w-2/3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={slideLeft}
-            transition={{ duration: 0.6 }}
+            animationType="slideLeft"
           >
             {forms.map((textInput) => (
               <div
@@ -130,16 +108,12 @@ const Contact = () => {
                 Send message <IoSendSharp className="ml-3" />
               </button>
             </div>
-          </motion.div>
+          </AnimatedComponent>
 
           {/* Contact Info Section */}
-          <motion.div
+          <AnimatedComponent
             className="md:w-1/3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={slideRight}
-            transition={{ duration: 0.6 }}
+            animationType="slideRight"
           >
             <div className="mb-10">
               <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">
@@ -184,7 +158,7 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </AnimatedComponent>
         </div>
       </form>
     </section>

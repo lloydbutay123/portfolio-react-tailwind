@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion"; // Import Framer Motion
 import aboutList from "../Helper/about";
+import AnimatedComponent from "./Motion/AnimatedComponent";
+import RotatingComponent from "./Motion/RotatingComponent";
 
 const navLinks = [
   { id: 2, title: "About", label: "about", href: "#about" },
@@ -13,20 +15,6 @@ const Hero = () => {
 
   const handleClick = (href) => {
     window.location.hash = href;
-  }
-
-  const { scrollY } = useScroll();
-  
-  // Define slide variants for left-to-right animation
-  const slideLeft = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  // Define slide variants for right-to-left animation
-  const slideRight = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
   }
 
   // Define slide variants for bottom-to-top animation
@@ -42,18 +30,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <motion.section
+    <section
       className="hero xl:relative flex flex-col justify-center overflow-hidden dark:bg-black p-[24px] h-screen space-y-[10px] overflow-x-hidden"
       id="hero"
     >
       <div>
         <div className="xl:absolute xl:top-[208px] md:flex flex-col xl:flex-row gap-[48px] lg:px-[72px] xl:px-[136px]">
-          <motion.div className="md:flex w-full lg:max-w-[1056px] justify-between space-y-[10px] pb-[40px] md:pb-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideRight}
-          transition={{ duration: 0.6 }}>
+          <AnimatedComponent className="md:flex w-full lg:max-w-[1056px] justify-between space-y-[10px] pb-[40px] md:pb-0"
+          animationType="slideRight">
             {/* Title Section */}
             <div className="flex flex-col space-y-[8px] w-full md:w-[700px]">
               {navLinks.map((item, index) => {
@@ -71,14 +55,10 @@ const Hero = () => {
                 );
               })}
             </div>
-          </motion.div>
+          </AnimatedComponent>
 
-          <motion.div className="md:flex w-full lg:max-w-[1056px] xl:block justify-between space-y-[70px] pb-[40px] md:pb-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideLeft}
-          transition={{ duration: 0.6 }}>
+          <AnimatedComponent className="md:flex w-full lg:max-w-[1056px] xl:block justify-between space-y-[70px] pb-[40px] md:pb-0"
+          animationType="slideLeft">
             {/* Introduction Section */}
             <motion.div
               className="flex flex-col gap-[34px] w-full"
@@ -100,14 +80,11 @@ const Hero = () => {
           animate={isMounted ? "visible" : "hidden"}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 10, ease: "linear", repeat: Infinity }}
+            <RotatingComponent
               className="size-14 bg-[#FF3C00]"
             />
             </motion.div>
-          </motion.div>
+          </AnimatedComponent>
         </div>
 
         <motion.div 
@@ -125,7 +102,7 @@ const Hero = () => {
         </motion.div>
 
       </div>
-    </motion.section>
+    </section>
   );
 };
 

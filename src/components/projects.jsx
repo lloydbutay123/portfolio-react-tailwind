@@ -1,23 +1,13 @@
 import React, { useEffect } from "react";
 import ProjectLists from "../Helper/projects.jsx";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { motion } from "framer-motion"; // Import Framer Motion
+import AnimatedComponent from "./Motion/AnimatedComponent";
 
 const projectsPreview = () => {
 
   useEffect(() => {
     document.title = "Projects | John Lloyd Butay";
   });
-  // Define slide variants for left-to-right animation
-  const slideLeft = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  const slideRight = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0 },
-  };
 
   return (
     <section
@@ -25,13 +15,9 @@ const projectsPreview = () => {
       id="projects"
     >
       <div className="w-full lg:px-[96px] xl:px-[136px]">
-        <motion.div
+        <AnimatedComponent
           className="mb-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={slideLeft}
-          transition={{ duration: 0.6 }}
+          animationType="slideLeft"
         >
           <h1 className="dark:text-white text-5xl md:text-8xl leading-[1em] font-bold">
             Crafted with love.
@@ -39,18 +25,14 @@ const projectsPreview = () => {
           <p className="dark:text-white text-[16px] md:text-[20px]">
             These are selections of my recent works.
           </p>
-        </motion.div>
+        </AnimatedComponent>
 
         {ProjectLists.map((project, index) => {
           return (
-            <motion.div
+            <AnimatedComponent
               className="cursor-pointer dark:bg-black w-full py-10 md:flex justify-between items-center md:mb-0 border-b-2 border-gray-500 break-words"
               key={`project-${project.id}`} // Unique key for the outer motion div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={slideLeft}
-              transition={{ duration: 0.6, delay: index * 0.2 }} // Slight delay for staggered effect
+              animationType="slideLeft"
             >
               <div className="mb-10">
                 <h1 className="dark:text-white text-4xl md:text-6xl font-medium">
@@ -61,14 +43,10 @@ const projectsPreview = () => {
                   {project.text}
                 </p>
               </div>
-              <motion.div
+              <AnimatedComponent
                 className="pr-7 flex justify-end left-20"
                 key={`link-${project.id}`} // Unique key for the inner motion div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={slideRight}
-                transition={{ duration: 0.6 }}
+                animationType="slideRight"
               >
                 <a
                   href={project.link}
@@ -81,8 +59,8 @@ const projectsPreview = () => {
                     <FaArrowRightLong />
                   </span>
                 </a>
-              </motion.div>
-            </motion.div>
+              </AnimatedComponent>
+            </AnimatedComponent>
           );
         })}
       </div>

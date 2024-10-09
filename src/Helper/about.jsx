@@ -1,4 +1,4 @@
-import aboutimg from "../assets/background_images/johnlloyd.png";
+import aboutimg from "../assets/background_images/johnlloyd.jpg";
 
 const aboutList = [
   {
@@ -10,6 +10,7 @@ const aboutList = [
       "Your friendly neighborhood Full-stack Developer, turning code into captivating digital experiences. By day (and often night), I craft immersive, interactive projects—bringing ideas to life, one line of code at a time.",
     description:
       "Crafting code, building connections, and shaping digital dreams into reality.",
+    mission: "Thrive on building solutions that merge innovation with efficiency, whether it's enhancing user experiences on the front end or optimizing server performance on the back end. make this more interesting.",
     story: [
       {
         introduction:
