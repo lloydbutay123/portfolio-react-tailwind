@@ -8,7 +8,7 @@ import RotatingComponent from "./Motion/RotatingComponent";
 const Service = () => {
 
   return (
-    <section className='flex flex-col items-center p-[24px] overflow-x-hidden dark:bg-black' id='services'>
+    <section className='flex flex-col items-center p-[24px] overflow-x-hidden dark:bg-black' id='service'>
         <div className='lg:px-[96px] lg:py-[136px] xl:px-[136px] py-[96px] xl:pr-[288px]'>
             <AnimatedComponent className='w-full flex justify-end'
             animationType='slideRight'

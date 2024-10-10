@@ -6,8 +6,8 @@ import RotatingComponent from "./Motion/RotatingComponent";
 
 const navLinks = [
   { id: 2, title: "About", label: "about", href: "#about" },
-  { id: 3, title: "Work", label: "Work", href: "#projects" },
-  { id: 3, title: "Services", label: "Services", href: "#services" },
+  { id: 3, title: "Work", label: "Work", href: "#work" },
+  { id: 3, title: "Service", label: "Service", href: "#service" },
   { id: 4, title: "Contact", label: "contact", href: "#contact" },
 ];
 

@@ -21,7 +21,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
         <div className="flex items-center">
           <a href="#hero" className="dark:text-white">HOME</a>
         </div>
-        <div className="flex items-center bg-white w-[96px] lg:w-[112px] h-[96px] p-[16px] rounded-tl-[20px] rounded-b-[20px]" >
+        <div className="flex items-center bg-white w-[96px] lg:w-[112px] h-[96px] p-[16px] rounded-tl-[20px] rounded-b-[20px] lg:rounded-[20px]" >
           <img src="/assets/36cb5d43-b2e6-42f8-939c-606e63706573.png" className="w-full" alt="" />
         </div>
       </nav>

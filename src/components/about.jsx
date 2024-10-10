@@ -17,11 +17,11 @@ const About = () => {
           animationType="slideLeft">
           <div className="px-[24px] pt-[96px] pb-[24px]"
           >
-            <p className=" text-black">(MEET ME)</p>
+            <p className="text-black dark:text-white">(MEET ME)</p>
           </div>
-          <div className="px-[24px] py-[96px]">
+          <div className="px-[24px] py-[96px] xl:pb-0">
             {aboutList.map((about, index) => (
-              <p className="lg:w-[614px] text-[18px] lg:text-[22px] leading-[1em]" key={index}>{about.mission}</p>
+              <p className="lg:w-[614px] text-black dark:text-white text-[18px] lg:text-[22px] leading-[1em]" key={index}>{about.mission}</p>
             ))}
             <p className="hidden md:block px-[24px] md:px-0"></p>
           </div>
@@ -33,13 +33,13 @@ const About = () => {
                 <img
                 src={about.img}
                 className="w-full h-[300px] md:h-[350px] lg:h-full lg:rounded-[50px] object-cover object-center"
-                alt="About image"
+                alt="About"
                 />
               </AnimatedComponent>
             ))}
           </div>
           <div className="relative p-[24px] lg:p-0 lg:w-1/2">
-            <AnimatedComponent animationType="slideLeft" className="absolute left-1/2 md:left-[200px] top-0 lg:-top-20">
+            <AnimatedComponent animationType="slideLeft" className="absolute left-1/2 md:left-[200px] -top-5 lg:-top-20">
               <RotatingComponent
                 className="size-3 bg-[#FF3C00]"
               />
@@ -59,7 +59,7 @@ const About = () => {
           
             animationType="slideBottom">
               {SocialsLists.map((social, index) => (
-                <a key={index} href={ social.link } className="text-[16px] uppercase font-medium">{ social.name }</a>
+                <a key={index} href={ social.link } className="text-black dark:text-white text-[16px] uppercase font-medium">{ social.name }</a>
               ))}
           </AnimatedComponent>
           </div>
@@ -68,7 +68,7 @@ const About = () => {
           animationType="slideBottom"
           >
               {SocialsLists.map((social, index) => (
-                <a key={index} href={ social.link } className="text-[16px] uppercase">{ social.name }</a>
+                <a key={index} href={ social.link } className="text-black dark:text-white text-[16px] uppercase">{ social.name }</a>
               ))}
           </AnimatedComponent>
         </div>

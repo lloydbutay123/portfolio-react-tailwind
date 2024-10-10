@@ -2,13 +2,11 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import { IoSendSharp } from "react-icons/io5";
-import { motion } from "framer-motion";
 import onlinelogo from "../assets/logo/img-logo.webp";
 import { BsArrowDownRight } from "react-icons/bs";
 import forms from "../Helper/form";
 import aboutList from "../Helper/about";
 import AnimatedComponent from "./Motion/AnimatedComponent";
-import RotatingComponent from "./Motion/RotatingComponent";
 
 const Contact = () => {
   document.title = "Contact | John Lloyd Butay";
