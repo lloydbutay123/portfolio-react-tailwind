@@ -7,6 +7,7 @@ import { BsArrowDownRight } from "react-icons/bs";
 import forms from "../Helper/form";
 import aboutList from "../Helper/about";
 import AnimatedComponent from "./Motion/AnimatedComponent";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   document.title = "Contact | John Lloyd Butay";
@@ -23,10 +24,24 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          navigate("/success");
+          Swal.fire({
+            title: "Success!",
+            text: "Thanks a bunch! I can’t wait to dive into your ideas!",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+
+          form.current.reset();
         },
         (error) => {
+          s;
           console.log("FAILED...", error.text);
+          Swal.fire({
+            title: "Error!",
+            text: "There was a problem sending your message.",
+            icon: "error",
+            confirmButtonText: "Try Again",
+          });
         }
       );
   };
@@ -38,10 +53,7 @@ const Contact = () => {
     >
       {/* Title and Logo Section */}
       <div className="w-full lg:pt-[136px] lg:px-[96px] md:flex mb-20 xl:pt-[96px] xl:px-[136px]">
-        <AnimatedComponent
-          className="md:w-2/3"
-          animationType="slideLeft"
-        >
+        <AnimatedComponent className="md:w-2/3" animationType="slideLeft">
           <p className="dark:text-white text-[12vw] md:text-[80px] leading-none">
             Let's start a project together
           </p>
@@ -62,12 +74,15 @@ const Contact = () => {
       </div>
 
       {/* Form Section */}
-      <form ref={form} onSubmit={sendEmail} method="POST" id="form" className="w-full lg:px-[96px] xl:px-[136px]">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        method="POST"
+        id="form"
+        className="w-full lg:px-[96px] xl:px-[136px]"
+      >
         <div className="block md:flex md:gap-[40px]">
-          <AnimatedComponent
-            className="md:w-2/3"
-            animationType="slideLeft"
-          >
+          <AnimatedComponent className="md:w-2/3" animationType="slideLeft">
             {forms.map((textInput) => (
               <div
                 className="flex gap-20 border-t-2 border-gray-500 py-[20px]"
@@ -109,10 +124,7 @@ const Contact = () => {
           </AnimatedComponent>
 
           {/* Contact Info Section */}
-          <AnimatedComponent
-            className="md:w-1/3"
-            animationType="slideRight"
-          >
+          <AnimatedComponent className="md:w-1/3" animationType="slideRight">
             <div className="mb-10">
               <h6 className="uppercase text-xs mb-3 text-bold text-gray-500">
                 Contact Details
@@ -121,10 +133,7 @@ const Contact = () => {
                 <div key={index}>
                   {item.contacts.map((c, i) => (
                     <div key={i} className="dark:text-white">
-                      <a
-                        className="text-sm block mb-2"
-                        href={`tel:${c.phone}`}
-                      >
+                      <a className="text-sm block mb-2" href={`tel:${c.phone}`}>
                         {c.phone}
                       </a>
                     </div>
