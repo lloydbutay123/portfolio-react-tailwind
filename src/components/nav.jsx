@@ -19,10 +19,16 @@ const Nav = ({ darkMode, setDarkMode }) => {
     <header className="flex fixed w-full z-50 pl-[24px] justify-between">
       <nav className="flex justify-between w-full lg:p-[72px] xl:pb-0">
         <div className="flex items-center">
-          <a href="#hero" className="dark:text-white">HOME</a>
+          <a href="#hero" className="dark:text-white">
+            HOME
+          </a>
         </div>
-        <div className="flex items-center bg-white w-[96px] lg:w-[112px] h-[96px] p-[16px] rounded-tl-[20px] rounded-b-[20px] lg:rounded-[20px]" >
-          <img src="/assets/36cb5d43-b2e6-42f8-939c-606e63706573.png" className="w-full" alt="" />
+        <div className="flex items-center bg-white w-[96px] lg:w-[112px] p-[16px] rounded-tl-[30px] rounded-b-[30px] lg:rounded-[30px]">
+          <img
+            src="/assets/36cb5d43-b2e6-42f8-939c-606e63706573.png"
+            className="w-full"
+            alt=""
+          />
         </div>
       </nav>
     </header>
