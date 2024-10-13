@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
 import ServicesList from "../Helper/services.jsx";
 import Skills from "../Helper/skills.jsx";
 
 const Services = () => {
+  
+  useEffect(() => {
+    document.title = "Services | John Lloyd Butay";
+  });
+  
+  
   // Define slide variants for left-to-right animation
   const slideLeft = {
     hidden: { opacity: 0, x: -100 },
@@ -16,8 +22,8 @@ const Services = () => {
   };
 
   return (
-    <section className="flex flex-col items-center p-[20px] md:p-[40px] space-y-[40px] dark:bg-black" id="services">
-      <div className=" w-full lg:max-w-[1056px]">
+    <section className="flex flex-col items-center p-[24px] space-y-[40px] overflow-x-hidden dark:bg-black" id="services">
+      <div className=" w-full lg:pt-[136px] lg:px-[96px]">
         <motion.div
           className="mb-10"
           initial="hidden"
@@ -26,9 +32,9 @@ const Services = () => {
           variants={slideLeft}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="dark:text-white text-4xl lg:text-5xl font-medium">
+          <p className="dark:text-white text-4xl lg:text-5xl font-medium">
             I can help you with ...
-          </h2>
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3">
@@ -48,10 +54,10 @@ const Services = () => {
                 </h3>
               </div>
               <div className="py-5">
-                <h2 className="dark:text-white text-[24px] mb-5 font-medium">
+                <p className="dark:text-white text-[21px] mb-5 font-medium">
                   {service.title}
-                </h2>
-                <p className="text-[16px] md:text-[20px] dark:text-white">
+                </p>
+                <p className="text-[18px] md:text-[20px] dark:text-white leading-[1em]">
                   {service.text}
                 </p>
               </div>
@@ -60,7 +66,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="w-full lg:max-w-[1056px]  py-[80px]">
+      <div className="w-full lg:px-[96px]">
         <motion.div
           className="mb-10"
           initial="hidden"

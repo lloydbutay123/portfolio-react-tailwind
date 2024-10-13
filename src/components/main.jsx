@@ -1,18 +1,19 @@
 import Hero from "./hero";
-import ProjectsPreview from "./projectsPreview";
+import Projects from "./projects";
+import About from "./about";
 import Services from "./services";
-import Quotes from "./quotes";
-import ContactPreview from "../components/contactPreview";
+import Contact from "./contact";
+import Service from "./service";
 
 const main = () => {
   document.title = "John Lloyd Butay | Career Portfolio"
   return (
     <div>
       <Hero />
-      <Services />
-      <ProjectsPreview />
-      <Quotes />
-      <ContactPreview />
+      <About />
+      <Projects />
+      <Service />
+      <Contact />
     </div>
   );
 };

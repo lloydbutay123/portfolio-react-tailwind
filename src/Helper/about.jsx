@@ -1,23 +1,24 @@
-import aboutimg from "../assets/background_images/aboutimg.webp";
+import aboutimg from "../assets/background_images/johnlloyd.jpg";
 
 const aboutList = [
   {
     name: "John Lloyd Butay",
     img: aboutimg,
     dob: "12/29/1999",
-    title: "Web Developer",
+    title: "Full Stack Developer | Software Engineer",
     introduction:
       "Your friendly neighborhood Full-stack Developer, turning code into captivating digital experiences. By day (and often night), I craft immersive, interactive projects—bringing ideas to life, one line of code at a time.",
     description:
-      "I'am a passionate Web Developer, with a love for creating dynamic, user-friendly websites and applications.",
+      "Crafting code, building connections, and shaping digital dreams into reality.",
+    mission:
+      "Thrive on building solutions that merge innovation with efficiency, whether it's enhancing user experiences on the front end or optimizing server performance on the back end.",
     story: [
       {
         introduction:
           "Hi I'm John Lloyd Butay. A passionate Full-stack Developer based in the Philippines.",
         text1:
           "Hey, I'm John Lloyd Butay and I use Lloyd as my nickname on social media. I'm a Web Developer with a deep passion for creating seamless, user-friendly digital experiences. I love diving into new technologies, constantly expanding my knowledge and skill set to stay ahead in the fast-paced world of tech. Whether it’s exploring the latest frameworks or optimizing code, I’m always eager to learn and push the boundaries of what’s possible. For me, coding is more than just a job—it’s a craft I’m excited to keep honing every day.",
-        text2:
-          "",
+        text2: "",
       },
     ],
     contacts: [
@@ -47,7 +48,7 @@ const aboutList = [
         name: "Batac National High School - Bungon Campus",
         course: "",
         year: "2012-2016",
-      }
+      },
     ],
     experience: [
       {

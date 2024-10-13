@@ -16,7 +16,7 @@ const SocialsLists = [
   {
     id: 2,
     name: "Github",
-    link: "github.com/lloydbutay123",
+    link: "https://github.com/lloydbutay123",
     icon: <FaGithub />,
   },
   {
