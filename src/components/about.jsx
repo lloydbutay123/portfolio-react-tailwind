@@ -105,7 +105,7 @@ const About = () => {
         <div className="w-full p-[24px] lg:py-[136px] lg:px-[96px] xl:py-[96px] xl:px-[136px]">
           <div className="block md:flex mb-20">
             <AnimatedComponent className="w-1/3" animationType="slideLeft">
-              <p className="dark:text-white text-xs uppercase flex items-center">
+              <p className="dark:text-white text-[16px] uppercase flex items-center">
                 /01 <span className="mx-10 text-gray-500">Story</span>
               </p>
             </AnimatedComponent>
@@ -135,7 +135,7 @@ const About = () => {
           {/* Education Section */}
           <div className="block md:flex mb-20">
             <AnimatedComponent className="md:w-1/3" animationType="slideLeft">
-              <p className="dark:text-white text-xs uppercase flex items-center">
+              <p className="dark:text-white text-[16px] uppercase flex items-center">
                 /02 <span className="mx-10 text-gray-500">Education</span>
               </p>
             </AnimatedComponent>
@@ -172,7 +172,7 @@ const About = () => {
           {/* Work Experience Section */}
           <div className="block md:flex mb-20">
             <AnimatedComponent className="md:w-1/3" animationType="slideLeft">
-              <p className="dark:text-white text-xs uppercase">
+              <p className="dark:text-white text-[16px] uppercase">
                 /03 <span className="mx-10 text-gray-500">Work Experience</span>
               </p>
             </AnimatedComponent>
@@ -209,7 +209,7 @@ const About = () => {
           {/* Trainings Section */}
           <div className="block md:flex mb-20">
             <AnimatedComponent className="md:w-1/3" animationType="slideLeft">
-              <p className="dark:text-white text-xs uppercase">
+              <p className="dark:text-white text-[16px] uppercase">
                 /04 <span className="mx-10 text-gray-500">Trainings</span>
               </p>
             </AnimatedComponent>

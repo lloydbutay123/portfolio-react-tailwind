@@ -61,7 +61,7 @@ const Service = () => {
             </h1>
           </AnimatedComponent>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center xl:justify-end">
             <div className="grid w-5/6 grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-5">
               {Skills.map((item, index) => (
                 <AnimatedComponent key={index} animationType="slideRight">
