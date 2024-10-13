@@ -12,16 +12,15 @@ const navLinks = [
 ];
 
 const Hero = () => {
-
   const handleClick = (href) => {
     window.location.hash = href;
-  }
+  };
 
   // Define slide variants for bottom-to-top animation
   const slideTBottom = {
     hidden: { opacity: 0, y: 100 },
     visible: { opacity: 1, y: 0 },
-  }
+  };
 
   const [isMounted, setIsMounted] = useState(false);
 
@@ -35,11 +34,13 @@ const Hero = () => {
       id="hero"
     >
       <div>
-        <div className="xl:absolute xl:top-[208px] md:flex flex-col xl:flex-row gap-[48px] lg:px-[72px] xl:px-[136px]">
-          <AnimatedComponent className="md:flex w-full lg:max-w-[1056px] justify-between space-y-[10px] pb-[40px] md:pb-0"
-          animationType="slideRight">
+        <div className="xl:absolute xl:top-[208px] md:flex flex-col xl:flex-row gap-[48px] xl:gap-[24px] lg:px-[72px] xl:px-[136px]">
+          <AnimatedComponent
+            className="md:flex w-full xl:w-2/3 justify-between space-y-[10px] pb-[40px] md:pb-0"
+            animationType="slideRight"
+          >
             {/* Title Section */}
-            <div className="flex flex-col space-y-[8px] w-full md:w-[700px]">
+            <div className="flex flex-col space-y-[8px] xl:space-y-0 w-full">
               {navLinks.map((item, index) => {
                 return (
                   <motion.div
@@ -48,7 +49,11 @@ const Hero = () => {
                     animate={isMounted ? "visible" : "hidden"}
                     transition={{ duration: 0.6 }}
                   >
-                    <button onClick={() => handleClick(item.href)}  className="text-[48px] lg:text-[54px] xl:text-[80px] dark:text-white uppercase font-[700] leading-[0.8em]" key={index}>
+                    <button
+                      onClick={() => handleClick(item.href)}
+                      className="text-[48px] lg:text-[54px] xl:text-[80px] dark:text-white uppercase font-[700] leading-[0.8em]"
+                      key={index}
+                    >
                       {item.title}
                     </button>
                   </motion.div>
@@ -57,8 +62,10 @@ const Hero = () => {
             </div>
           </AnimatedComponent>
 
-          <AnimatedComponent className="md:flex w-full lg:max-w-[1056px] xl:block justify-between space-y-[70px] pb-[40px] md:pb-0"
-          animationType="slideLeft">
+          <AnimatedComponent
+            className="md:flex w-full xl:w-1/3 xl:block justify-between space-y-[70px] pb-[40px] md:pb-0"
+            animationType="slideLeft"
+          >
             {/* Introduction Section */}
             <motion.div
               className="flex flex-col gap-[34px] w-full"
@@ -75,32 +82,27 @@ const Hero = () => {
               ))}
             </motion.div>
             <motion.div
-          className="flex justify-end xl:justify-start"
-          initial="hidden"
-          animate={isMounted ? "visible" : "hidden"}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-            <RotatingComponent
-              className="size-14 bg-[#FF3C00]"
-            />
+              className="flex justify-end xl:justify-start"
+              initial="hidden"
+              animate={isMounted ? "visible" : "hidden"}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <RotatingComponent className="size-14 bg-[#FF3C00]" />
             </motion.div>
           </AnimatedComponent>
         </div>
 
-        <motion.div 
+        <motion.div
           className="absolute bottom-[24px] lg:bottom-0 left-0 right-0"
           initial="hidden"
           animate={isMounted ? "visible" : "hidden"} // Controlled animation
           variants={slideTBottom}
           transition={{ duration: 0.6 }}
         >
-          <div
-            className="font-extrabold text-[#FF3C00] leading-none uppercase text-center w-full text-[18vw]"
-          >
+          <div className="font-extrabold text-[#FF3C00] leading-none uppercase text-center w-full text-[18vw]">
             CraftJB®
           </div>
         </motion.div>
-
       </div>
     </section>
   );
