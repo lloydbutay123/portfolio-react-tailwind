@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <section
-      className="lg:flex flex-col items-center overflow-x-hidden dark:bg-black contact p-[24px] lg:min-h-[100vh]"
+      className="lg:flex flex-col items-center overflow-x-hidden dark:bg-black contact px-[24px] py-[96px] lg:min-h-[100vh]"
       id="contact"
     >
       {/* Title and Logo Section */}
