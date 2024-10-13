@@ -8,7 +8,7 @@ const navLinks = [
   { id: 2, title: "About", label: "about", href: "#about" },
   { id: 3, title: "Work", label: "Work", href: "#work" },
   { id: 3, title: "Service", label: "Service", href: "#service" },
-  { id: 4, title: "Contact", label: "contact", href: "#contact" },
+  { id: 4, title: "Contact", label: "contact", href: "#footer" },
 ];
 
 const Hero = () => {

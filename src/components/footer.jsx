@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SocialsLists from "../Helper/socials.jsx";
 import { FaRegCopyright } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const footer = () => {
   const date = new Date();
   const year = date.getFullYear();
@@ -11,25 +12,40 @@ const footer = () => {
     }, 1000);
   });
 
+  const navigate = useNavigate();
+
   return (
-    <footer className="block lg:flex flex-col items-center w-full bg-black text-white p-[24px] lg:px-[96px] xl:px-[136px]">
-      <div className="md:flex w-full gap-4 justify-between items-center">
-        <div className="block justify-between mb-5 md:mb-0">
-          <p className="uppercase text-xs text-gray-400 py-3">Socials</p>
-          <div className="flex flex-wrap border-b-2 md:border-none border-gray-400 gap-5 pb-10 md:pb-0">
-            {SocialsLists.map((social) => {
-              return (
-                <a
-                  className="text-sm"
-                  href={social.link}
-                  target="_blank"
-                  aria-label={social.name}
-                  key={social.id}
-                >
-                  {social.name}
-                </a>
-              );
-            })}
+    <footer className="lg:p-[24px]" id="footer">
+      <div className="block lg:flex flex-col lg:rounded-[60px] w-full bg-black text-white px-[24px] py-[96px] lg:px-[96px] xl:px-[136px]">
+        <div className="flex flex-col gap-[72px]">
+          <div className="grid place-items-center gap-[40px]">
+            <h1 className="text-[48px] lg:text-[84px] leading-[1em] text-center max-w-[700px]">
+              Let's create your next big idea.
+            </h1>
+            <button
+              className="text-[18px] bg-white px-[24px] py-[12px] text-black rounded-[30px] font-medium"
+              onClick={() => navigate("/contact")}
+            >
+              Schedule a call
+            </button>
+          </div>
+          <div className="block justify-between mb-5 md:mb-0">
+            <p className="uppercase text-xs text-gray-400 py-3">Socials</p>
+            <div className="flex flex-wrap border-b-2 md:border-none border-gray-400 gap-5 pb-10 md:pb-0">
+              {SocialsLists.map((social) => {
+                return (
+                  <a
+                    className="text-[14px] font-medium"
+                    href={social.link}
+                    target="_blank"
+                    aria-label={social.name}
+                    key={social.id}
+                  >
+                    {social.name}
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className="flex gap-5 justify-between">
