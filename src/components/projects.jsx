@@ -10,17 +10,6 @@ const projectsPreview = () => {
   return (
     <section className="dark:bg-black" id="work">
       <div className="w-full">
-        {/* <AnimatedComponent
-          className="mb-10"
-          animationType="slideLeft"
-        >
-          <h1 className="dark:text-white text-5xl md:text-8xl leading-[1em] font-bold">
-            Crafted with love.
-          </h1>
-          <p className="dark:text-white text-[16px] md:text-[20px]">
-            These are selections of my recent works.
-          </p>
-        </AnimatedComponent> */}
         {ProjectLists.map((project, index) => (
           <div
             key={index}

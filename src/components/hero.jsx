@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion"; // Import Framer Motion
 import aboutList from "../Helper/about";
 import AnimatedComponent from "./Motion/AnimatedComponent";
 import RotatingComponent from "./Motion/RotatingComponent";
@@ -12,10 +12,6 @@ const navLinks = [
 ];
 
 const Hero = () => {
-  const handleClick = (href) => {
-    window.location.hash = href;
-  };
-
   // Define slide variants for bottom-to-top animation
   const slideTBottom = {
     hidden: { opacity: 0, y: 100 },
@@ -37,34 +33,29 @@ const Hero = () => {
         <div className="xl:absolute xl:top-[208px] md:flex flex-col xl:flex-row gap-[48px] xl:gap-[24px] lg:px-[72px] xl:px-[136px]">
           <AnimatedComponent
             className="md:flex w-full xl:w-2/3 justify-between space-y-[10px] pb-[40px] md:pb-0"
-            animationType="slideRight"
+            animationType="slideLeft"
           >
             {/* Title Section */}
-            <div className="flex flex-col space-y-[8px] xl:space-y-0 w-full">
+            <motion.div className="flex flex-col space-y-[8px] xl:space-y-0 w-full">
               {navLinks.map((item, index) => {
                 return (
-                  <motion.div
-                    key={index}
-                    initial="hidden"
-                    animate={isMounted ? "visible" : "hidden"}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <button
-                      onClick={() => handleClick(item.href)}
+                  <div key={index}>
+                    <a
+                      href={item.href}
                       className="text-[48px] lg:text-[54px] xl:text-[80px] dark:text-white uppercase font-[700] leading-[0.8em]"
                       key={index}
                     >
                       {item.title}
-                    </button>
-                  </motion.div>
+                    </a>
+                  </div>
                 );
               })}
-            </div>
+            </motion.div>
           </AnimatedComponent>
 
           <AnimatedComponent
             className="md:flex w-full xl:w-1/3 xl:block justify-between space-y-[70px] pb-[40px] md:pb-0"
-            animationType="slideLeft"
+            animationType="slideRight"
           >
             {/* Introduction Section */}
             <motion.div

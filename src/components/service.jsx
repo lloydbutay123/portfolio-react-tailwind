@@ -1,4 +1,4 @@
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import React from "react";
 import ServicesList from "../Helper/services";
 import Skills from "../Helper/skills";

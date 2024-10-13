@@ -1,25 +1,9 @@
-import logo from "../assets/logo/main-logo.svg";
-import { useState } from "react";
-
-const Nav = ({ darkMode, setDarkMode }) => {
-  const [open, setOpen] = useState(false);
-  const toggleMenu = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
-
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      setOpen(false); // Close menu after click
-    }
-  };
-
+const Nav = () => {
   return (
     <header className="flex fixed w-full z-50 pl-[24px] justify-between">
       <nav className="flex justify-between w-full lg:p-[72px] xl:pb-0">
         <div className="flex items-center">
-          <a href="#hero" className="dark:text-white">
+          <a href="#hero" className="dark:text-white font-medium">
             HOME
           </a>
         </div>
