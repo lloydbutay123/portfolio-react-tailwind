@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ProjectLists from "../Helper/projects.jsx";
 import RotatingComponent from "./Motion/RotatingComponent.jsx";
+import AnimatedComponent from "./Motion/AnimatedComponent.jsx";
 
 const projectsPreview = () => {
   useEffect(() => {
@@ -21,7 +22,8 @@ const projectsPreview = () => {
               }`}
             >
               <div className="flex flex-col xl:gap-[64px] xl:flex-row h-full justify-between xl:items-center">
-                <div className="flex flex-col gap-[24px] lg:justify-end items-start xl:w-2/3 xl:items-start">
+                <AnimatedComponent className="flex flex-col gap-[24px] lg:justify-end items-start xl:w-2/3 xl:items-start"
+                  animationType="slideLeft">
                   <div className="text-white text-[16px] w-full text-start lg:text-center xl:text-start uppercase">
                     (work)
                   </div>
@@ -57,14 +59,14 @@ const projectsPreview = () => {
                       <RotatingComponent className="hidden xl:block inset-0 lg:size-6 bg-white xl:order-1" />
                     </div>
                   </div>
-                </div>
-                <div className="flex items-end justify-center xl:w-2/3">
+                </AnimatedComponent>
+                <AnimatedComponent className="flex items-end justify-center xl:w-2/3" animationType="slideRight"> 
                   <img
                     src={project.sampleImage}
                     alt=""
                     className="lg:w-[600px] xl:w-full"
                   />
-                </div>
+                </AnimatedComponent>
               </div>
             </div>
           </div>
