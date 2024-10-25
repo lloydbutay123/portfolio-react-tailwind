@@ -64,11 +64,7 @@ const Contact = () => {
         >
           <div className="block">
             <img src={onlinelogo} className="w-[100px] mb-5" alt="Logo" />
-            <BsArrowDownRight
-              size={25}
-              className="dark:text-white"
-              onClick={() => navigate("/404")}
-            />
+            <BsArrowDownRight size={25} className="dark:text-white" />
           </div>
         </AnimatedComponent>
       </div>

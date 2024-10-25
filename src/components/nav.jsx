@@ -7,12 +7,12 @@ const Nav = () => {
     <header className="flex fixed w-full z-50 pl-[24px] justify-between">
       <nav className="flex justify-between w-full lg:p-[72px] xl:pb-0">
         <div className="flex items-center">
-          <a
+          <button
             className="dark:text-white font-medium"
-            href="#"
+            onClick={() => navigate("/")}
           >
             HOME
-          </a>
+          </button>
         </div>
         <div className="flex items-center bg-white w-[96px] lg:w-[112px] p-[16px] rounded-tl-[30px] rounded-b-[30px] lg:rounded-[30px]">
           <img
