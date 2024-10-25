@@ -1,17 +1,28 @@
-import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import ServicesList from "../Helper/services";
 import Skills from "../Helper/skills";
 import AnimatedComponent from "./Motion/AnimatedComponent";
-import RotatingComponent from "./Motion/RotatingComponent";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 const Service = () => {
+  const [expanded, setExpanded] = useState(null); // Store the index of the expanded accordion
+
+  const handleToggle = (index) => {
+    // Toggle accordion based on its index
+    setExpanded((prevExpanded) => (prevExpanded === index ? null : index));
+  };
+
   return (
     <section
       className="flex flex-col items-center p-[24px] overflow-x-hidden dark:bg-black"
       id="service"
     >
-      <div className="lg:px-[96px] lg:py-[136px] xl:px-[136px] py-[96px] xl:pr-[288px]">
+      <div className="lg:px-[96px] lg:py-[136px] xl:px-[136px] py-[96px] xl:pr-[222px]">
         <AnimatedComponent
           className="w-full flex justify-end"
           animationType="slideRight"
@@ -20,39 +31,63 @@ const Service = () => {
             (Services)
           </p>
         </AnimatedComponent>
-        {ServicesList.map((items, index) => (
-          <AnimatedComponent
-            key={index}
-            animationType="slideBottom"
-            className="w-full lg:h-screen flex flex-col gap-[96px] md:flex-row items-center lg:justify-between md:space-x-8 lg:py-[136px] py-[96px]"
-          >
-            {/* Rotating Box */}
-            <div className="w-full md:w-2/12 flex items-start">
-              <div className="relative size-12 lg:size-36 flex items-center justify-center">
-                <RotatingComponent className="absolute inset-0 lg:size-40 bg-[#FF3C00]" />
-                <span className="absolute text-white text-[48px] lg:text-[240px] flex items-center">
-                  {index + 1}
-                </span>
-              </div>
-            </div>
-            {/* Text Section */}
-            <div className="w-full xl:w-6/12 h-auto">
-              <motion.div
-                className="text-black text-center md:text-left"
-                transition={{ duration: 0.8 }}
+        <div className="py-[96px]">
+          {ServicesList.map((items, index) => (
+            <Accordion
+              expanded={expanded === index} // Check if this specific accordion is expanded
+              onChange={() => handleToggle(index)} // Pass the index to handleToggle
+              sx={{
+                border: "none",
+                boxShadow: "none",
+                borderBottom: "1px solid gray",
+                borderRadius: 0,
+                "&:before": { display: "none" },
+                "& .MuiAccordionSummary-root": {
+                  padding: "0",
+                },
+                "&:last-child": {
+                  borderRadius: 0,
+                },
+              }}
+              key={index}
+            >
+              <AnimatedComponent animationType="slideLeft">
+                <AccordionSummary
+                  expandIcon={expanded === index ? <RemoveIcon /> : <AddIcon />}
+                  aria-controls="panel1-content"
+                  id={`panel${index}-header`}
+                >
+                  <Typography
+                    sx={{
+                      fontWeight: "bold",
+                      fontSize: { xs: "20px", lg: "28px" },
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "12px",
+                    }}
+                  >
+                    {items.icon} {items.title}
+                  </Typography>
+                </AccordionSummary>
+              </AnimatedComponent>
+              <AccordionDetails
+                sx={{
+                  paddingX: 0, // Removes all padding from AccordionDetails
+                }}
               >
-                <div className="flex flex-col gap-[24px] text-start font-medium ">
-                  <div className="text-[24px] md:text-[36px] font-bold dark:text-gray-500">
-                    {items.title}
-                  </div>
-                  <div className="text-[18px] md:text-[24px] leading-[1em] dark:text-white">
-                    {items.text}
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </AnimatedComponent>
-        ))}
+                <Typography
+                  sx={{
+                    fontSize: { xs: "16px", lg: "20px" },
+                    lineHeight: "1em",
+                    color: "#6b7280",
+                  }}
+                >
+                  {items.text}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </div>
 
         <div className="w-full">
           <AnimatedComponent className="mb-10" animationType="slideLeft">
