@@ -54,10 +54,10 @@ const aboutList = [
       {
         name: "CCK City Network, Inc.",
         title: "Software Engineer",
-        year: "Jan 09, 2023 - June 11, 2023",
+        year: "January 09, 2023 - November 11, 2023",
       },
       {
-        name: "Asianlink.ai",
+        name: "asianlink.ai",
         title: "Full-stack Developer",
         year: "May 15, 2024 - PRESENT",
       },
