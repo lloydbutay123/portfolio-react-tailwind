@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ServicesList from "../Helper/services";
 import Skills from "../Helper/skills";
 import AnimatedComponent from "./Motion/AnimatedComponent";
@@ -8,14 +8,17 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { useTheme } from "@mui/material";
 
 const Service = () => {
-  const [expanded, setExpanded] = useState(null); // Store the index of the expanded accordion
+  const [expanded, setExpanded] = useState(null);
 
   const handleToggle = (index) => {
-    // Toggle accordion based on its index
     setExpanded((prevExpanded) => (prevExpanded === index ? null : index));
   };
+
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode
 
   return (
     <section
@@ -34,13 +37,15 @@ const Service = () => {
         <div className="py-[96px]">
           {ServicesList.map((items, index) => (
             <Accordion
-              expanded={expanded === index} // Check if this specific accordion is expanded
-              onChange={() => handleToggle(index)} // Pass the index to handleToggle
+              expanded={expanded === index}
+              onChange={() => handleToggle(index)}
               sx={{
                 border: "none",
                 boxShadow: "none",
                 borderBottom: "1px solid gray",
                 borderRadius: 0,
+                backgroundColor: "transparent",
+                color: isDarkMode ? "white" : "black",
                 "&:before": { display: "none" },
                 "& .MuiAccordionSummary-root": {
                   padding: "0",
@@ -64,6 +69,7 @@ const Service = () => {
                       display: "flex",
                       alignItems: "center",
                       gap: "12px",
+                      color: isDarkMode ? "#ccc" : "#6b7280",
                     }}
                   >
                     {items.icon} {items.title}
@@ -72,7 +78,7 @@ const Service = () => {
               </AnimatedComponent>
               <AccordionDetails
                 sx={{
-                  paddingX: 0, // Removes all padding from AccordionDetails
+                  paddingX: 0,
                 }}
               >
                 <Typography

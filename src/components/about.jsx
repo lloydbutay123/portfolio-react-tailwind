@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import aboutList from "../Helper/about";
 import SocialsLists from "../Helper/socials";
 import AnimatedComponent from "./Motion/AnimatedComponent";
@@ -65,7 +65,7 @@ const About = () => {
                   {about.title}
                 </p>
                 <p className="text-[20px] lg:text-[24px] italic leading-[1em]">
-                  "{about.description}"
+                  &quot;{about.description}&quot;
                 </p>
               </AnimatedComponent>
             ))}

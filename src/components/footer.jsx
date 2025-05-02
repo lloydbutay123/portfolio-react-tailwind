@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react/no-unescaped-entities */
+import { useEffect, useState } from "react";
 import SocialsLists from "../Helper/socials.jsx";
 import { FaRegCopyright } from "react-icons/fa";
 import { IoSendSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import AnimatedComponent from "./Motion/AnimatedComponent.jsx";
 
-const footer = () => {
+const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   const [time, setTime] = useState(new Date());
@@ -76,4 +77,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

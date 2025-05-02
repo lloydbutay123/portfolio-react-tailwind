@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
 import aboutList from "../Helper/about";
 import AnimatedComponent from "./Motion/AnimatedComponent";

@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+/* eslint-disable react/no-unescaped-entities */
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useNavigate } from "react-router-dom";
 import { IoSendSharp } from "react-icons/io5";
 import onlinelogo from "../assets/logo/img-logo.webp";
 import { BsArrowDownRight } from "react-icons/bs";
@@ -12,7 +12,6 @@ import Swal from "sweetalert2";
 const Contact = () => {
   document.title = "Contact | John Lloyd Butay";
   const form = useRef();
-  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -34,7 +33,6 @@ const Contact = () => {
           form.current.reset();
         },
         (error) => {
-          s;
           console.log("FAILED...", error.text);
           Swal.fire({
             title: "Error!",
