@@ -1,5 +1,6 @@
 import { TbBrandFramerMotion, TbBrandReactNative, TbBrandVscode } from "react-icons/tb";
 import { BiLogoNetlify, BiLogoJquery } from "react-icons/bi";
+import { FaFlutter } from "react-icons/fa6";
 import {
   SiCanva,
   SiMysql,
@@ -20,8 +21,7 @@ import {
   FaChrome,
   FaNpm,
   FaFigma,
-  FaJava,
-  FaFlutter
+  FaJava
 } from "react-icons/fa";
 
 const Skills = [
