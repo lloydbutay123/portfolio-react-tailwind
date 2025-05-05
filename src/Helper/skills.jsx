@@ -1,11 +1,11 @@
 import { TbBrandFramerMotion, TbBrandReactNative, TbBrandVscode } from "react-icons/tb";
 import { BiLogoNetlify, BiLogoJquery } from "react-icons/bi";
-import { FaFlutter } from "react-icons/fa6";
 import {
   SiCanva,
   SiMysql,
   SiAdobephotoshop,
   SiTailwindcss,
+  SiFlutter
 } from "react-icons/si";
 import {
   FaHtml5,
@@ -142,8 +142,8 @@ const Skills = [
   },
   {
     name: "Flutter",
-    icon: <FaFlutter />,
-    link: "https://flutter.dev/",
+    icon: <SiFlutter />,
+    link: "https://www.flutter.dev",
   },
 ];
 
