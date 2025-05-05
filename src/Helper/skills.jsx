@@ -1,4 +1,4 @@
-import { TbBrandFramerMotion, TbBrandReactNative, TbBrandVscode, TbBrandReactNative } from "react-icons/tb";
+import { TbBrandFramerMotion, TbBrandReactNative, TbBrandVscode } from "react-icons/tb";
 import { BiLogoNetlify, BiLogoJquery } from "react-icons/bi";
 import {
   SiCanva,
@@ -23,6 +23,7 @@ import {
   FaNpm,
   FaFigma,
   FaJava,
+  FaGlobe,
 } from "react-icons/fa";
 
 const Skills = [
@@ -142,9 +143,14 @@ const Skills = [
     link: "https://www.javatpoint.com/java-tutorial",
   },
   {
-    name: "dart",
+    name: "Dart",
     icon: <SiDart />,
     link: "https://dart.dev/",
+  },
+  {
+    name: "Uniapp",
+    icon: <FaGlobe />,
+    link: "https://uniapp.dcloud.io/",
   },
   {
     name: "Flutter",
