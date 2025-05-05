@@ -20,7 +20,8 @@ import {
   FaChrome,
   FaNpm,
   FaFigma,
-  FaJava
+  FaJava,
+  FaFlutter
 } from "react-icons/fa";
 
 const Skills = [
@@ -138,6 +139,11 @@ const Skills = [
     name: "Java",
     icon: <FaJava />,
     link: "https://www.javatpoint.com/java-tutorial",
+  },
+  {
+    name: "Flutter",
+    icon: <FaFlutter />,
+    link: "https://flutter.dev/",
   },
 ];
 
