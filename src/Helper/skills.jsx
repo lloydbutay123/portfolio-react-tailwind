@@ -23,7 +23,6 @@ import {
   FaNpm,
   FaFigma,
   FaJava,
-  FaGlobe 
 } from "react-icons/fa";
 
 const Skills = [
@@ -141,11 +140,6 @@ const Skills = [
     name: "Java",
     icon: <FaJava />,
     link: "https://www.javatpoint.com/java-tutorial",
-  },
-  {
-  name: "uniapp",
-  icon: <FaGlobe />,
-  link: "https://uniapp.dcloud.io/",
   },
   {
     name: "dart",
