@@ -1,11 +1,12 @@
-import { TbBrandFramerMotion, TbBrandReactNative, TbBrandVscode } from "react-icons/tb";
+import { TbBrandFramerMotion, TbBrandReactNative, TbBrandVscode, TbBrandReactNative } from "react-icons/tb";
 import { BiLogoNetlify, BiLogoJquery } from "react-icons/bi";
 import {
   SiCanva,
   SiMysql,
   SiAdobephotoshop,
   SiTailwindcss,
-  SiFlutter
+  SiFlutter,
+  SiDart ,
 } from "react-icons/si";
 import {
   FaHtml5,
@@ -21,7 +22,8 @@ import {
   FaChrome,
   FaNpm,
   FaFigma,
-  FaJava
+  FaJava,
+  FaGlobe 
 } from "react-icons/fa";
 
 const Skills = [
@@ -141,9 +143,24 @@ const Skills = [
     link: "https://www.javatpoint.com/java-tutorial",
   },
   {
+  name: "uniapp",
+  icon: <FaGlobe />,
+  link: "https://uniapp.dcloud.io/",
+  },
+  {
+    name: "dart",
+    icon: <SiDart />,
+    link: "https://dart.dev/",
+  },
+  {
     name: "Flutter",
     icon: <SiFlutter />,
     link: "https://www.flutter.dev",
+  },
+  {
+    name: "React Native",
+    icon: <TbBrandReactNative />,
+    link: "https://reactnative.dev/",
   },
 ];
 
