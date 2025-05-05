@@ -17,14 +17,14 @@ const aboutList = [
         introduction:
           "Hi I'm John Lloyd Butay. A passionate Full-stack Developer based in the Philippines.",
         text1:
-          "Hey, I'm John Lloyd Butay and I use Lloyd as my nickname on social media. I'm a Web Developer with a deep passion for creating seamless, user-friendly digital experiences. I love diving into new technologies, constantly expanding my knowledge and skill set to stay ahead in the fast-paced world of tech. Whether it’s exploring the latest frameworks or optimizing code, I’m always eager to learn and push the boundaries of what’s possible. For me, coding is more than just a job—it’s a craft I’m excited to keep honing every day.",
+          "Hey, I'm John Lloyd Butay and I use Lloyd as my nickname on social media. I'm a Full stack Developer with a deep passion for creating seamless, user-friendly digital experiences. I love diving into new technologies, constantly expanding my knowledge and skill set to stay ahead in the fast-paced world of tech. Whether it’s exploring the latest frameworks or optimizing code, I’m always eager to learn and push the boundaries of what’s possible. For me, coding is more than just a job—it’s a craft I’m excited to keep honing every day.",
         text2: "",
       },
     ],
     contacts: [
       {
         email: "johnlloydbutay123@gmail.com",
-        phone: "09567223090",
+        phone: "09524736056",
         address: "#14 Bungon, City of Batac, Ilocos Norte Philippines",
       },
       {
