@@ -17,19 +17,19 @@ const aboutList = [
         introduction:
           "Hi I'm John Lloyd Butay. A passionate Full-stack Developer based in the Philippines.",
         text1:
-          "Hey, I'm John Lloyd Butay and I use Lloyd as my nickname on social media. I'm a Full stack Developer with a deep passion for creating seamless, user-friendly digital experiences. I love diving into new technologies, constantly expanding my knowledge and skill set to stay ahead in the fast-paced world of tech. Whether it’s exploring the latest frameworks or optimizing code, I’m always eager to learn and push the boundaries of what’s possible. For me, coding is more than just a job—it’s a craft I’m excited to keep honing every day.",
+          "👋 Hey, I’m John Lloyd Butay—but you can call me Lloyd (that’s what I go by on socials). I’m a Full Stack Developer with a deep passion for crafting seamless, user-friendly digital experiences. Whether I’m building a sleek front end or fine-tuning the back end, I love making things that just work—and work well. I'm constantly diving into new tech, exploring fresh frameworks, and pushing my skills to the next level. For me, coding isn’t just a job—it’s a craft, a challenge, and a thrill I enjoy every single day. Let’s build something amazing together. 💻",
         text2: "",
       },
     ],
     contacts: [
       {
         email: "johnlloydbutay123@gmail.com",
-        phone: "09524736056",
+        phone: "09956397484",
         address: "#14 Bungon, City of Batac, Ilocos Norte Philippines",
       },
       {
         email: "",
-        phone: "09070343386",
+        phone: "",
         address: "",
       },
     ],
@@ -54,7 +54,7 @@ const aboutList = [
       {
         name: "CCK City Network, Inc.",
         title: "Software Engineer",
-        year: "January 09, 2023 - November 11, 2023",
+        year: "January 09, 2023 - March 09, 2024",
       },
       {
         name: "asianlink.ai",
