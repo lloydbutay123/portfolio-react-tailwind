@@ -5,7 +5,7 @@ const aboutList = [
     name: "John Lloyd Butay",
     img: aboutimg,
     dob: "12/29/1999",
-    title: "Full Stack Developer | Software Engineer",
+    title: "Web and Mobile Developer",
     introduction:
       "🚀 Your friendly neighborhood Web & Mobile Developer — crafting code that clicks, swipes, scrolls, and wows. By day (and usually night), I bring digital dreams to life—whether it’s a sleek website or a snappy mobile app. From pixels to production, I build immersive, interactive experiences that feel as good as they look. Turning ideas into apps, bugs into features, and coffee into code ☕💻📱",
     description:
