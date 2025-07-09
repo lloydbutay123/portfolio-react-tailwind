@@ -7,7 +7,7 @@ const aboutList = [
     dob: "12/29/1999",
     title: "Full Stack Developer | Software Engineer",
     introduction:
-      "Your friendly neighborhood Full-stack Developer, turning code into captivating digital experiences. By day (and often night), I craft immersive, interactive projects—bringing ideas to life, one line of code at a time.",
+      "🚀 Your friendly neighborhood Web & Mobile Developer — crafting code that clicks, swipes, scrolls, and wows. By day (and usually night), I bring digital dreams to life—whether it’s a sleek website or a snappy mobile app. From pixels to production, I build immersive, interactive experiences that feel as good as they look. Turning ideas into apps, bugs into features, and coffee into code ☕💻📱",
     description:
       "Crafting code, building connections, and shaping digital dreams into reality.",
     mission:
