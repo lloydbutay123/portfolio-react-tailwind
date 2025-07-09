@@ -11,7 +11,7 @@ const aboutList = [
     description:
       "Crafting code, building connections, and shaping digital dreams into reality.",
     mission:
-      "Thrive on building solutions that merge innovation with efficiency—whether it's enhancing user experiences on the front end or optimizing server performance on the back end. Now diving deep into mobile development too, I turn ideas into apps that fit right in your pocket. From responsive websites to cross-platform apps, I code with purpose, design with empathy, and debug with determination. Always learning, always shipping. 🚀",
+      "Thrive on building solutions that merge innovation with efficiency—whether it's enhancing user experiences on the front end or optimizing server performance on the back end. Now diving deep into mobile development too, I turn ideas into apps that fit right in your pocket. From responsive websites to cross-platform apps, I code with purpose, design with empathy, and debug with determination. \nAlways learning, always shipping. 🚀",
     story: [
       {
         introduction:
