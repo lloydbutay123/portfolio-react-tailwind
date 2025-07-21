@@ -7,17 +7,17 @@ const aboutList = [
     dob: "12/29/1999",
     title: "Web and Mobile Developer",
     introduction:
-      "🚀 Your friendly neighborhood Web & Mobile Developer — crafting code that clicks, swipes, scrolls, and wows. By day (and usually night), I bring digital dreams to life—whether it’s a sleek website or a snappy mobile app. From pixels to production, I build immersive, interactive experiences that feel as good as they look. Turning ideas into apps, bugs into features, and coffee into code ☕💻📱",
+      "Your friendly neighborhood Web & Mobile Developer — crafting code that clicks, swipes, scrolls, and wows. By day (and usually night), I bring digital dreams to life—whether it’s a sleek website or a snappy mobile app. From pixels to production, I build immersive, interactive experiences that feel as good as they look. Turning ideas into apps, bugs into features, and coffee into code.",
     description:
       "Crafting code, building connections, and shaping digital dreams into reality.",
     mission:
-      "Thrive on building solutions that merge innovation with efficiency—whether it's enhancing user experiences on the front end or optimizing server performance on the back end. Now diving deep into mobile development too, I turn ideas into apps that fit right in your pocket. From responsive websites to cross-platform apps, I code with purpose, design with empathy, and debug with determination. Always learning, always shipping. 🚀",
+      "Thrive on building solutions that merge innovation with efficiency—whether it's enhancing user experiences on the front end or optimizing server performance on the back end. Now diving deep into mobile development too, I turn ideas into apps that fit right in your pocket. From responsive websites to cross-platform apps, I code with purpose, design with empathy, and debug with determination. Always learning, always shipping.",
     story: [
       {
         introduction:
           "Hi I'm John Lloyd Butay. A passionate Full-stack Developer based in the Philippines.",
         text1:
-          "👋 Hey, I’m John Lloyd Butay—but you can call me Lloyd (that’s what I go by on socials). I’m a Full Stack Developer with a deep passion for crafting seamless, user-friendly digital experiences. Whether I’m building a sleek front end or fine-tuning the back end, I love making things that just work—and work well. I'm constantly diving into new tech, exploring fresh frameworks, and pushing my skills to the next level. For me, coding isn’t just a job—it’s a craft, a challenge, and a thrill I enjoy every single day. Let’s build something amazing together. 💻",
+          "Hey, I’m John Lloyd Butay—but you can call me Lloyd (that’s what I go by on socials). I’m a Full Stack Developer with a deep passion for crafting seamless, user-friendly digital experiences. Whether I’m building a sleek front end or fine-tuning the back end, I love making things that just work—and work well. I'm constantly diving into new tech, exploring fresh frameworks, and pushing my skills to the next level. For me, coding isn’t just a job—it’s a craft, a challenge, and a thrill I enjoy every single day. Let’s build something amazing together.",
         text2: "",
       },
     ],
