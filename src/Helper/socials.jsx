@@ -22,7 +22,7 @@ const SocialsLists = [
   {
     id: 3,
     name: "Instagram",
-    link: "https://www.instagram.com/engr.buts/",
+    link:"https://www.instagram.com/lloydpuji/",
     icon: <FaInstagram />,
   },
   {
