@@ -59,7 +59,12 @@ const aboutList = [
       {
         name: "asianlink.ai",
         title: "Full-stack Developer",
-        year: "May 15, 2024 - PRESENT",
+        year: "May 15, 2024 - July 10, 2025",
+      },
+      {
+        name: "Questronix Corporation",
+        title: "React Developer",
+        year: "August 28, 2025 - PRESENT",
       },
     ],
     trainings: [
@@ -112,8 +117,7 @@ const aboutList = [
       },
       {
         name: "Web Development Fundamentals: Getting started with Vue.js",
-        company: "Mariano Marcos State University",
-        issuedOn: "2022",
+        company: "Mariano Marcos         issuedOn: "2022",
         verify: "",
       },
       {
