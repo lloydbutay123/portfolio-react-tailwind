@@ -117,7 +117,8 @@ const aboutList = [
       },
       {
         name: "Web Development Fundamentals: Getting started with Vue.js",
-        company: "Mariano Marcos         issuedOn: "2022",
+        company: "Mariano Marcos State University",
+        issuedOn: "2022",
         verify: "",
       },
       {
